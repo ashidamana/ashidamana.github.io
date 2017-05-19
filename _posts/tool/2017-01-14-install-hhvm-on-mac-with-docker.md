@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在 Mac 下用 Docker 安装测试 HHVM
-category: 工具
+category: 实用工具
 tags: [Mac, Docker]
 keywords: Mac,Docker,HHVM,Hack
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 几种企业的存储系统
-category: 技术
+category: 技术笔记
 tags: Concept
 description: 今天在看对象存储时涉及到几个企业常用的存储系统，在此大概罗列一下，以后完善
 ---

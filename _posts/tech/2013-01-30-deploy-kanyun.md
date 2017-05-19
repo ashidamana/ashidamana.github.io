@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在OpenStack中部署kanyun
-category: 技术
+category: 技术笔记
 tags: OpenStack
 description: 在OpenStack中部署kanyun
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OpenStack Ceilometer Pipeline代码解读
-category: 技术
+category: 技术笔记
 tags: OpenStack
 keywords: OpenStack,Ceilometer,Pipeline
 description: 在阅读Ceilometer代码时，发现它使用了一个pipeline机制

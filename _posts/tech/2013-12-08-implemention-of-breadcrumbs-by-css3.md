@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 基于CSS3实现尖角面包屑
-category: 技术
+category: 技术笔记
 tags: CSS
 keywords: CSS,尖角,面包屑,导航
 description: 

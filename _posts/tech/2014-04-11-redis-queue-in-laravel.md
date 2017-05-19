@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Laravel中用Redis来做任务队列
-category: 技术
+category: 技术笔记
 tags: Laravel
 keywords: Laravel,Redis,Queue
 description: 

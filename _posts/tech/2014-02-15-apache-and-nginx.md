@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 从运行原理及使用场景看Apache和Nginx
-category: 技术
+category: 技术笔记
 tags: [Apache,Nginx]
 keywords: Apache,Nginx,原理,运行,场景
 description: 

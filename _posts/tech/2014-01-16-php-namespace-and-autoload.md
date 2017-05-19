@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PHP命名空间及自动加载
-category: 技术
+category: 技术笔记
 tags: PHP
 keywords: PHP,命名空间,自动加载
 description: 

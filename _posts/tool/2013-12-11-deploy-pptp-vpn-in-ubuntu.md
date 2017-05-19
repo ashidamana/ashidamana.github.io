@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在ubuntu下搭建pptp vpn服务器
-category: 工具
+category: 实用工具
 tags: Linux
 keywords: Linux,pptp,vpn
 ---

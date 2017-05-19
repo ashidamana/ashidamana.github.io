@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Laravel关联模型名称一致性问题
-category: 技术
+category: 技术笔记
 tags: [PHP, Laravel]
 keywords: Laravel,Conflict,Relationship,Model
 description: 

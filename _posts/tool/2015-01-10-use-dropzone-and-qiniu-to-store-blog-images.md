@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 使用Dropzone和七牛优化博客图床
-category: 工具
+category: 实用工具
 tags: Blog
 keywords: Dropzone,Qiniu,七牛,图床,博客
 description: 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在Mac下安装使用Vagrant
-category: 工具
+category: 实用工具
 tags: [Mac, Vagrant]
 keywords: Mac,Vagrant
 description: 

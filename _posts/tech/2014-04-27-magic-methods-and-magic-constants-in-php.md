@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PHP中的魔术方法和魔术常量简介和使用
-category: 技术
+category: 技术笔记
 tags: PHP
 keywords: PHP,魔术方法
 description: 

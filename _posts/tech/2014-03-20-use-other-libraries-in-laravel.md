@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在Laravel中使用自己的类库三种方式
-category: 技术
+category: 技术笔记
 tags: [Laravel, PHP]
 keywords: Laravel,PHP,Library
 description: 

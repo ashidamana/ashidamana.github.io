@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 用Laravel+Grunt+Bower管理你的应用
-category: 技术
+category: 技术笔记
 tags: [PHP, Laravel]
 keywords: Laravel,PHP,Grunt,Bower
 description: 

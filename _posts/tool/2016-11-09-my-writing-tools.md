@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 我使用的收藏，写作和分享工具
-category: 工具
+category: 实用工具
 tags: Tools
 keywords: 收藏,写作,发布,工具
 ---

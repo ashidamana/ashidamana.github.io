@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 虚拟化中KVM, Xen, Qemu的区别
-category: 技术
+category: 技术笔记
 tags: Virtualization
 description: 在做云计算和虚拟化时，经常要涉及到KVM,Xen,Qemu等，这些到底是什么区别？以前不太了解，最近找了个时间详细总结了一下
 ---

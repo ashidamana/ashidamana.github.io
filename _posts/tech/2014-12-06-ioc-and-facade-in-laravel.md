@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Laravel核心之IOC和Facade
-category: 技术
+category: 技术笔记
 tags: [PHP, Laravel]
 keywords: Laravel,PHP,IoC,Facade
 description: 

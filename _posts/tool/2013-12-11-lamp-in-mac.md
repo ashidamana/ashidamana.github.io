@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mac下用brew搭建LNMP和LAMP开发环境
-category: 工具
+category: 实用工具
 tags: [Mac, MongoDB, PHP] 
 keywords: Brew,Mac,MongoDB,MySQL,Apache,Nginx,PHP
 description: 
