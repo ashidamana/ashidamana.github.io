@@ -1,6 +1,6 @@
 ### 喵喵清吟的博客（模板等资源来自[http://yansu.org](http://yansu.org)）
 
-地址：[http://mmqy.vip](http://mmqy.vip)
+地址：[https://blog.mana.love](https://blog.mana.love)
 
 ### 安装说明
 

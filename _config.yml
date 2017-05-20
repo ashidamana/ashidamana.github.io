@@ -2,9 +2,8 @@
 title: 喵喵清吟 | 爱菜家希望之神小飞鸟官方博客
 email: flyer@mana.love
 description: > # 这里是爱菜家希望之神小飞鸟官方博客
-  闫肃的博客
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: http://mmqy.vip # the base hostname & protocol for your site
+url: https://blog.mana.love # the base hostname & protocol for your site
 rss_url: /pages/feed.xml
 author: 小飞鸟
 
@@ -21,8 +20,8 @@ instagram: suyan08301
 linkedin: suyan08301
 
 # avatar and Favicon
-avatar: http://o7s0nx6nx.bkt.clouddn.com/site-avatar.png
-favicon: http://o7s0nx6nx.bkt.clouddn.com/img/favicon.ico
+avatar: https://o7s0nx6nx.bkt.clouddn.com/site-avatar.png
+favicon: https://o7s0nx6nx.bkt.clouddn.com/img/favicon.ico
 
 # disqus config
 #disqus:
