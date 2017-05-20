@@ -13,13 +13,13 @@ layout: post
 
 我写博客应该很久了，能找到的历史最早可以追溯到2015-07-21，当然也可能更早，但我找不到相关痕迹了。
 
-最早的时候用过emlog，可能是在2014年左右，不过已经完全找不到历史记录了。
+最早的时候用过[emlog](http://www.emlog.net/)，可能是在2014年左右，不过已经完全找不到历史记录了。
 
 2015-07-21，开始使用[Lofter](http://imana.lofter.com/)轻博客,这个博客目前还能访问的，不过我已经不更新了，感觉写作起来比较麻烦，界面也不是很好控制。
 
 2016-01-11，初次使用[Wordpress](https://wordpress.org/)，可能是谷歌字体等因素，导致访问起来非常慢，当时也没找到合适的解决方案，就直接弃用了。
 
-2016-01-12，开始使用Z-BlogPHP,使用[http://love.mana.love](http://love.mana.love)作为博客域名,这个倒是用了一段时间，当时还在上面挂了广告，虽然也没赚到几毛钱。
+2016-01-12，开始使用[Z-BlogPHP](https://www.zblogcn.com/),使用[http://love.mana.love](http://love.mana.love)作为博客域名,这个倒是用了一段时间，当时还在上面挂了广告，虽然也没赚到几毛钱。
 
 2016-05-25，后来又折腾了好一阵子，突然觉得还是不太好，又开始折腾起[Wordpress](https://wordpress.org/)，选了个好看的主题，还安装了一些插件，解决谷歌字体慢等问题，使用[http://mmqy.vip](http://mmqy.vip)作为博客域名，并托管在[衡天主机](http://hengtian.cc/)的虚拟主机上。
 
