@@ -19,11 +19,11 @@ layout: post
 
 2016-01-11，初次使用Wordpress，可能是谷歌字体等因素，导致访问起来非常慢，当时也没找到合适的解决方案，就直接弃用了。
 
-2016-01-12，然后开始使用Z-BlogPHP,使用[http://love.mana.love](http://love.mana.love) 作为博客域名,这个倒是用了一段时间，当时还在上面挂了广告，虽然没赚几毛钱。
+2016-01-12，然后开始使用Z-BlogPHP,使用[http://love.mana.love](http://love.mana.love) 作为博客域名,这个倒是用了一段时间，当时还在上面挂了广告，虽然也没赚到几毛钱。
 
-2016-05-25，后来又折腾了好一阵子，突然觉得还是不太好，又开始用Wordpress，选了个好看的主题，还安装了一些插件，解决谷歌字体慢等问题，使用[http://mmqy.vip](http://mmqy.vip) 作为博客域名，并托管在[衡天主机](http://hengtian.cc/) 的虚拟主机上。
+2016-05-25，后来又折腾了好一阵子，突然觉得还是不太好，又开始折腾起Wordpress，选了个好看的主题，还安装了一些插件，解决谷歌字体慢等问题，使用[http://mmqy.vip](http://mmqy.vip) 作为博客域名，并托管在[衡天主机](http://hengtian.cc/) 的虚拟主机上。
 
-2017-05-20，之前的Wordpress用的虚拟主机快到期了，不打算续费了，而且那个Wordpress博客被黑客攻击得厉害，准备弃用。接着又开始研究[Hexo](https://hexo.io/) 静态博客，但一直没找到好看的模板，昨天又试着找[Jekyll](http://jekyllrb.com/) 的模板，最终选定当前这个模板，挺喜欢的。
+2017-05-20，之前的Wordpress博客用的虚拟主机快到期了，不打算续费了。而且那个Wordpress博客被黑客攻击得厉害，准备弃用。接着又开始研究[Hexo](https://hexo.io/) 静态博客，但一直没找到好看的模板，昨天又试着找[Jekyll](http://jekyllrb.com/) 的模板，最终选定当前这个模板，挺喜欢的。
 
 2017-05-20，开启新博客，域名用的是[https://blog.mana.love](https://blog.mana.love) , [http://mmqy.vip](http://mmqy.vip), [http://love.mana.love](http://love.mana.love) 等域名均转发到这里。
 
