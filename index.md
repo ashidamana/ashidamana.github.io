@@ -38,7 +38,8 @@ layout: post
 ## 联系我们
 
 新浪微博：[飞鸟鸣鸾](http://weibo.com/flyerangel)
-个人邮箱：[flyer@mana.love](flyer@mana.love)
+
+个人邮箱：<a mailto="flyer@mana.love">flyer@mana.love</a>
 
 
 爱菜家、希望之神小飞鸟
