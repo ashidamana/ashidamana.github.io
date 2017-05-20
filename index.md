@@ -25,7 +25,7 @@ layout: post
 
 2017-05-20，之前的Wordpress博客用的虚拟主机快到期了，不打算续费了。而且那个Wordpress博客被黑客攻击得厉害，准备弃用。接着又开始研究[Hexo](https://hexo.io/) 静态博客，但一直没找到好看的模板，昨天又试着找[Jekyll](http://jekyllrb.com/) 的模板，最终选定当前这个模板，挺喜欢的。
 
-2017-05-20，开启新博客，域名用的是[https://blog.mana.love](https://blog.mana.love) , [http://mmqy.vip](http://mmqy.vip), [http://love.mana.love](http://love.mana.love) 等域名均转发到这里。
+2017-05-20，开启新博客，域名用的是[https://blog.mana.love](https://blog.mana.love) ,之前用过的 [http://mmqy.vip](http://mmqy.vip), [http://love.mana.love](http://love.mana.love) 等域名均转发到这里。
 
 ## 一些总结
 
