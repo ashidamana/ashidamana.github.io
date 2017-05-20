@@ -69,7 +69,7 @@ killall Dock
 
 ### 设置iterm中option为alt(meta)键
 
-![option-to-meta](https://7u2ho6.com1.z0.glb.clouddn.com/resource-set-meta-to-alt.png)
+![option-to-meta](https://www.tuchuang001.com/images/2017/05/20/resource-set-meta-to-alt.png)
 
 ### 删除dropbox冲突文件
 

@@ -35,7 +35,7 @@ Move to core for H
 
 ### Ceilometer架构介绍
 
-![Ceilometer架构介绍](https://7u2ho6.com1.z0.glb.clouddn.com/tech-ceilometer-architecture.png)
+![Ceilometer架构介绍](https://www.tuchuang001.com/images/2017/05/20/tech-ceilometer-architecture.png)
 
 ### Ceilometer项目主要由Agent，Collector，DataStore，API和消息队列组成。
 
