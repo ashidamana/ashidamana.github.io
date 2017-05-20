@@ -35,6 +35,12 @@ layout: post
 
 本博客的技术笔记、实用工具、编程资源分类的文章全部来自[http://yansu.org/](http://yansu.org/) ,因为觉得写得都挺好、挺实用的，丢掉实在可惜，就直接保留了，没事的时候多看看，可以学到很多知识。
 
+## 联系我们
+
+新浪微博：[飞鸟鸣鸾](http://weibo.com/flyerangel)
+个人邮箱：[flyer@mana.love](flyer@mana.love)
+
+
 爱菜家、希望之神小飞鸟
 
 2017-05-20
