@@ -35,7 +35,7 @@ layout: post
 主题基于 [3-Jekyll](https://github.com/P233/3-Jekyll)修改而成，
 SSL证书由[CloudFlare](https://www.cloudflare.com/)免费提供，
 图片存储由[图床001](https://www.tuchuang001.com/)免费提供，
-评论服务由[来必力（livere）](https://livere.com/)免费提供，
+评论服务由~~[来必力（livere）](https://livere.com/)~~[网易云跟贴](https://gentie.163.com/)免费提供，
 统计服务由[百度统计](http://tongji.baidu.com)免费提供。
 
 ## 一些声明
