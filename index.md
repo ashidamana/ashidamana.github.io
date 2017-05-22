@@ -46,7 +46,7 @@ SSL证书由[CloudFlare](https://www.cloudflare.com/)免费提供，
 
 新浪微博：[飞鸟鸣鸾](http://weibo.com/flyerangel)
 
-个人邮箱：<a href="mailto:flyer@mana.love">flyer@mana.love</a>
+个人邮箱：<flyer@mana.love>
 
 
 爱菜家、希望之神小飞鸟
