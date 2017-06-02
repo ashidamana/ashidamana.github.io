@@ -74,7 +74,7 @@ $(function() {
     // your scripts
 //    自己的代码写在这里
     Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-    console.log('loaded');
+    console.log('loaded2');
   };
   afterPjax();
 
