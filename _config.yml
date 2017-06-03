@@ -6,7 +6,8 @@
 title:       "Streamelody's Blog"
 description: '小河流我愿待在你身旁 听你唱永恒的歌声'
 url:         # the base hostname & protocol for your site
-
+avatar: https://www.tuchuang001.com/images/2017/05/20/site-avatar.png
+favicon: https://www.tuchuang001.com/images/2017/05/20/favicon.png
 #
 ###################################
 # Jekyll configuration
