@@ -1,0 +1,49 @@
+# Site settings
+title: 喵喵清吟 | 爱菜家希望之神小飞鸟官方博客
+email: flyer@mana.love
+description: > # 这里是爱菜家希望之神小飞鸟官方博客
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: https://blog.mana.love # the base hostname & protocol for your site
+rss_url: /pages/feed.xml
+author: 小飞鸟
+
+# Sidebar filter
+# Choose 'tag' or 'category' as filter in sidebar.
+filter: 'category'
+recent_num: 20
+
+# Social account
+#twitter: masonsuyan1
+weibo: flyerangel
+github: ashidamana
+#instagram: suyan08301
+#linkedin: suyan08301
+
+# avatar and Favicon
+avatar: https://www.tuchuang001.com/images/2017/05/20/site-avatar.png
+favicon: https://www.tuchuang001.com/images/2017/05/20/favicon.png
+
+# disqus config
+#disqus:
+ # shortname: suyan-zh
+
+# google analytics config
+#ga:
+ # id: UA-54767140-1
+  #url: mmqy.vip
+
+# Build settings
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+highlighter: rouge
+mathjax: disabled
+sass:
+  style: compressed
+
+# Jekyll Plugin
+# https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
