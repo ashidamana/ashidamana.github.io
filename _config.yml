@@ -14,7 +14,7 @@ url:         # the base hostname & protocol for your site
 #
 timezone:          Asia/Shanghai
 markdown:          kramdown
-highlighter:       pygments
+highlighter:       rouge
 excerpt_separator: <!--more-->
 permalink:         /:year/:month/:title/
 timezone:          Asia/Shanghai
