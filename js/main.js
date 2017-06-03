@@ -6,5 +6,6 @@ $(document).ready(function() {
         target: "cloud-tie-wrapper"
     };
     var yunManualLoad = true;
+    console.log(666);
     Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
 });
