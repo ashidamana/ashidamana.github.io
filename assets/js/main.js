@@ -9,13 +9,13 @@ $(function() {
       menu    = $('#menu'),
       posttoc = $('#post-toc-menu'),
       x1, y1;
-    var cloudTieConfig = {
-        url: document.location.href, 
-        sourceId: "",
-        productKey: "86a52c1e48c0450385a25e49e7c984cd",
-        target: "cloud-tie-wrapper"
-    };
-    var yunManualLoad = true;
+//    var cloudTieConfig = {
+//        url: document.location.href, 
+//        sourceId: "",
+//        productKey: "86a52c1e48c0450385a25e49e7c984cd",
+//        target: "cloud-tie-wrapper"
+//    };
+//    var yunManualLoad = true;
   // run this function after pjax load.
   var afterPjax = function() {
     // open links in new tab.
@@ -74,7 +74,7 @@ $(function() {
     // your scripts
 //    自己的代码写在这里
     Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-    console.log('loaded2');
+    console.log('loaded3');
   };
   afterPjax();
 
