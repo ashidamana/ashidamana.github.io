@@ -3,9 +3,9 @@
 # Site wide configuration
 ####################################
 #
-title:       "Streamelody's Blog"
-description: '小河流我愿待在你身旁 听你唱永恒的歌声'
-url:         # the base hostname & protocol for your site
+title: 喵喵清吟 | 爱菜家希望之神小飞鸟官方博客
+description: '爱菜家、希望之神小飞鸟官方博客'
+url: https://blog.mana.love
 avatar: https://www.tuchuang001.com/images/2017/05/20/site-avatar.png
 favicon: https://www.tuchuang001.com/images/2017/05/20/favicon.png
 #
@@ -17,7 +17,7 @@ timezone:          Asia/Shanghai
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
-permalink:         /:year/:month/:title/
+permalink:         /:year/:month/:day/:title.html
 timezone:          Asia/Shanghai
 
 kramdown:
@@ -38,37 +38,37 @@ paginate_path: "page/:num/"
 ####################################
 #
 owner:
-  name: Streamelody
-  avatar: avatar.jpg
-  job: "小溪之歌"
-  bio: "小河流我愿待在你身旁 听你唱永恒的歌声"
+  name: 小飞鸟
+  #avatar: avatar.jpg
+  job: "爱菜家、希望之神"
+  bio: "爱菜爱菜爱菜"
 
-  github: streamelody #username
-  weibo: bailuer #username
-  facebook: streamelody #username
-  email: shuangyeying@gmail.com
-  duoshuo: streamelody #多说域名
+  github: ashidamana #username
+  weibo: flyerangel #username
+#  facebook: streamelody #username
+  email: flyer@mana.love
+#  duoshuo: streamelody #多说域名
 
-  google:
-    plus: #username
-    analytics: UA-62251910-1
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
-  disqus-shortname: #username
-  twitter:  #username
-  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
-  xing: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  flickr: #username
-  codepen: #username
+#  google:
+#    plus: #username
+#    analytics: UA-62251910-1
+#    verify:
+#    ad-client:
+#    ad-slot:
+#  bing-verify:
+#  disqus-shortname: #username
+#  twitter:  #username
+#  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+#  linkedin: #username
+#  xing: #username
+#  instagram: #username
+#  lastfm: #username
+#  tumblr: #username
+#  pinterest: #username
+#  foursquare: #username
+#  steam: #username
+#  dribbble: #username
+#  youtube: #username
+#  soundcloud: #username
+#  flickr: #username
+#  codepen: #username
