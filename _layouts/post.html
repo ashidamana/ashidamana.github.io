@@ -1,41 +1,75 @@
 ---
 layout: default
 ---
-<article class="post container">
-  <div class="post-meta">
-    <span class="post-meta-span date">{{ page.date | date:"%Y %B %d" }}</span>
-    {% if page.tags.size > 0 %}
-    <span class="post-meta-span tag">{{ page.tags | join: ', ' }}</span>
-    {% endif %}
-  </div>
+<!-- 判断是否插入首页图片 -->
+{% if page.image.feature %}
+<div class="post-image-feature">
+    <img class="feature-image" src=
+        {% if page.image.feature contains 'https' or page.image.feature contains 'http' %}
+        "{{ page.image.feature }}"
+        {% else %}
+        "{{ site.url }}/img/{{ page.image.feature }}"
+        {% endif %}
+        alt="{{ page.title }} feature image">
+        
+        {% if page.image.credit %}
+        <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+        {% endif %}
+</div>
+{% endif %}
 
-  <h1 class="post-title">{{ page.title }}</h1>
-  {{ content }}
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-    <script>
-    var cloudTieConfig = {
-      url: document.location.href, 
-      sourceId: "",
-      productKey: "86a52c1e48c0450385a25e49e7c984cd",
-      target: "cloud-tie-wrapper"
-    };
-    var yunManualLoad = true;
-//    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-   </script>
-</article>
-
-<div class="post-share">
-  <div class="container">
-    <a href="https://twitter.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}&text={{ page.title }}" target="_blank" class="post-share-icon twitter"></a>
-    <a href="https://www.evernote.com/clip.action?url={{ page.url | prepend: site.baseurl | prepend: site.url }}&title={{ page.title }}" target="_blank" class="post-share-icon evernote"></a>
-    <a href="http://service.weibo.com/share/share.php?url={{ page.url | prepend: site.baseurl | prepend: site.url }}&title={{ page.title }}" target="_blank" class="post-share-icon weibo"></a>
-  </div>
+<!-- 添加日期和阅读 -->
+<div id="post">
+    <header class="post-header">
+        <span class="post-meta">
+            <span class="post-date">
+                {{ page.date | date: "%Y-%m-%d" | upcase }}
+            </span>
+            •
+            {% include read_time.html %}
+        </span>
+        <h1 title="{{ page.title }}">{{ page.title }}</h1>
+    </header>
+    
+    <!-- 引入google code pretiffy高亮样式 -->
+    <link href="/js/google-code-prettify/themes/github-v2.css" rel="stylesheet" type="text/css" />
+    
+    <!-- 添加博文 -->
+    <article class="post-content">
+        {{ content }}
+    </article>
 </div>
 
-{% if site.disqus_shortname %}
-<div class="comment container">
-  <div id="disqus_thread">
-    <a href=""></a>
-  </div>
-</div>
+<!-- 引入google code pretiffy -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $("pre").addClass("prettyprint linenums");
+      prettyPrint();
+      });
+    </script>
+
+<!-- 添加博文分割线 -->
+<hr class="post-list__divider" />
+{% include new-old.html %}
+
+<!-- 多说评论框 start -->
+{% if page.comments == true %}
+<div class="ds-thread" data-thread-key="{{ site.url }}" data-title="{{ page.title }}" data-url="{{ site.url }}"></div>
+<!-- 多说评论框 end -->
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"{{ site.owner.duoshuo }}"};
+    (function() {
+     var ds = document.createElement('script');
+     ds.type = 'text/javascript';ds.async = true;
+     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+     ds.charset = 'UTF-8';
+     (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+     })();
+    </script>
+<!-- 多说公共JS代码 end -->
 {% endif %}

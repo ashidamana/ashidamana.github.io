@@ -1,38 +1,73 @@
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+#
+###################################
+# Site wide configuration
+####################################
+#
+title:       "Streamelody's Blog"
+description: '小河流我愿待在你身旁 听你唱永恒的歌声'
+url:         # the base hostname & protocol for your site
 
+#
+###################################
+# Jekyll configuration
+####################################
+#
+timezone:          Asia/Shanghai
+markdown:          kramdown
+highlighter:       pygments
+excerpt_separator: <!--more-->
+permalink:         /:year/:month/:title/
+timezone:          Asia/Shanghai
 
-# Sidebar filter
-# Choose 'tag' or 'category' as filter in sidebar.
-filter: 'tag'
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  enable_coderay: false
 
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page/:num/"
 
-# Social account
-# twitter:  username
-# weibo:    ID
-# github:   username
-# codepen:  username
-# dribbble: username
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: Streamelody
+  avatar: avatar.jpg
+  job: "小溪之歌"
+  bio: "小河流我愿待在你身旁 听你唱永恒的歌声"
 
+  github: streamelody #username
+  weibo: bailuer #username
+  facebook: streamelody #username
+  email: shuangyeying@gmail.com
+  duoshuo: streamelody #多说域名
 
-# Comment
-# disqus_shortname: discussion_shortname
-
-
-# Google Analytics
-# google_analytics: tracking_ID
-
-
-# Build settings
-markdown: kramdown
-sass:
-  style: compressed
-gems:
-  - jekyll-sitemap
+  google:
+    plus: #username
+    analytics: UA-62251910-1
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  disqus-shortname: #username
+  twitter:  #username
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: #username
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  flickr: #username
+  codepen: #username
