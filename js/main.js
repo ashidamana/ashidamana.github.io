@@ -6,7 +6,7 @@ $(document).ready(function() {
     if ($(".avatar_a>img").length == 0) {
         avatar.empty().append(str);
     } else {
-        console.log(223333);
+        console.log(666);
         $(".avatar_a>img").attr('src', base_img_url + parseInt(19 * Math.random()) + '.png');
     }
     console.log(str);
