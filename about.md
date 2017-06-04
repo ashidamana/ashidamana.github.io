@@ -29,19 +29,29 @@ layout: post
 
 ## 一些总结
 
-本博客采用[Markdown](http://blog.leanote.com/post/freewalk/Markdown-语法手册)书写，
-通过 [Jekyll](http://jekyllrb.com/)生成，
-部署在 [Github](https://pages.github.com)上，
-主题基于 ~~[3-Jekyll](https://github.com/P233/3-Jekyll)~~[Leonids](https://github.com/renyuanz/leonids/)修改而成，
-SSL证书由[CloudFlare](https://www.cloudflare.com/)免费提供，
-图片存储由[图床001](https://www.tuchuang001.com/)免费提供，
-评论服务由~~[来必力（livere）](https://livere.com/)~~[网易云跟贴](https://gentie.163.com/)免费提供，
-分享服务由[百度分享](http://share.baidu.com)免费提供。
+本博客所用服务:  
+
+采用[Markdown](http://blog.leanote.com/post/freewalk/Markdown-语法手册)书写，  
+
+通过[Jekyll](http://jekyllrb.com/)生成，  
+
+部署在[Github](https://pages.github.com)上，  
+
+主题基于[Leonids](https://github.com/renyuanz/leonids/)修改而成，  
+
+SSL证书由[CloudFlare](https://www.cloudflare.com/)免费提供，  
+
+图片存储由[图床001](https://www.tuchuang001.com/)免费提供，  
+
+评论服务由[网易云跟贴](https://gentie.163.com/)免费提供，  
+
+分享服务由[百度分享](http://share.baidu.com)免费提供，  
+
 统计服务由[百度统计](http://tongji.baidu.com)免费提供。
 
 ## 一些声明
 
-本博客的技术笔记、实用工具、编程资源分类的文章全部来自[http://yansu.org](http://yansu.org/) ,因为觉得写得都挺好、挺实用的，丢掉实在可惜，就直接保留了，没事的时候多看看，可以学到很多知识。
+本博客的技术笔记、实用工具、编程资源分类的，2017-05-20（不包括这一天）之前文章全部来自[http://yansu.org](http://yansu.org/) ,因为觉得写得都挺好、挺实用的，丢掉实在可惜，就直接保留了，没事的时候多看看，可以学到很多知识。
 
 ## 联系我们
 
