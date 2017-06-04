@@ -41,7 +41,7 @@ paginate_path: "page/:num/"
 #
 owner:
   name: 小飞鸟
-  avatar: avatar.jpg
+  avatar: avatar_13.png
   job: "爱菜家、希望之神"
   bio: "爱菜爱菜爱菜"
 
