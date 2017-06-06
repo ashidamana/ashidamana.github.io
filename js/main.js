@@ -8,8 +8,13 @@ $(document).ready(function() {
     } else {
         $(".avatar_a>img").attr('src', base_img_url + parseInt(19 * Math.random()) + '.png');
     }
-    
-    var domain = window.location.host;
-    console.log(domain);
-    
+//    非本站的链接全部新窗口打开
+    var reg = /^https:\/\/blog\.mana\.love/;
+    var a = document.getElementsByTagName("a");
+    for (var i = 0; i < a.length; i++) {
+        if (!reg.test(a[i].href)) {
+            a[i].target = "_blank";
+        }
+    }
+      
 });
