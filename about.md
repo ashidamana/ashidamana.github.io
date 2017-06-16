@@ -43,6 +43,8 @@ SSL证书由[CloudFlare](https://www.cloudflare.com/)免费提供，
 
 图片存储由[图床001](https://www.tuchuang001.com/)免费提供，  
 
+图片存储由[SM.MS](https://sm.ms/)免费提供，  
+
 评论服务由[网易云跟贴](https://gentie.163.com/)免费提供，  
 
 分享服务由[百度分享](http://share.baidu.com)免费提供，  
