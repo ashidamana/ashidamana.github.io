@@ -7,10 +7,10 @@ description: 简单好用的SMMS图床伴侣,sm.ms站点伴侣，支持选择/�
 ---
 
 最近博客改用Jekyll了，然后站点也启用了https,这样图床是个大问题。原来是使用七牛云的，免费的只支持http，而
-收费的要有ICP备案的才能用上https,显然我的域名是不能备案的。
-于是寻找其他的，找到一个[图床001](https://www.tuchuang001.com/)，用起来也还算可以，但是在手机上打开（QQ/UC浏览器）就会弹出证书不信任。
-于是需找其他的，找到一个微博新浪微博图床，它还有一个扩展，[WeiboPicBed](https://github.com/Suxiaogang/WeiboPicBed),试了下，似乎不能用了，估计是新浪和谐了。
-后来看到[https://sm.ms](https://sm.ms),这个倒是挺好用的，搜索了一下，有好几年了，稳定，速度快。而且有API，
+收费的要有ICP备案的才能用上https,显然我的域名是不能备案的。  
+于是寻找其他的，找到一个[图床001](https://www.tuchuang001.com/)，用起来也还算可以，但是在手机上打开（QQ/UC浏览器）就会弹出证书不信任。  
+于是需找其他的，找到一个微博新浪微博图床，它还有一个扩展，[WeiboPicBed](https://github.com/Suxiaogang/WeiboPicBed),试了下，似乎不能用了，估计是新浪和谐了。  
+后来看到[https://sm.ms](https://sm.ms),这个倒是挺好用的，搜索了一下，有好几年了，稳定，速度快,而且有API。  
 于是我就在WeiboPicBed的就出上写了个SMMS图床伴侣（SMMSPicBed），应该还挺好用的。  
 
 下面对这款扩展做下具体介绍：  
