@@ -49,7 +49,9 @@ SSL证书由[CloudFlare](https://www.cloudflare.com/)免费提供，
 
 分享服务由[百度分享](http://share.baidu.com)免费提供，  
 
-统计服务由[百度统计](http://tongji.baidu.com)免费提供。
+整站统计服务由[百度统计](http://tongji.baidu.com)免费提供。  
+
+文章浏览量统计服务为[Hit Kounter v0.2](http://jerryzou.com/posts/introduction-to-hit-kounter-lc/)。
 
 ## 一些声明
 
