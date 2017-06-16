@@ -22,7 +22,7 @@ permalink: /tags/
     <h5 class="tag-group-title" id="{{ tag_name | slugize }}">{{ tag_name }}</h5>
     {% for post in site.tags[tag_name] %}
     <article class="tag-item">
-      <a class="tag-item-title" href="{{ site.url }}{{ post.url }}">{{post.title}}</a> • 阅读(<span data-hk-page="{{ post.url | prepend: site.url }}"> - </span>次)
+      <a class="tag-item-title" href="{{ site.url }}{{ post.url }}">{{post.title}}</a> • <span style="color: #5FB878;">阅读(<span data-hk-page="{{ post.url | prepend: site.url }}"> - </span>次)</span>
     </article>
     {% endfor %}
   </div>
