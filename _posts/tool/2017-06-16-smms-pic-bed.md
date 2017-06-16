@@ -16,8 +16,9 @@ description: 简单好用的SMMS图床伴侣,sm.ms站点伴侣，支持选择/�
 下面对这款扩展做下具体介绍：  
 
 ## 📑 一些声明
-本扩展是为了对[https://sm.ms/](https://sm.ms/)的功能做封装而开发的。
-主体代码基于[WeiboPicBed](https://github.com/Suxiaogang/WeiboPicBed)
+本扩展是为了对[https://sm.ms/](https://sm.ms/)的功能做封装而开发的,主体代码基于[WeiboPicBed](https://github.com/Suxiaogang/WeiboPicBed)。  
+使用时请遵守[https://sm.ms/](https://sm.ms/)的相关规则。
+
 
 ## 📑 Features
 - 支持点选/拖拽2种方式上传图片至https://sm.ms/
