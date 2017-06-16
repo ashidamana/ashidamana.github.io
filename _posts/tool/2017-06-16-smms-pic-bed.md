@@ -9,24 +9,24 @@ description: 简单好用的SMMS图床伴侣,sm.ms站点伴侣，支持选择/�
 最近博客改用Jekyll了，然后站点也启用了https,这样图床是个大问题。原来是使用七牛云的，免费的只支持http，而
 收费的要有ICP备案的才能用上https,显然我的域名是不能备案的。  
 于是寻找其他的，找到一个[图床001](https://www.tuchuang001.com/)，用起来也还算可以，但是在手机上打开（QQ/UC浏览器）就会弹出证书不信任。  
-于是需找其他的，找到一个微博新浪微博图床，它还有一个扩展，[WeiboPicBed](https://github.com/Suxiaogang/WeiboPicBed),试了下，似乎不能用了，估计是新浪和谐了。  
+于是寻找其他的，找到一个新浪微博图床，它还有一个扩展，[WeiboPicBed](https://github.com/Suxiaogang/WeiboPicBed),试了下，似乎不能用了，估计是被新浪和谐了。  
 后来看到[https://sm.ms](https://sm.ms),这个倒是挺好用的，搜索了一下，有好几年了，稳定，速度快,而且有API。  
 于是我就在WeiboPicBed的就出上写了个SMMS图床伴侣（SMMSPicBed），应该还挺好用的。  
 
 下面对这款扩展做下具体介绍：  
 
-## 一些声明
+## 📑 一些声明
 本扩展是为了对[https://sm.ms/](https://sm.ms/)的功能做封装而开发的。
 主体代码基于[WeiboPicBed](https://github.com/Suxiaogang/WeiboPicBed)
 
-## Features
+## 📑 Features
 - 支持点选/拖拽2种方式上传图片至https://sm.ms/
 - 可生成图片链接,HTML,UBB和Markdown四种格式
 - 支持返回https安全协议的图片地址
 - 支持自定义Chrome菜单栏图标
 - 上传历史浏览和删除（注：历史记录是依托于浏览器的）
 
-## Screenshots
+## 📑 Screenshots
 ![上传页面](https://ooo.0o0.ooo/2017/06/16/59434b42c173e.jpg)
 
 ![上传后的页面，可复制链接](https://ooo.0o0.ooo/2017/06/16/59434b45bf527.jpg)
@@ -40,9 +40,9 @@ description: 简单好用的SMMS图床伴侣,sm.ms站点伴侣，支持选择/�
 ## Contributors
 [Flyer](https://github.com/ashidamana/) 
 
-## 最常被问到的问题
+## 📑 最常被问到的问题
 
-## 参考
+## 📑 参考
 [WeiboPicBed](https://github.com/Suxiaogang/WeiboPicBed)
 
 ## 📑 更新日志
