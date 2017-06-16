@@ -24,10 +24,10 @@ layout: default
         <span class="post-meta">
             <span class="post-date">
                 {{ page.date | date: "%Y-%m-%d" | upcase }}
-            </span>
-            浏览量：<span data-hk-page="current"> - </span>次<span class="pause"> | </span>
+            </span> 
             •
             {% include read_time.html %}
+            浏览量：<span data-hk-page="current"> - </span>次<span class="pause"> | </span>
         </span>
         <h1 title="{{ page.title }}">{{ page.title }}</h1>
     </header>
