@@ -11,7 +11,7 @@ description: 简单好用的SMMS图床伴侣,sm.ms站点伴侣，支持选择/�
 于是寻找其他的，找到一个[图床001](https://www.tuchuang001.com/)，用起来也还算可以，但是在手机上打开（QQ/UC浏览器）就会弹出证书不信任。  
 于是寻找其他的，找到一个新浪微博图床，它还有一个扩展，[WeiboPicBed](https://github.com/Suxiaogang/WeiboPicBed),试了下，似乎不能用了，估计是被新浪和谐了。  
 后来看到[https://sm.ms](https://sm.ms),这个倒是挺好用的，搜索了一下，有好几年了，稳定，速度快，而且有API。  
-于是我就在WeiboPicBed的就出上写了个SMMS图床伴侣（SMMSPicBed），应该还挺好用的。  
+于是我就在WeiboPicBed的基础上写了个SMMS图床伴侣（SMMSPicBed），应该还挺好用的。  
 
 下面对这款扩展做下具体介绍：  
 
