@@ -10,6 +10,7 @@ permalink: /links/
 
 - [jobbykids官网](http://www.jobbykids.jp/product/芦田-愛菜/)  
 - [日本菜籽うーたん的博客](http://profile.ameba.jp/cdkmc575/)  
+- [芦田爱菜-百度百科](http://baike.baidu.com/link?url=Wa4TYZwoeVTIoXM2NonpiOpbjsaHZWk8410291lrnc2bU-IKLK9oHoR32Z_B8LgwmkjGS39LjkK5n8PV3YSmGfN2o5x4MdR6VyHvxMAwA3TquSrDd4Z1ypOsrj3jKBEV)  
 - [芦田愛菜展覽館](http://ashidamana.info/)  
 - [芦田愛菜展览馆官博](http://weibo.com/laomingxiang)  
 - [芦田愛菜中文首站](http://weibo.com/mana0623)  
