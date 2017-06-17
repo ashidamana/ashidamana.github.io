@@ -108,7 +108,7 @@ permalink: /about/
 - 2015-04-25,爱菜小部官方网站,<http://www.manachannbu.com/>
 - 2015-04-25,爱菜小部官方论坛,<http://bbs.manachannbu.com/>
 - 2015-04-25,爱菜小部官方游戏站,<http://game.manachannbu.com/>
-- 2015-04-25,爱菜小部官方QQ群,<//shang.qq.com/wpa/qunwpa?idkey=323eaef305c88a7f479db2636e4ba0b2c7c625219f471ccc12fe2fb6be25a4a1>
+- 2015-04-25,爱菜小部官方QQ群,欢迎芦田爱菜粉丝加入,<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=57e1be3b343eba93824524d8573f5e0237090c7c81566a22c73423e3738ec9a5"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="爱菜小部" title="爱菜小部"></a>
 - 2015-07-09,「爱菜小部 国语高清」恐龙战队 第一季,<http://tieba.baidu.com/p/3881061069>
 - 2015-08-30,「爱菜小部 国语高清」恐龙战队 第二季,<http://tieba.baidu.com/p/4010137751>
 - 2015-09-17,「爱菜小部 国语高清」恐龙战队 第三季,<http://tieba.baidu.com/p/4048265714>
@@ -122,7 +122,7 @@ permalink: /about/
 - 2016-05-25,喵喵清吟 - 爱生活、爱分享,<http://www.mmqy.vip/>
 - 2016-05-27,喵喵贴吧云签到,<http://tieba.pe.hu/>
 - 2016-06-23,喵喵清吟 - 个人主页,<http://www.flyerangel.top/>
-- 2016-10-31,爱菜小部国语恐龙战队QQ群,<//shang.qq.com/wpa/qunwpa?idkey=b36f320cfc07905df5b0ace8abf80a11724f7430f6880e9ede150d4b8a0284b4>
+- 2016-10-31,爱菜小部国语恐龙战队QQ群,欢迎恐龙战队粉丝加入,<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=7a2a3668b9ad273137c73b93c633da03e9c83f3ceaaecb25c249a466a037f3ab"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="爱菜小部国语恐龙战队" title="爱菜小部国语恐龙战队"></a>
 - 2017-05-20,爱菜家希望之神小飞鸟官方博客,<https://blog.mana.love/>
 - 2017-06-16,开发Chrome扩展，SMMS图床伴侣,<https://blog.mana.love/2017/06/16/smms-pic-bed.html>
 
