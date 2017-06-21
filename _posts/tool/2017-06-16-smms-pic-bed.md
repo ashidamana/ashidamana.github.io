@@ -13,6 +13,10 @@ description: 简单好用的SMMS图床伴侣,sm.ms站点伴侣，支持选择/�
 后来看到[https://sm.ms](https://sm.ms),这个倒是挺好用的，搜索了一下，有好几年了，稳定，速度快，而且有API。  
 于是我就在WeiboPicBed的基础上写了个SMMS图床伴侣（SMMSPicBed），应该还挺好用的。  
 
+2017-06-21
+今天看了一下，SMMS图床伴侣扩展终于在360应用市场审核通过。
+直达链接，[快戳我](https://ext.se.360.cn/webstore/detail/gpfmdejmklijnfobjnjaeglkggocnlnn)  
+
 下面对这款扩展做下具体介绍：  
 
 ## 📑 一些声明
@@ -53,8 +57,12 @@ Weixin
 
 ## 📑 更新日志
 ```
+2017-06-21 v1.0.0  
+SMMS图床伴侣扩展终于在360应用市场审核通过。  
+直达链接，[快戳我](https://ext.se.360.cn/webstore/detail/gpfmdejmklijnfobjnjaeglkggocnlnn)  
+
 2017-06-16 v1.0.0  
-打包发布
+打包发布到360应用市场
 
 2017-06-16 v0.0.2
 支持点选/拖拽2种方式上传图片至https://sm.ms/
