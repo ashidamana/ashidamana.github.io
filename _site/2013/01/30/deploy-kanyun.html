@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>在OpenStack中部署kanyun</title>
+  <meta name="description" content="kanyun的部署  1 全部节点配置          1.1 安装zmq      1.2 安装kanyun        2 控制节点配置          2.1 安装配置cassandra      2.2 启动和配置kanyun        3 计算节点配置          3.1 启动和配置ka...">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://blog.mana.love/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.mana.love/css/main.css">
+
+  <link rel="canonical" href="https://blog.mana.love/2013/01/30/deploy-kanyun.html">
+  <link rel="alternate" type="application/rss+xml" title="喵喵清吟 | 爱菜家希望之神小飞鸟官方博客" href="https://blog.mana.love /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <!--<link rel="shortcut icon" href="https://blog.mana.love/favicon.ico">-->
+   <!--32x32--> 
+  <link rel="shortcut icon" href="https://blog.mana.love/img/favicon.png">
+  <!--<link rel="shortcut icon" href="https://www.tuchuang001.com/images/2017/05/20/favicon.png">-->
+    <!--百度统计-->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9e7b394e0b9f2ed7bbe4edf5607e7dad";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+         
+
+<div class="cover-card table-cell table-middle">
+  <!---->
+  <a href="https://blog.mana.love/" class="avatar_a"><img src="" alt="" class="avatar" style="outline: 0;border: 0;"/></a>
+  <!--<img src="https://www.tuchuang001.com/images/2017/05/20/site-avatar.png" alt="" class="avatar">-->
+  <!---->
+  <a href="https://blog.mana.love/" class="author_name">小飞鸟</a>
+  <span class="author_job">爱菜家、希望之神</span>
+  <span class="author_bio mbm">爱菜、爱菜、爱菜</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://blog.mana.love/">首页</a>
+        <span>/</span>
+      </li>
+       
+      <li class="nav-item">
+        <a href="https://blog.mana.love/about/">关于</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/archive/">归档</a>
+        
+          <span>/</span>
+        
+      </li>
+            
+      <li class="nav-item">
+        <a href="https://blog.mana.love/categories/">分类</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/links/">友链</a>
+        
+          <span>/</span>
+        
+      </li>
+          
+      <li class="nav-item">
+        <a href="https://blog.mana.love/tags/">标签</a>
+        
+          <span>/</span>
+        
+      </li>
+                             
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="http://github.com/ashidamana" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    <li><a href="http://www.weibo.com/flyerangel" class="social-link-item" target="_blank"><i class="fa fa-fw fa-weibo"></i></a></li>
+    
+    <li><a href="mailto:flyer@mana.love" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <!-- 判断是否插入首页图片 -->
+
+
+<!-- 添加日期和阅读 -->
+<div id="post">
+    <header class="post-header">
+        <span class="post-meta">
+            <span class="post-date">
+                2013-01-30
+            </span> 
+            •
+            <span class="read-time" title="Estimated read time">
+  
+  
+    2 mins read
+  
+</span>
+
+            •
+            阅读(<span data-hk-page="current"> - </span>次)<span class="pause"></span>
+        </span>
+        <h1 title="在OpenStack中部署kanyun">在OpenStack中部署kanyun</h1>
+    </header>
+    
+    <!-- 引入google code pretiffy高亮样式 -->
+    <link href="/js/google-code-prettify/themes/github-v2.css" rel="stylesheet" type="text/css" />
+    
+    <!-- 添加博文 -->
+    <article class="post-content">
+        <h1>kanyun的部署</h1>
+
+<ul>
+  <li><a href="#all">1 全部节点配置</a>
+    <ul>
+      <li><a href="#all-zmq">1.1 安装zmq</a></li>
+      <li><a href="#all-kanyun">1.2 安装kanyun</a></li>
+    </ul>
+  </li>
+  <li><a href="#controller">2 控制节点配置</a>
+    <ul>
+      <li><a href="#controller-cassandra">2.1 安装配置cassandra</a></li>
+      <li><a href="#controller-kanyun">2.2 启动和配置kanyun</a></li>
+    </ul>
+  </li>
+  <li><a href="#compute">3 计算节点配置</a>
+    <ul>
+      <li><a href="#compute-kanyun">3.1 启动和配置kanyun</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="all">1 全部节点</h2>
+<h3 id="all-zmq">1.1 安装zmq</h3>
+<h4>安装zerozmq(2.2.0)</h4>
+<ol>
+  <li>yum install libtool autoconf automake</li>
+  <li>yum install uuid-devel</li>
+  <li>yum install libuuid-devel</li>
+  <li>wget http://download.zeromq.org/zeromq-2.2.0.tar.gz</li>
+  <li>tar zxvf zeromq-2.2.0.tar.gz &amp; cd zeromq-2.2.0 &amp; ./configure &amp; make install</li>
+  <li>ldconfig</li>
+</ol>
+
+<h4>安装pyzmq</h4>
+<ol>
+  <li>easy_install “pyzmq==2.2.0”</li>
+  <li>如果出现缺少libzmq.so.1的情况，可能是链接库没有正确配置。</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>sudo /sbin/ldconfig -v</td>
+          <td>grep libzmq查看是否有所需链接</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>如果没有libzmq.so.1 -&gt; libzmq.so.1.0.1，则修改/etc/ld.so.conf，在末尾增加/usr/local/lib，然后ldconfig -v</td>
+          <td>grep libzmq即可</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>如果出现缺少Python.h，则使用yum install python-devel来安装</li>
+</ol>
+
+<h3 id="all-kanyun">1.2 安装kanyun</h3>
+<h4>下载代码</h4>
+<p>kanyun原来的代码有bug，而且不能在python2.6环境下使用，下面是我改过的</p>
+
+<pre><code>cd /opt
+git clone https://github.com/suyan/kanyun.git
+</code></pre>
+
+<p>修改内容：</p>
+
+<ul>
+  <li>兼容python2.6和2.7（python2.6需要安装OrderedDict）</li>
+  <li>修改获取内存信息方式和计算cpu使用率方式</li>
+  <li>修复一些bug</li>
+</ul>
+
+<h4>安装</h4>
+<pre><code>python /opt/kanyun/setup.py install
+</code></pre>
+<h4>创建日志目录</h4>
+<pre><code>mkdir /var/log/kanyun
+</code></pre>
+<h4>安装OrderedDict(python2.6)</h4>
+<pre><code>easy_install OrderedDict
+</code></pre>
+
+<h2 id="controller">2 控制节点</h2>
+<h3 id="controller-cassandra">2.1 安装配置cassandra</h3>
+<h4>下载Cassandra</h4>
+<pre><code>cd /opt
+wget http://mirror.bit.edu.cn/apache/cassandra/0.8.10/apache-cassandra-0.8.10-bin.tar.gz
+</code></pre>
+<h4>解压</h4>
+<pre><code>tar zxvf apache-cassandra-0.8.10-bin.tar.gz
+</code></pre>
+<h4>运行</h4>
+<pre><code>/opt/apache-cassandra-0.8.10/bin/cassandra
+</code></pre>
+<h4>创建数据库</h4>
+<p>通过命令打开数据库</p>
+
+<pre><code>/opt/apache-cassandra-0.8.10/bin/cassandra-cli -h 127.0.0.1
+</code></pre>
+
+<p>并执行下面命令</p>
+
+<pre><code>CREATE keyspace DATA;
+USE DATA;
+
+CREATE COLUMN family vmnetwork WITH column_type='Super' AND comparator='AsciiType' AND subcomparator='IntegerType' AND default_validation_class='AsciiType';
+CREATE COLUMN family cpu WITH column_type='Super' AND comparator='AsciiType' AND subcomparator='IntegerType' AND default_validation_class='AsciiType';
+CREATE COLUMN family mem_max WITH column_type='Super' AND comparator='AsciiType' AND subcomparator='IntegerType' AND default_validation_class='AsciiType';
+CREATE COLUMN family mem_free WITH column_type='Super' AND comparator='AsciiType' AND subcomparator='IntegerType' AND default_validation_class='AsciiType';
+CREATE COLUMN family nic_incoming WITH column_type='Super' AND comparator='AsciiType' AND subcomparator='IntegerType' AND default_validation_class='AsciiType';
+CREATE COLUMN family nic_outgoing WITH column_type='Super' AND comparator='AsciiType' AND subcomparator='IntegerType' AND default_validation_class='AsciiType';
+CREATE COLUMN family blk_read WITH column_type='Super' AND comparator='AsciiType' AND subcomparator='IntegerType' AND default_validation_class='AsciiType';
+CREATE COLUMN family blk_write WITH column_type='Super' AND comparator='AsciiType' AND subcomparator='IntegerType' AND default_validation_class='AsciiType';
+
+assume vmnetwork KEYS AS ascii;
+assume cpu KEYS AS ascii;
+assume mem_max KEYS AS ascii;
+assume nic_incoming KEYS AS ascii;
+assume nic_outgoing KEYS AS ascii;
+assume blk_read KEYS AS ascii;
+assume blk_write KEYS AS ascii;
+assume mem_free KEYS AS ascii;       
+</code></pre>
+
+<h4>安装pycassa支持</h4>
+<pre><code>easy_install pycassa
+</code></pre>
+
+<p>如果出现<em>The required version of distribute is not available</em></p>
+
+<pre><code>easy_install -U distribute
+</code></pre>
+
+<h3 id="controller-kanyun">2.2 启动和配置kanyun</h3>
+<h4>配置/etc/kanyun.conf</h4>
+<ul>
+  <li>文件中host需要填写计算节点的ip</li>
+  <li>sql_connection填写nova.conf中connection值</li>
+</ul>
+
+<p>配置文件</p>
+
+<pre><code>[kanyun]
+log: /var/log/kanyun/kanyun.log
+[DEFAULT]
+sql_connection: mysql://nova:novamysqlpassword@controller/nova
+[server]
+host: 172.19.9.1 
+port: 5551
+db_host: 127.0.0.1
+log: /var/log/kanyun/kanyun-server.log
+[api]
+api_host: 172.19.9.1
+api_port: 5552
+db_host: 127.0.0.1
+log: /var/log/kanyun/kanyun-api.log
+[client]
+api_host: 172.19.9.1
+api_port: 5552
+log: /var/log/kanyun/kanyun-client.log 
+</code></pre>
+
+<h4>启动服务</h4>
+<pre><code>python /opt/kanyun/bin/kanyun-server &amp;
+python /opt/kanyun/bin/kanyun-api &amp;
+</code></pre>
+
+<h2 id="compute">3 计算节点</h2>
+<h3 id="compute-kanyun">3.1 启动和配置kanyun</h3>
+<h4>配置/etc/kanyun.conf</h4>
+<ul>
+  <li>文件中api_host需要填写计算节点的ip</li>
+  <li>sql_connection填写nova.conf中connection值</li>
+  <li>id根据节点编号自己设置</li>
+</ul>
+
+<p>配置文件</p>
+
+<pre><code>[kanyun]
+log: /var/log/kanyun/kanyun.log
+[DEFAULT]
+sql_connection: mysql://nova:novamysqlpassword@controller/nova
+[worker]
+id: worker1
+worker_timeout: 60
+dataserver_host: 172.19.9.1
+dataserver_port: 5551
+log: /var/log/kanyun/kanyun-worker.log
+[client]
+api_host: 172.19.9.1
+api_port: 5552
+log: /var/log/kanyun/kanyun-client.log
+</code></pre>
+
+<h4>启动服务</h4>
+<pre><code>python /opt/kanyun/bin/kanyun-worker &amp;
+</code></pre>
+
+
+        <!--百度分享-->
+     <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧">百度贴吧</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">豆瓣网</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a></div>
+     <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16},"image":{"viewList":["tsina","sqq","qzone","tieba","weixin","douban","renren"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","sqq","qzone","tieba","weixin","douban","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        <!--网易云跟贴-->
+        <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    </article>
+</div>
+
+<!-- 引入google code pretiffy -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $("pre").addClass("prettyprint linenums");
+      prettyPrint();
+      });
+    </script>
+
+<!-- 添加博文分割线 -->
+<hr class="post-list__divider" />
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2013/01/30/command-of-kanyun.html" data-toggle="tooltip" data-placement="top" title="kanyun的api-client命令">上一篇：  <span>kanyun的api-client命令</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2013/01/30/introduction-kanyun-server.html" data-toggle="tooltip" data-placement="top" title="kanyun server服务">下一篇：  <span>kanyun server服务</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+<!-- 多说评论框 start -->
+
+
+
+        <footer>
+  &copy; 2015-2017 喵喵清吟,blog.mana.love <br/>Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> Themes <a href="http://github.com/renyuanz/leonids/" target="_blank">Leonids</a>
+</footer>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://blog.mana.love/js/jquery-2.1.4.min.js"></script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script type="text/javascript" src="https://blog.mana.love/js/main.js"></script>
+<!--访问量统计工具 Hit Kounter v0.2-->
+<script src="https://blog.mana.love/js/av-mini-0.6.10.js"></script>
+<script src="https://blog.mana.love/js/hit-kounter-lc-0.2.0.js"></script>
+<script type="text/javascript">
+    var cloudTieConfig = {
+        url: document.location.href,
+        sourceId: "",
+        productKey: "86a52c1e48c0450385a25e49e7c984cd",
+        target: "cloud-tie-wrapper"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>sae下的python开发部署和一个简单例子</title>
+  <meta name="description" content="  以前开发php时，一直在使用sae的平台和服务，非常的喜欢。现在在整openstack，所以改用python做一些东西，为了不来回切换两个语言，我决定学习学习django，方便做一些自己的东西。关于sae下python的使用，sae官方文档写的非常全面，我这里只是记录自己的一个学习过程搭建本地开发环境安装dj...">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://blog.mana.love/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.mana.love/css/main.css">
+
+  <link rel="canonical" href="https://blog.mana.love/2012/12/31/python-development-of-sae.html">
+  <link rel="alternate" type="application/rss+xml" title="喵喵清吟 | 爱菜家希望之神小飞鸟官方博客" href="https://blog.mana.love /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <!--<link rel="shortcut icon" href="https://blog.mana.love/favicon.ico">-->
+   <!--32x32--> 
+  <link rel="shortcut icon" href="https://blog.mana.love/img/favicon.png">
+  <!--<link rel="shortcut icon" href="https://www.tuchuang001.com/images/2017/05/20/favicon.png">-->
+    <!--百度统计-->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9e7b394e0b9f2ed7bbe4edf5607e7dad";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+         
+
+<div class="cover-card table-cell table-middle">
+  <!---->
+  <a href="https://blog.mana.love/" class="avatar_a"><img src="" alt="" class="avatar" style="outline: 0;border: 0;"/></a>
+  <!--<img src="https://www.tuchuang001.com/images/2017/05/20/site-avatar.png" alt="" class="avatar">-->
+  <!---->
+  <a href="https://blog.mana.love/" class="author_name">小飞鸟</a>
+  <span class="author_job">爱菜家、希望之神</span>
+  <span class="author_bio mbm">爱菜、爱菜、爱菜</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://blog.mana.love/">首页</a>
+        <span>/</span>
+      </li>
+       
+      <li class="nav-item">
+        <a href="https://blog.mana.love/about/">关于</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/archive/">归档</a>
+        
+          <span>/</span>
+        
+      </li>
+            
+      <li class="nav-item">
+        <a href="https://blog.mana.love/categories/">分类</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/links/">友链</a>
+        
+          <span>/</span>
+        
+      </li>
+          
+      <li class="nav-item">
+        <a href="https://blog.mana.love/tags/">标签</a>
+        
+          <span>/</span>
+        
+      </li>
+                             
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="http://github.com/ashidamana" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    <li><a href="http://www.weibo.com/flyerangel" class="social-link-item" target="_blank"><i class="fa fa-fw fa-weibo"></i></a></li>
+    
+    <li><a href="mailto:flyer@mana.love" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <!-- 判断是否插入首页图片 -->
+
+
+<!-- 添加日期和阅读 -->
+<div id="post">
+    <header class="post-header">
+        <span class="post-meta">
+            <span class="post-date">
+                2012-12-31
+            </span> 
+            •
+            <span class="read-time" title="Estimated read time">
+  
+  
+    2 mins read
+  
+</span>
+
+            •
+            阅读(<span data-hk-page="current"> - </span>次)<span class="pause"></span>
+        </span>
+        <h1 title="sae下的python开发部署和一个简单例子">sae下的python开发部署和一个简单例子</h1>
+    </header>
+    
+    <!-- 引入google code pretiffy高亮样式 -->
+    <link href="/js/google-code-prettify/themes/github-v2.css" rel="stylesheet" type="text/css" />
+    
+    <!-- 添加博文 -->
+    <article class="post-content">
+        <blockquote>
+  <p>以前开发php时，一直在使用<a href="http://sae.sina.com.cn" title="sae">sae</a>的平台和服务，非常的喜欢。现在在整openstack，所以改用python做一些东西，为了不来回切换两个语言，我决定学习学习django，方便做一些自己的东西。关于sae下python的使用，<a href="http://appstack.sinaapp.com/static/doc/release/testing/index.html" title="sae官方文档">sae官方文档</a>写的非常全面，我这里只是记录自己的一个学习过程</p>
+</blockquote>
+
+<h2 id="section">搭建本地开发环境</h2>
+
+<p>安装django</p>
+
+<pre><code>easy_install django
+</code></pre>
+
+<p>下载安装本地开发环境</p>
+
+<pre><code>git clone https://github.com/SAEPython/saepythondevguide.git
+cd dev_server
+python setup.py install
+</code></pre>
+
+<h2 id="python">创建python项目</h2>
+
+<p>到sae.sina.com.cn下创建一个python项目</p>
+
+<p>进入管理面板创建版本，版本号为1</p>
+
+<p>使用svn下载代码</p>
+
+<pre><code>svn co https://svn.sinaapp.com/xxxxx/
+</code></pre>
+
+<p>进入主目录，发现一个1的文件夹，这个就是对应的django的工程目录</p>
+
+<pre><code>django-admin.py start project mysite
+mv mysite/* 1    
+</code></pre>
+
+<p>在1下创建配置文件config.yaml，并写入如下内容</p>
+
+<pre><code>libraries:
+- name: "django"
+   version: "1.4"
+</code></pre>
+
+<p>在1下创建index.wsgi，内容如下</p>
+
+<pre><code>import sae
+from mysite import wsgi
+application = sae.create_wsgi_app(wsgi.application)    
+</code></pre>
+
+<p>项目创建完毕，在1中执行dev_server.py来启动sae项目，默认localhost:8080访问</p>
+
+<p>我在这里遇到一个问题，我是用Windows虚拟的Linux，所以我在Windows下无法通过ip:8080访问到linux。看了d&gt;ev_server.py的代码发现这里host是写死为localhost的，所以我将代码小改动了一下</p>
+
+<pre><code>#/usr/local/lib/python2.7/dist-packages/sae_python_dev.../EGG-INFO/scripts/dev_server.py
+run_simple(option.host, options.port...)
+if __name__ == '__main__':
+    parser = Option.Parser()
+    parser.add_option("--host",dest="host",default="localhost")    
+</code></pre>
+
+<p>这样就能通过增加–host，将外部访问的ip设定好了</p>
+
+<h2 id="section-1">实现一个简单的投票应用</h2>
+
+<p>在1目录下，创建应用</p>
+
+<pre><code>python manage.py startapp polls
+</code></pre>
+
+<p>修改配置文件settings</p>
+
+<pre><code>import os
+
+if 'SERVER_SOFTWARE' in os.environ:
+    from sae.const import(
+                          MYSQL_HOST,
+                          MYSQL_PORT,
+                          MYSQL_USER,
+                          MYSQL_PASS,
+                          MYSQL_DB
+                          )
+else:
+    MYSQL_HOST = "localhost"
+    MYSQL_PORT = "3306"
+    MYSQL_USER = "root"
+    MYSQL_PASS = "xxxxx"
+    MYSQL_DB = "app_polls"
+
+DATABASES = {
+    'default': {
+        'ENGINE':   'django.db.backends.mysql',
+        'NAME':     MYSQL_DB,
+        'USER':     MYSQL_USER,
+        'PASSWORD': MYSQL_PASS,
+        'HOST':     MYSQL_HOST,
+        'PORT':     MYSQL_PORT,
+    }
+}
+...
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(os.path.dirname(__file__), 'templates'),
+)
+
+INSTALLED_APPS = (
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    # Uncomment the next line to enable the admin:
+    'django.contrib.admin',
+    # Uncomment the next line to enable admin documentation:
+    # 'django.contrib.admindocs',
+    'polls'
+)
+</code></pre>
+
+<p>这里的配置项主要是将SAE和本地开发环境区分开，在SAE环境下使用它们提供的变量就可以直接连接数据库了，不过记得要在SAE控制面板进行初始化</p>
+
+<p>配置主urls，即mysite下的urls</p>
+
+<pre><code>from django.conf.urls import patterns, include, url
+
+from django.contrib import admin
+admin.autodiscover()
+
+urlpatterns = patterns('',
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^polls/', include('polls.urls')),
+)
+</code></pre>
+
+<p>在polls文件夹下修改urls</p>
+
+<pre><code>from django.conf.urls import patterns, url
+
+urlpatterns = patterns('polls.views',
+    url(r'^$', 'index'),
+    url(r'^(?P&lt;poll_id&gt;\d+)/$', 'detail'),
+    url(r'^(?P&lt;poll_id&gt;\d+)/results/$', 'results'),
+    url(r'^(?P&lt;poll_id&gt;\d+)/vote/$', 'vote'),
+)
+</code></pre>
+
+<p>在polls文件夹下创建model.py</p>
+
+<pre><code>from django.db import models
+
+
+class Poll(models.Model):
+    question = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+
+
+class Choice(models.Model):
+    poll = models.ForeignKey(Poll)
+    choice = models.CharField(max_length=200)
+    votes = models.IntegerField()
+</code></pre>
+
+<p>然后在mysql中创建一个add_polls数据库，使用</p>
+
+<pre><code>python manage.py syncdb
+</code></pre>
+
+<p>同步数据库，这个仅限本地，如果要在sae使用的话，需要本地生成后导入到sae上。</p>
+
+<p>在polls文件夹下创建view视图文件</p>
+
+<pre><code>from django.shortcuts import render_to_response, get_object_or_404
+from django.template import RequestContext
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+from polls.models import Poll, Choice
+
+
+#主页显示最新的5条投票列表
+def index(request):
+    latest_poll_list = Poll.objects.all().order_by('-pub_date')[:5]
+    return render_to_response('index.html', {'latest_poll_list': latest_poll_list})
+
+
+#获得某条信息详细情况
+def detail(request, poll_id):
+    p = get_object_or_404(Poll, pk=poll_id)
+    return render_to_response('detail.html', {'poll': p},
+                               context_instance=RequestContext(request))
+
+
+#投票
+def vote(request, poll_id):
+    p = get_object_or_404(Poll, pk=poll_id)
+    try:
+        selected_choice = p.choice_set.get(pk=request.POST['choice'])
+    except (KeyError, Choice.DoesNotExist):
+        return render_to_response('detail.html', {
+            'poll': p,
+            'error_message': "You didn't select a choice.",
+        }, context_instance=RequestContext(request))
+    else:
+        selected_choice.votes += 1
+        selected_choice.save()
+        return HttpResponseRedirect(reverse('polls.views.results', args=(p.id,)))
+
+
+#显示投票结果
+def results(request, poll_id):
+    p = get_object_or_404(Poll, pk=poll_id)
+    return render_to_response('results.html', {'poll': p})
+</code></pre>
+
+<p>在polls下创建templates文件夹，并创建以下三个文件</p>
+
+<p>detail.html</p>
+
+<pre><code>&lt;h1&gt;{{ poll.question }}&lt;/h1&gt;
+{% if error_message %}&lt;p&gt;&lt;strong&gt;{{ error_message }}&lt;/strong&gt;&lt;/p&gt;{% endif %}
+&lt;form action="/polls/{{ poll.id }}/vote/" method="post"&gt;
+{% csrf_token %}
+{% for choice in poll.choice_set.all %}
+    &lt;input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" /&gt;
+    &lt;label for="choice{{ forloop.counter }}"&gt;{{ choice.choice }}&lt;/label&gt;&lt;br /&gt;
+{% endfor %}
+&lt;input type="submit" value="Vote" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>index.html</p>
+
+<pre><code>{% if latest_poll_list %}
+    &lt;ul&gt;
+    {% for poll in latest_poll_list %}
+        &lt;li&gt;&lt;a href="/polls/{{ poll.id }}/"&gt;{{ poll.question }}&lt;/a&gt;&lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
+{% else %}
+    &lt;p&gt;No polls are available.&lt;/p&gt;
+{% endif %}
+</code></pre>
+
+<p>results.html</p>
+
+<pre><code>&lt;h1&gt;{{ poll.question }}&lt;/h1&gt;
+&lt;ul&gt;
+{% for choice in poll.choice_set.all %}
+    &lt;li&gt;{{ choice.choice }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}&lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;
+&lt;a href="/polls/{{ poll.id }}/"&gt;Vote again?&lt;/a&gt;
+</code></pre>
+
+
+        <!--百度分享-->
+     <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧">百度贴吧</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">豆瓣网</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a></div>
+     <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16},"image":{"viewList":["tsina","sqq","qzone","tieba","weixin","douban","renren"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","sqq","qzone","tieba","weixin","douban","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        <!--网易云跟贴-->
+        <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    </article>
+</div>
+
+<!-- 引入google code pretiffy -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $("pre").addClass("prettyprint linenums");
+      prettyPrint();
+      });
+    </script>
+
+<!-- 添加博文分割线 -->
+<hr class="post-list__divider" />
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2012/12/30/share-windows-and-linux.html" data-toggle="tooltip" data-placement="top" title="Windows和Linux切换最终解决方案">上一篇：  <span>Windows和Linux切换最终解决方案</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2013/01/09/remote-access-of-mysql.html" data-toggle="tooltip" data-placement="top" title="MySQL远程访问">下一篇：  <span>MySQL远程访问</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+<!-- 多说评论框 start -->
+
+
+
+        <footer>
+  &copy; 2015-2017 喵喵清吟,blog.mana.love <br/>Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> Themes <a href="http://github.com/renyuanz/leonids/" target="_blank">Leonids</a>
+</footer>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://blog.mana.love/js/jquery-2.1.4.min.js"></script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script type="text/javascript" src="https://blog.mana.love/js/main.js"></script>
+<!--访问量统计工具 Hit Kounter v0.2-->
+<script src="https://blog.mana.love/js/av-mini-0.6.10.js"></script>
+<script src="https://blog.mana.love/js/hit-kounter-lc-0.2.0.js"></script>
+<script type="text/javascript">
+    var cloudTieConfig = {
+        url: document.location.href,
+        sourceId: "",
+        productKey: "86a52c1e48c0450385a25e49e7c984cd",
+        target: "cloud-tie-wrapper"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+
+
+</body>
+</html>

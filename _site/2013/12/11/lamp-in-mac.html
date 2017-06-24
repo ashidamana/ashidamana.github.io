@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mac下用brew搭建LNMP和LAMP开发环境</title>
+  <meta name="description" content="  Mac下搭建lamp开发环境很容易，有xampp和mamp现成的集成环境。但是集成环境对于经常需要自定义一些配置的开发者来说会非常麻烦，而且Mac本身自带apache和php，在brew的帮助下非常容易手动搭建，可控性很高Brewbrew对于mac，就像apt-get对于ubuntu，安装软件的好帮手，不能方...">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://blog.mana.love/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.mana.love/css/main.css">
+
+  <link rel="canonical" href="https://blog.mana.love/2013/12/11/lamp-in-mac.html">
+  <link rel="alternate" type="application/rss+xml" title="喵喵清吟 | 爱菜家希望之神小飞鸟官方博客" href="https://blog.mana.love /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <!--<link rel="shortcut icon" href="https://blog.mana.love/favicon.ico">-->
+   <!--32x32--> 
+  <link rel="shortcut icon" href="https://blog.mana.love/img/favicon.png">
+  <!--<link rel="shortcut icon" href="https://www.tuchuang001.com/images/2017/05/20/favicon.png">-->
+    <!--百度统计-->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9e7b394e0b9f2ed7bbe4edf5607e7dad";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+         
+
+<div class="cover-card table-cell table-middle">
+  <!---->
+  <a href="https://blog.mana.love/" class="avatar_a"><img src="" alt="" class="avatar" style="outline: 0;border: 0;"/></a>
+  <!--<img src="https://www.tuchuang001.com/images/2017/05/20/site-avatar.png" alt="" class="avatar">-->
+  <!---->
+  <a href="https://blog.mana.love/" class="author_name">小飞鸟</a>
+  <span class="author_job">爱菜家、希望之神</span>
+  <span class="author_bio mbm">爱菜、爱菜、爱菜</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://blog.mana.love/">首页</a>
+        <span>/</span>
+      </li>
+       
+      <li class="nav-item">
+        <a href="https://blog.mana.love/about/">关于</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/archive/">归档</a>
+        
+          <span>/</span>
+        
+      </li>
+            
+      <li class="nav-item">
+        <a href="https://blog.mana.love/categories/">分类</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/links/">友链</a>
+        
+          <span>/</span>
+        
+      </li>
+          
+      <li class="nav-item">
+        <a href="https://blog.mana.love/tags/">标签</a>
+        
+          <span>/</span>
+        
+      </li>
+                             
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="http://github.com/ashidamana" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    <li><a href="http://www.weibo.com/flyerangel" class="social-link-item" target="_blank"><i class="fa fa-fw fa-weibo"></i></a></li>
+    
+    <li><a href="mailto:flyer@mana.love" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <!-- 判断是否插入首页图片 -->
+
+
+<!-- 添加日期和阅读 -->
+<div id="post">
+    <header class="post-header">
+        <span class="post-meta">
+            <span class="post-date">
+                2013-12-11
+            </span> 
+            •
+            <span class="read-time" title="Estimated read time">
+  
+  
+    2 mins read
+  
+</span>
+
+            •
+            阅读(<span data-hk-page="current"> - </span>次)<span class="pause"></span>
+        </span>
+        <h1 title="Mac下用brew搭建LNMP和LAMP开发环境">Mac下用brew搭建LNMP和LAMP开发环境</h1>
+    </header>
+    
+    <!-- 引入google code pretiffy高亮样式 -->
+    <link href="/js/google-code-prettify/themes/github-v2.css" rel="stylesheet" type="text/css" />
+    
+    <!-- 添加博文 -->
+    <article class="post-content">
+        <blockquote>
+  <p>Mac下搭建lamp开发环境很容易，有xampp和mamp现成的集成环境。但是集成环境对于经常需要自定义一些配置的开发者来说会非常麻烦，而且Mac本身自带apache和php，在brew的帮助下非常容易手动搭建，可控性很高</p>
+</blockquote>
+
+<h2 id="brewhttpbrewsh"><a href="http://brew.sh/">Brew</a></h2>
+<p>brew对于mac，就像apt-get对于ubuntu，安装软件的好帮手，不能方便更多…</p>
+
+<p>brew的安装方式如下：</p>
+
+<pre><code>ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+</code></pre>
+
+<p>brew常用选项</p>
+
+<pre><code>brew install xxx
+brew uninstall xxx
+brew list 
+brew update xxx
+</code></pre>
+
+<h2 id="apache--nginx">Apache 或 Nginx</h2>
+
+<blockquote>
+  <p>两者只需要安装一个</p>
+</blockquote>
+
+<h3 id="apache">Apache</h3>
+<p>Apache的话使用mac自带的基本就够了，我的系统是10.9，可以使用以下命令控制Apache</p>
+
+<pre><code>sudo apachectl start
+sudo apachectl restart
+sudo apachectl stop
+</code></pre>
+
+<p>唯一要改的是主目录，mac默认在home下有个<code>Sites</code>（站点）目录，访问路径是</p>
+
+<pre><code>http://localhost/~user_name
+</code></pre>
+
+<p>这样不太容易访问，修改<code>/etc/apache2/httpd.conf</code>内容</p>
+
+<pre><code>DocumentRoot /Users/username/Sites
+&lt;Directory /Users/username/Sites&gt;
+    Options Indexes MultiViews
+    # apache 2.2
+    # AllowOverride All
+    # Order allow,deny
+    # Allow from 127.0.0.1
+
+    # apache 2.4
+    Require local
+&lt;/Directory&gt;
+</code></pre>
+
+<p>这样<code>Sites</code>目录就是网站根目录了，通过<code>http://localhost</code>就可以访问了。</p>
+
+<h4 id="section">常用命令</h4>
+
+<p><code>bash
+sudo apachectl start # 启动apache
+sudo apachectl stop # 关闭apache
+sudo apachectl restart # 重启apache
+</code></p>
+
+<h4 id="vhost">设置vhost</h4>
+<p>设置vhost可以很方便的进行站点调试，尤其是对于需要在根目录运行的站点。推荐 <a href="https://clickontyler.com/virtualhostx/">VirtualHostX</a>.</p>
+
+<p>设置方法是：</p>
+
+<p><code>bash
+sudo vi /etc/apache2/extra/httpd-vhosts.conf
+</code></p>
+
+<p>然后输入：</p>
+
+<p><code>bash
+&lt;Directory "/pash/to/site"&gt;
+    Allow From All
+    AllowOverride All
+    Options +Indexes
+&lt;/Directory&gt;
+&lt;VirtualHost *:80&gt;
+       ServerName "site.test"
+       DocumentRoot "/path/to/site"
+&lt;/VirtualHost&gt;
+</code></p>
+
+<p>这么设置会有个问题，默认的<code>http://localhost</code>会被转到这儿来，所以专门再设置一下<code>localhost</code>的host就好了。</p>
+
+<p><code>bash
+&lt;VirtualHost *:80&gt;
+    ServerName localhost
+    DocumentRoot /path/to/root
+&lt;/VirtualHost&gt;
+</code></p>
+
+<p>然后把host文件改一下，把刚刚设置的<code>ServerName</code>改到本地就好了。</p>
+
+<p><code>bash
+sudo vi /etc/hosts
+</code></p>
+
+<p>写入：</p>
+
+<p><code>bash
+127.0.0.1 site.test
+</code></p>
+
+<h3 id="nginx">Nginx</h3>
+<p>要使用Nginx也比较方便，首先安装</p>
+
+<pre><code>brew install nginx
+</code></pre>
+
+<p>启动关闭Nginx的命令如下（如果想要监听80端口，必须以管理员身份运行）</p>
+
+<pre><code>#打开 nginx
+sudo nginx
+#重新加载配置|重启|停止|退出 nginx
+nginx -s reload|reopen|stop|quit
+#测试配置是否有语法错误
+nginx -t
+</code></pre>
+
+<p>配置Nginx</p>
+
+<pre><code>cd /usr/local/etc/nginx/
+mkdir conf.d
+</code></pre>
+
+<p>修改Nginx配置文件</p>
+
+<pre><code>vim nginx.conf
+</code></pre>
+
+<p>主要修改位置是最后的include</p>
+
+<pre><code>worker_processes  1;  
+
+error_log       /usr/local/var/log/nginx/error.log warn;
+
+pid        /usr/local/var/run/nginx.pid;
+
+events {
+    worker_connections  256;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log      /usr/local/var/log/nginx/access.log main;
+    port_in_redirect off;
+    sendfile        on; 
+    keepalive_timeout  65; 
+
+    include /usr/local/etc/nginx/conf.d/*.conf;
+}
+</code></pre>
+
+<p>修改自定义文件</p>
+
+<pre><code>vim ./conf.d/default.conf
+</code></pre>
+
+<p>增加一个监听端口</p>
+
+<pre><code>server {
+    listen       80;
+    server_name  localhost;
+
+    root /Users/username/Sites/; # 该项要修改为你准备存放相关网页的路径
+
+    location / { 
+        index index.php;
+        autoindex on; 
+    }   
+
+    #proxy the php scripts to php-fpm  
+    location ~ \.php$ {
+        include /usr/local/etc/nginx/fastcgi.conf;
+        fastcgi_intercept_errors on; 
+        fastcgi_pass   127.0.0.1:9000; 
+    }   
+
+}
+</code></pre>
+
+<p>这个时候还不能访问php站点，因为还没有开启php-fpm。</p>
+
+<p>虽然mac 10.9自带了php-fpm，但是由于我们使用了最新的PHP，PHP中自带php-fpm，所以使用PHP中的php-fpm可以保证版本的一致。</p>
+
+<p>这里的命令在安装完下一步的php后再执行</p>
+
+<pre><code>sudo nginx
+sudo php-fpm -D
+</code></pre>
+
+<h2 id="php">PHP</h2>
+<p>PHP在mac下默认安装了，但是不好控制版本，利用brew可以再mac下安装最新版本，甚至是多个版本，我装了php5.5</p>
+
+<pre><code>brew update
+brew tap homebrew/dupes
+brew tap josegonzalez/homebrew-php
+# brew install php55 --with-fpm #Nginx
+brew install php55 #Apache
+</code></pre>
+
+<p>然后修改php的cli路径和apache使用的php模块。在.bashrc或.zshrc里头加以下内容</p>
+
+<pre><code>#export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH" 
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+</code></pre>
+
+<p>就用刚刚安装的php代替了系统默认cli的php版本。然后在<code>/etc/apache2/httpd.conf</code>下增加</p>
+
+<pre><code>LoadModule php5_module /usr/local/Cellar/php55/5.5.8/libexec/apache2/libphp5.so
+</code></pre>
+
+<p>这样就对apache使用的php版本也进行了修改。</p>
+
+<p>后面会用到mongo和mysql，所以可以直接利用下面命令安装php模块，其他模块也类似</p>
+
+<pre><code>#brew install php55-mysql #这个已经不需要再安装了
+brew install php55-mongo
+</code></pre>
+
+<h2 id="mysql">MySQL</h2>
+<p>mac不自带mysql，这里需要重新安装，方法依然很简单</p>
+
+<pre><code>brew install mysql
+unset TMPDIR
+mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+sudo chown -R your_user /usr/local/var/mysql/
+</code></pre>
+
+<p>第一句是安装，后面的是确保正常使用。然后是启动命令</p>
+
+<pre><code>mysql.server start
+</code></pre>
+
+<p>最好给mysql设个密码，方法如下</p>
+
+<pre><code>mysqladmin -u root password 'xxx'
+</code></pre>
+
+<p>如果想修改mysql的配置，在<code>/usr/local/etc</code>下建立一个<code>my.cnf</code>，例如增加log</p>
+
+<pre><code>[mysqld]
+general-log
+general_log_file = /usr/local/var/log/mysqld.log
+</code></pre>
+
+<h2 id="mongodb">MongoDB</h2>
+<p>MongoDB可以说是最简单的一个，直接执行</p>
+
+<pre><code>brew install mongodb
+</code></pre>
+
+<p>启动方法</p>
+
+<pre><code>mongod --fork
+</code></pre>
+
+<h2 id="phpmyadmin">PHPMyAdmin</h2>
+<p>phpmyadmin几乎是管理mysql最容易的web应用了吧，每次我都顺道装上。</p>
+
+<ul>
+  <li>去<a href="http://www.phpmyadmin.net/home_page/downloads.php">官网</a>下载最新的版本</li>
+  <li>解压到~/Sites/phpmyadmin下</li>
+  <li>在phpmyadmin目录下创建一个可写的config目录</li>
+  <li>打开http://localhost/phpmyadmin/setup，安装一个服务，最后保存（这里只需要输入帐号密码就够了）</li>
+  <li>将config下生成的config.inc.php移到phpmyadmin根目录下</li>
+  <li>删除config</li>
+</ul>
+
+<p>这样就装好了，虽然可能有点小复杂，但是来一次就习惯了。</p>
+
+<p>这里很可能会遇到2002错误，就是找不到mysql.sock的问题，用下面方法解决</p>
+
+<pre><code>sudo mkdir /var/mysql
+sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock
+</code></pre>
+
+<h2 id="rockmongo">RockMongo</h2>
+<p>RockMongo是MongoDB很好用的一个web应用，安装也很容易</p>
+
+<ul>
+  <li>去<a href="http://rockmongo.com/">官网</a>下载最新版本</li>
+  <li>解压到~/Sites/rockmongo下</li>
+  <li>运行http://localhost/rockmongo即可</li>
+</ul>
+
+<h2 id="site--dropbox-">把 site 放在 Dropbox 文件夹下</h2>
+
+<p><code>
+ln -s ~/Dropbox/sitename ~/Sites/sitename
+chmod a+rw ~/Dropbox
+chmod a+rw ~/Dropbox/sitename
+</code></p>
+
+<h2 id="section-1">完成</h2>
+<p>这样就在mac下配置好一个php开发环境了，enjoy it!</p>
+
+<h2 id="section-2">参考</h2>
+<ol>
+  <li><a href="http://www.nabito.net/hot-to-install-nginx-php-fpm-5-5-6-mongo-and-mysql-on-mac-with-homebrew/">Hot to install nginx, PHP-fpm 5.5.6, mongo and MySql on mac with homebrew</a></li>
+  <li><a href="http://my.oschina.net/chen0dgax/blog/190161">Mac OSX 10.9搭建nginx+mysql+php-fpm环境</a></li>
+</ol>
+
+
+        <!--百度分享-->
+     <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧">百度贴吧</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">豆瓣网</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a></div>
+     <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16},"image":{"viewList":["tsina","sqq","qzone","tieba","weixin","douban","renren"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","sqq","qzone","tieba","weixin","douban","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        <!--网易云跟贴-->
+        <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    </article>
+</div>
+
+<!-- 引入google code pretiffy -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $("pre").addClass("prettyprint linenums");
+      prettyPrint();
+      });
+    </script>
+
+<!-- 添加博文分割线 -->
+<hr class="post-list__divider" />
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2013/12/11/deploy-pptp-vpn-in-ubuntu.html" data-toggle="tooltip" data-placement="top" title="在ubuntu下搭建pptp vpn服务器">上一篇：  <span>在ubuntu下搭建pptp vpn服务器</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2014/01/15/general-git-resources.html" data-toggle="tooltip" data-placement="top" title="Git 常用资源">下一篇：  <span>Git 常用资源</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+<!-- 多说评论框 start -->
+
+
+
+        <footer>
+  &copy; 2015-2017 喵喵清吟,blog.mana.love <br/>Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> Themes <a href="http://github.com/renyuanz/leonids/" target="_blank">Leonids</a>
+</footer>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://blog.mana.love/js/jquery-2.1.4.min.js"></script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script type="text/javascript" src="https://blog.mana.love/js/main.js"></script>
+<!--访问量统计工具 Hit Kounter v0.2-->
+<script src="https://blog.mana.love/js/av-mini-0.6.10.js"></script>
+<script src="https://blog.mana.love/js/hit-kounter-lc-0.2.0.js"></script>
+<script type="text/javascript">
+    var cloudTieConfig = {
+        url: document.location.href,
+        sourceId: "",
+        productKey: "86a52c1e48c0450385a25e49e7c984cd",
+        target: "cloud-tie-wrapper"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+
+
+</body>
+</html>

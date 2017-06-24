@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PHP命名空间及自动加载</title>
+  <meta name="description" content="命名空间什么是命名空间呢？  命名空间（英语：Namespace）表示标识符（identifier）的可见范围。一个标识符可在多个命名空间中定义，它在不同命名空间中的含义是互不相干的。这样，在一个新的命名空间中可定义任何标识符，它们不会与任何已有的标识符发生冲突，因为已有的定义都处于其它命名空间中。简单说来命名空...">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://blog.mana.love/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.mana.love/css/main.css">
+
+  <link rel="canonical" href="https://blog.mana.love/2014/01/16/php-namespace-and-autoload.html">
+  <link rel="alternate" type="application/rss+xml" title="喵喵清吟 | 爱菜家希望之神小飞鸟官方博客" href="https://blog.mana.love /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <!--<link rel="shortcut icon" href="https://blog.mana.love/favicon.ico">-->
+   <!--32x32--> 
+  <link rel="shortcut icon" href="https://blog.mana.love/img/favicon.png">
+  <!--<link rel="shortcut icon" href="https://www.tuchuang001.com/images/2017/05/20/favicon.png">-->
+    <!--百度统计-->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9e7b394e0b9f2ed7bbe4edf5607e7dad";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+         
+
+<div class="cover-card table-cell table-middle">
+  <!---->
+  <a href="https://blog.mana.love/" class="avatar_a"><img src="" alt="" class="avatar" style="outline: 0;border: 0;"/></a>
+  <!--<img src="https://www.tuchuang001.com/images/2017/05/20/site-avatar.png" alt="" class="avatar">-->
+  <!---->
+  <a href="https://blog.mana.love/" class="author_name">小飞鸟</a>
+  <span class="author_job">爱菜家、希望之神</span>
+  <span class="author_bio mbm">爱菜、爱菜、爱菜</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://blog.mana.love/">首页</a>
+        <span>/</span>
+      </li>
+       
+      <li class="nav-item">
+        <a href="https://blog.mana.love/about/">关于</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/archive/">归档</a>
+        
+          <span>/</span>
+        
+      </li>
+            
+      <li class="nav-item">
+        <a href="https://blog.mana.love/categories/">分类</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/links/">友链</a>
+        
+          <span>/</span>
+        
+      </li>
+          
+      <li class="nav-item">
+        <a href="https://blog.mana.love/tags/">标签</a>
+        
+          <span>/</span>
+        
+      </li>
+                             
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="http://github.com/ashidamana" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    <li><a href="http://www.weibo.com/flyerangel" class="social-link-item" target="_blank"><i class="fa fa-fw fa-weibo"></i></a></li>
+    
+    <li><a href="mailto:flyer@mana.love" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <!-- 判断是否插入首页图片 -->
+
+
+<!-- 添加日期和阅读 -->
+<div id="post">
+    <header class="post-header">
+        <span class="post-meta">
+            <span class="post-date">
+                2014-01-16
+            </span> 
+            •
+            <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
+
+            •
+            阅读(<span data-hk-page="current"> - </span>次)<span class="pause"></span>
+        </span>
+        <h1 title="PHP命名空间及自动加载">PHP命名空间及自动加载</h1>
+    </header>
+    
+    <!-- 引入google code pretiffy高亮样式 -->
+    <link href="/js/google-code-prettify/themes/github-v2.css" rel="stylesheet" type="text/css" />
+    
+    <!-- 添加博文 -->
+    <article class="post-content">
+        <h2 id="section">命名空间</h2>
+<p>什么是<a href="http://zh.wikipedia.org/wiki/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4">命名空间</a>呢？</p>
+
+<blockquote>
+  <p>命名空间（英语：Namespace）表示标识符（identifier）的可见范围。一个标识符可在多个命名空间中定义，它在不同命名空间中的含义是互不相干的。这样，在一个新的命名空间中可定义任何标识符，它们不会与任何已有的标识符发生冲突，因为已有的定义都处于其它命名空间中。</p>
+</blockquote>
+
+<p>简单说来命名空间是为了解决不同库在同一个环境下使用时出现的命名冲突。例如我自己有一个函数名叫A，但是系统已经有一个A函数了，那就会出现冲突。</p>
+
+<h2 id="php">PHP中的命名空间</h2>
+<p>PHP从5.3版本开始引入了命名空间，之后许多现有PHP类库以及框架都开始支持它。那么PHP的命名空间怎么用呢？</p>
+
+<h3 id="section-1">定义命名空间</h3>
+<p>下面是一个定义命名空间的例子</p>
+
+<pre><code>&lt;?php    
+//file a.php
+namespace A;
+
+const test = 'Atest'; 
+
+function test() { 
+    return __FUNCTION__; 
+}
+
+class Test{
+    public function __construct(){
+        return __METHOD__;
+    }
+}
+?&gt;
+</code></pre>
+
+<p>上面例子中就是一个典型的命名空间定义方法，只有<code>const</code>, <code>function</code>, <code>class</code>受命名空间的约束。</p>
+
+<h3 id="section-2">使用命名空间</h3>
+<p>使用命名空间的方式如下：</p>
+
+<pre><code>&lt;?php 
+namespace B;
+use A;
+
+const test = 'Btest';
+function test() { 
+    return __FUNCTION__; 
+}
+
+class Test{
+    public function __construct(){
+        return __METHOD__;
+    }
+}
+
+include "a.php";//必须包含A命名空间的文件
+
+// 完全限定
+// `\B\test`从绝对位置查找输出，如果是全局函数则`\test`
+echo \B\test;   //输出Btest
+
+// 限定名称  
+// 这里已经通过`use A`申明了在这个文件可以通过`\A\...`使用A命名空间的函数
+echo A\test;    //输出Atest
+
+// 非限定名称
+// 非限定名称的函数`test`会从当前命名控件查找，即B
+echo test;      //输出Btest
+
+// namespace关键字代表当前命名空间
+echo namespace\test;
+?&gt;
+</code></pre>
+
+<p>首先要注意的是命名空间只起申明作用，也就是在使用了命名空间的时候依然得把这个命名空间申明的那个文件包含进来。在使用中可以通过<code>__NAMESPACE__</code>来查看当前命名空间。</p>
+
+<p>更多内容可以查看<a href="http://www.php.net/manual/zh/language.namespaces.basics.php">PHP官方文档</a></p>
+
+<h2 id="section-3">自动加载</h2>
+<p>每个文件既要申明命名控件又要手动<code>include</code>是非常不智能的事情，所以在自己的PHP系统或者框架中可以使用自动加载技术，让系统自己去找</p>
+
+<p>最简单的方式是利用函数<code>__autoload</code>函数，但是这个函数只能在非命名控件下定义，也就是全局情况下：</p>
+
+<pre><code>function __autoload($class) {
+  $dir = './';
+  set_include_path(get_include_path().PATH_SEPARATOR.$ids_dir);
+  $class = str_replace('\\', '/', $class) . '.php'; 
+  require_once($class); }
+</code></pre>
+
+<p>如果在已经有了命名空间的类中，可以使用函数<code>spl_autoload_register</code>来注册一个类中的方法来代替<code>__autoload</code></p>
+
+
+        <!--百度分享-->
+     <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧">百度贴吧</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">豆瓣网</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a></div>
+     <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16},"image":{"viewList":["tsina","sqq","qzone","tieba","weixin","douban","renren"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","sqq","qzone","tieba","weixin","douban","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        <!--网易云跟贴-->
+        <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    </article>
+</div>
+
+<!-- 引入google code pretiffy -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $("pre").addClass("prettyprint linenums");
+      prettyPrint();
+      });
+    </script>
+
+<!-- 添加博文分割线 -->
+<hr class="post-list__divider" />
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2014/01/15/general-svn-resources.html" data-toggle="tooltip" data-placement="top" title="SVN 常用资源">上一篇：  <span>SVN 常用资源</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2014/01/17/python-script-of-sae-log-download.html" data-toggle="tooltip" data-placement="top" title="Python脚本--下载合并SAE日志">下一篇：  <span>Python脚本--下载合并SAE日志</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+<!-- 多说评论框 start -->
+
+
+
+        <footer>
+  &copy; 2015-2017 喵喵清吟,blog.mana.love <br/>Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> Themes <a href="http://github.com/renyuanz/leonids/" target="_blank">Leonids</a>
+</footer>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://blog.mana.love/js/jquery-2.1.4.min.js"></script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script type="text/javascript" src="https://blog.mana.love/js/main.js"></script>
+<!--访问量统计工具 Hit Kounter v0.2-->
+<script src="https://blog.mana.love/js/av-mini-0.6.10.js"></script>
+<script src="https://blog.mana.love/js/hit-kounter-lc-0.2.0.js"></script>
+<script type="text/javascript">
+    var cloudTieConfig = {
+        url: document.location.href,
+        sourceId: "",
+        productKey: "86a52c1e48c0450385a25e49e7c984cd",
+        target: "cloud-tie-wrapper"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+
+
+</body>
+</html>

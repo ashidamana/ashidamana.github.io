@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>虚拟化中KVM, Xen, Qemu的区别</title>
+  <meta name="description" content="虚拟化类型全虚拟化（Full Virtualization)全虚拟化也成为原始虚拟化技术，该模型使用虚拟机协调guest操作系统和原始硬件，VMM在guest操作系统和裸硬件之间用于工作协调，一些受保护指令必须由Hypervisor（虚拟机管理程序）来捕获处理。        图1 全虚拟化模型全虚拟化的运行速度...">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://blog.mana.love/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.mana.love/css/main.css">
+
+  <link rel="canonical" href="https://blog.mana.love/2013/03/20/different-bewteen-kvm-xen-qemu.html">
+  <link rel="alternate" type="application/rss+xml" title="喵喵清吟 | 爱菜家希望之神小飞鸟官方博客" href="https://blog.mana.love /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <!--<link rel="shortcut icon" href="https://blog.mana.love/favicon.ico">-->
+   <!--32x32--> 
+  <link rel="shortcut icon" href="https://blog.mana.love/img/favicon.png">
+  <!--<link rel="shortcut icon" href="https://www.tuchuang001.com/images/2017/05/20/favicon.png">-->
+    <!--百度统计-->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9e7b394e0b9f2ed7bbe4edf5607e7dad";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+         
+
+<div class="cover-card table-cell table-middle">
+  <!---->
+  <a href="https://blog.mana.love/" class="avatar_a"><img src="" alt="" class="avatar" style="outline: 0;border: 0;"/></a>
+  <!--<img src="https://www.tuchuang001.com/images/2017/05/20/site-avatar.png" alt="" class="avatar">-->
+  <!---->
+  <a href="https://blog.mana.love/" class="author_name">小飞鸟</a>
+  <span class="author_job">爱菜家、希望之神</span>
+  <span class="author_bio mbm">爱菜、爱菜、爱菜</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://blog.mana.love/">首页</a>
+        <span>/</span>
+      </li>
+       
+      <li class="nav-item">
+        <a href="https://blog.mana.love/about/">关于</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/archive/">归档</a>
+        
+          <span>/</span>
+        
+      </li>
+            
+      <li class="nav-item">
+        <a href="https://blog.mana.love/categories/">分类</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/links/">友链</a>
+        
+          <span>/</span>
+        
+      </li>
+          
+      <li class="nav-item">
+        <a href="https://blog.mana.love/tags/">标签</a>
+        
+          <span>/</span>
+        
+      </li>
+                             
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="http://github.com/ashidamana" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    <li><a href="http://www.weibo.com/flyerangel" class="social-link-item" target="_blank"><i class="fa fa-fw fa-weibo"></i></a></li>
+    
+    <li><a href="mailto:flyer@mana.love" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <!-- 判断是否插入首页图片 -->
+
+
+<!-- 添加日期和阅读 -->
+<div id="post">
+    <header class="post-header">
+        <span class="post-meta">
+            <span class="post-date">
+                2013-03-20
+            </span> 
+            •
+            <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
+
+            •
+            阅读(<span data-hk-page="current"> - </span>次)<span class="pause"></span>
+        </span>
+        <h1 title="虚拟化中KVM, Xen, Qemu的区别">虚拟化中KVM, Xen, Qemu的区别</h1>
+    </header>
+    
+    <!-- 引入google code pretiffy高亮样式 -->
+    <link href="/js/google-code-prettify/themes/github-v2.css" rel="stylesheet" type="text/css" />
+    
+    <!-- 添加博文 -->
+    <article class="post-content">
+        <h2 id="section">虚拟化类型</h2>
+
+<h3 id="full-virtualization">全虚拟化（Full Virtualization)</h3>
+<p>全虚拟化也成为原始虚拟化技术，该模型使用虚拟机协调guest操作系统和原始硬件，VMM在guest操作系统和裸硬件之间用于工作协调，一些受保护指令必须由Hypervisor（虚拟机管理程序）来捕获处理。</p>
+
+<center>
+    <img src="https://www.tuchuang001.com/images/2017/05/20/tech-full-virtualization.gif" alt="全虚拟化模型" />
+    <br />图1 全虚拟化模型
+</center>
+
+<p>全虚拟化的运行速度要快于硬件模拟，但是性能方面不如裸机，因为Hypervisor需要占用一些资源</p>
+
+<h3 id="para-virtualization">半虚拟化（Para Virtualization）</h3>
+<p>半虚拟化是另一种类似于全虚拟化的技术，它使用Hypervisor分享存取底层的硬件，但是它的guest操作系统集成了虚拟化方面的代码。该方法无需重新编译或引起陷阱，因为操作系统自身能够与虚拟进程进行很好的协作。</p>
+
+<center>
+    <img src="https://www.tuchuang001.com/images/2017/05/20/tech-para-virtualization.gif" alt="半虚拟化模型" />
+    <br />图2 半虚拟化模型
+</center>
+
+<p>半虚拟化需要guest操作系统做一些修改，使guest操作系统意识到自己是处于虚拟化环境的，但是半虚拟化提供了与原操作系统相近的性能。</p>
+
+<h2 id="section-1">虚拟化技术</h2>
+
+<h3 id="kvmkernel-based-virtual-machine">KVM(Kernel-based Virtual Machine)基于内核的虚拟机</h3>
+<p>KVM是集成到Linux内核的Hypervisor，是X86架构且硬件支持虚拟化技术（Intel VT或AMD-V）的Linux的全虚拟化解决方案。它是Linux的一个很小的模块，利用Linux做大量的事，如任务调度、内存管理与硬件设备交互等。</p>
+
+<center>
+    <img src="https://www.tuchuang001.com/images/2017/05/20/tech-kvm-architecture.jpg" alt="KVM虚拟化平台架构" />
+    <br />图3 KVM虚拟化平台架构
+</center>
+
+<h3 id="xen">Xen</h3>
+<p>Xen是第一类运行再裸机上的虚拟化管理程序(Hypervisor)。它支持全虚拟化和半虚拟化,Xen支持hypervisor和虚拟机互相通讯，而且提供在所有Linux版本上的免费产品，包括Red Hat Enterprise Linux和SUSE Linux Enterprise Server。Xen最重要的优势在于半虚拟化，此外未经修改的操作系统也可以直接在xen上运行(如Windows)，能让虚拟机有效运行而不需要仿真，因此虚拟机能感知到hypervisor，而不需要模拟虚拟硬件，从而能实现高性能。</p>
+
+<center>
+    <img src="https://www.tuchuang001.com/images/2017/05/20/tech-xen-architecture.jpg" alt="Xen虚拟化平台架构" />
+    <br />图4 Xen虚拟化平台架构
+</center>
+
+<h3 id="qemu">QEMU</h3>
+<p>QEMU是一套由Fabrice Bellard所编写的模拟处理器的自由软件。它与Bochs，PearPC近似，但其具有某些后两者所不具备的特性，如高速度及跨平台的特性。经由kqemu这个开源的加速器，QEMU能模拟至接近真实电脑的速度。</p>
+
+<h3 id="kvmqemu">KVM和QEMU的关系</h3>
+<p>准确来说，KVM是Linux kernel的一个模块。可以用命令modprobe去加载KVM模块。加载了模块后，才能进一步通过其他工具创建虚拟机。但仅有KVM模块是 远远不够的，因为用户无法直接控制内核模块去作事情,你还必须有一个运行在用户空间的工具才行。这个用户空间的工具，kvm开发者选择了已经成型的开源虚拟化软件 QEMU。说起来QEMU也是一个虚拟化软件。它的特点是可虚拟不同的CPU。比如说在x86的CPU上可虚拟一个Power的CPU，并可利用它编译出可运行在Power上的程序。KVM使用了QEMU的一部分，并稍加改造，就成了可控制KVM的用户空间工具了。所以你会看到，官方提供的KVM下载有两大部分(qemu和kvm)三个文件(KVM模块、QEMU工具以及二者的合集)。也就是说，你可以只升级KVM模块，也可以只升级QEMU工具。这就是KVM和QEMU 的关系。</p>
+
+<center>
+    <img src="https://www.tuchuang001.com/images/2017/05/20/tech-kvm-and-qemu.png" alt="Xen虚拟化平台架构" />
+    <br />图5 KVM和QEMU关系
+</center>
+
+        <!--百度分享-->
+     <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧">百度贴吧</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">豆瓣网</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a></div>
+     <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16},"image":{"viewList":["tsina","sqq","qzone","tieba","weixin","douban","renren"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","sqq","qzone","tieba","weixin","douban","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        <!--网易云跟贴-->
+        <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    </article>
+</div>
+
+<!-- 引入google code pretiffy -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $("pre").addClass("prettyprint linenums");
+      prettyPrint();
+      });
+    </script>
+
+<!-- 添加博文分割线 -->
+<hr class="post-list__divider" />
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2013/03/20/debug-and-modify-openstack-horizon.html" data-toggle="tooltip" data-placement="top" title="调试和修改OpenStack中的Horizon部分">上一篇：  <span>调试和修改OpenStack中的Horizon部分</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2013/03/21/introduction-of-ceilometer.html" data-toggle="tooltip" data-placement="top" title="OpenStack Ceilometer项目简介">下一篇：  <span>OpenStack Ceilometer项目简介</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+<!-- 多说评论框 start -->
+
+
+
+        <footer>
+  &copy; 2015-2017 喵喵清吟,blog.mana.love <br/>Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> Themes <a href="http://github.com/renyuanz/leonids/" target="_blank">Leonids</a>
+</footer>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://blog.mana.love/js/jquery-2.1.4.min.js"></script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script type="text/javascript" src="https://blog.mana.love/js/main.js"></script>
+<!--访问量统计工具 Hit Kounter v0.2-->
+<script src="https://blog.mana.love/js/av-mini-0.6.10.js"></script>
+<script src="https://blog.mana.love/js/hit-kounter-lc-0.2.0.js"></script>
+<script type="text/javascript">
+    var cloudTieConfig = {
+        url: document.location.href,
+        sourceId: "",
+        productKey: "86a52c1e48c0450385a25e49e7c984cd",
+        target: "cloud-tie-wrapper"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+
+
+</body>
+</html>

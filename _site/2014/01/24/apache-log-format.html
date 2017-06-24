@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Apache 日志文件格式及简单处理</title>
+  <meta name="description" content="  Apache对于所有经手的访问日志，都会记录在access_log中，对这个文件分析，可以了解很多服务器情况。例如访问来源，访问资源等日志格式根据Apache文档，可以看到我们可以通过设置LogFormat来设置Apache记录的日志格式。简单的几种设置格式如下：1. Common Log Format (C...">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://blog.mana.love/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.mana.love/css/main.css">
+
+  <link rel="canonical" href="https://blog.mana.love/2014/01/24/apache-log-format.html">
+  <link rel="alternate" type="application/rss+xml" title="喵喵清吟 | 爱菜家希望之神小飞鸟官方博客" href="https://blog.mana.love /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <!--<link rel="shortcut icon" href="https://blog.mana.love/favicon.ico">-->
+   <!--32x32--> 
+  <link rel="shortcut icon" href="https://blog.mana.love/img/favicon.png">
+  <!--<link rel="shortcut icon" href="https://www.tuchuang001.com/images/2017/05/20/favicon.png">-->
+    <!--百度统计-->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9e7b394e0b9f2ed7bbe4edf5607e7dad";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+         
+
+<div class="cover-card table-cell table-middle">
+  <!---->
+  <a href="https://blog.mana.love/" class="avatar_a"><img src="" alt="" class="avatar" style="outline: 0;border: 0;"/></a>
+  <!--<img src="https://www.tuchuang001.com/images/2017/05/20/site-avatar.png" alt="" class="avatar">-->
+  <!---->
+  <a href="https://blog.mana.love/" class="author_name">小飞鸟</a>
+  <span class="author_job">爱菜家、希望之神</span>
+  <span class="author_bio mbm">爱菜、爱菜、爱菜</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://blog.mana.love/">首页</a>
+        <span>/</span>
+      </li>
+       
+      <li class="nav-item">
+        <a href="https://blog.mana.love/about/">关于</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/archive/">归档</a>
+        
+          <span>/</span>
+        
+      </li>
+            
+      <li class="nav-item">
+        <a href="https://blog.mana.love/categories/">分类</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/links/">友链</a>
+        
+          <span>/</span>
+        
+      </li>
+          
+      <li class="nav-item">
+        <a href="https://blog.mana.love/tags/">标签</a>
+        
+          <span>/</span>
+        
+      </li>
+                             
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="http://github.com/ashidamana" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    <li><a href="http://www.weibo.com/flyerangel" class="social-link-item" target="_blank"><i class="fa fa-fw fa-weibo"></i></a></li>
+    
+    <li><a href="mailto:flyer@mana.love" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <!-- 判断是否插入首页图片 -->
+
+
+<!-- 添加日期和阅读 -->
+<div id="post">
+    <header class="post-header">
+        <span class="post-meta">
+            <span class="post-date">
+                2014-01-24
+            </span> 
+            •
+            <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
+
+            •
+            阅读(<span data-hk-page="current"> - </span>次)<span class="pause"></span>
+        </span>
+        <h1 title="Apache 日志文件格式及简单处理">Apache 日志文件格式及简单处理</h1>
+    </header>
+    
+    <!-- 引入google code pretiffy高亮样式 -->
+    <link href="/js/google-code-prettify/themes/github-v2.css" rel="stylesheet" type="text/css" />
+    
+    <!-- 添加博文 -->
+    <article class="post-content">
+        <blockquote>
+  <p>Apache对于所有经手的访问日志，都会记录在access_log中，对这个文件分析，可以了解很多服务器情况。例如访问来源，访问资源等</p>
+</blockquote>
+
+<h2 id="section">日志格式</h2>
+<p>根据<a href="http://httpd.apache.org/docs/mod/mod_log_config.html">Apache文档</a>，可以看到我们可以通过设置<code>LogFormat</code>来设置Apache记录的日志格式。简单的几种设置格式如下：</p>
+
+<pre><code>1. Common Log Format (CLF)
+"%h %l %u %t \"%r\" %&gt;s %b"
+2. Common Log Format with Virtual Host
+"%v %h %l %u %t \"%r\" %&gt;s %b"
+3. NCSA extended/combined log format
+"%h %l %u %t \"%r\" %&gt;s %b \"%{Referer}i\" \"%{User-agent}i\""
+4. Referer log format
+"%{Referer}i -&gt; %U"
+5. Agent (Browser) log format
+"%{User-agent}i"
+</code></pre>
+
+<p>这些格式都代表什么意思呢？下面是一个参考表</p>
+
+<pre><code>%%  百分号(Apache2.0.44或更高的版本)
+%a  远端IP地址
+%A  本机IP地址
+%B  除HTTP头以外传送的字节数
+%b  以CLF格式显示的除HTTP头以外传送的字节数，也就是当没有字节传送时显示’-‘而不是0。
+%{Foobar}C  在请求中传送给服务端的cookieFoobar的内容。
+%D  服务器处理本请求所用时间，以微为单位。
+%{FOOBAR}e  环境变量FOOBAR的值
+%f  文件名
+%h  远端主机
+%H  请求使用的协议
+%{Foobar}i  发送到服务器的请求头Foobar:的内容。
+%l  远端登录名(由identd而来，如果支持的话)，除非IdentityCheck设为”On“，否则将得到一个”-”。
+%m  请求的方法
+%{Foobar}n  来自另一个模块的注解Foobar的内容。
+%{Foobar}o  应答头Foobar:的内容。
+%p  服务器服务于该请求的标准端口。
+%P  为本请求提供服务的子进程的PID。
+%{format}P  服务于该请求的PID或TID(线程ID)，format的取值范围为：pid和tid(2.0.46及以后版本)以及hextid(需要APR1.2.0及以上版本)
+%q  查询字符串(若存在则由一个”?“引导，否则返回空串)
+%r  请求的第一行
+%s  状态。对于内部重定向的请求，这个状态指的是原始请求的状态，
+    —%&gt;s则指的是最后请求的状态。
+%t  时间，用普通日志时间格式(标准英语格式)
+%{format}t  时间，用strftime(3)指定的格式表示的时间。(默认情况下按本地化格式)
+%T  处理完请求所花时间，以秒为单位。
+%u  远程用户名(根据验证信息而来；如果返回status(%s)为401，可能是假的)
+%U  请求的URL路径，不包含查询字符串。
+%v  对该请求提供服务的标准ServerName。
+%V  根据UseCanonicalName指令设定的服务器名称。
+%X  请求完成时的连接状态：
+    X=  连接在应答完成前中断。
+    +=  应答传送完后继续保持连接。
+    -=  应答传送完后关闭连接。
+(在1.3以后的版本中，这个指令是%c，但这样就和过去的SSL语法：%{var}c冲突了)
+%I  接收的字节数，包括请求头的数据，并且不能为零。要使用这个指令你必须启用mod_logio模块。
+%O  发送的字节数，包括请求头的数据，并且不能为零。要使用这个指令你必须启用mod_logio模块。
+</code></pre>
+
+<p>这么多看着就头疼，拿个例子来说明一下，比如</p>
+
+<pre><code>"%h %l %u %t \"%r\" %&gt;s %b"
+</code></pre>
+
+<p>这是最常见的日志记录格式，一般也是系统默认的，对应记录下来的日志为：</p>
+
+<pre><code>61.135.219.2 - - [01/Jan/2014:00:02:02 +0800] "GET /feed/ HTTP/1.0" 200 12306
+</code></pre>
+
+<p>分解说明一下：</p>
+
+<ol>
+  <li>61.135.219.2  访问来源IP</li>
+  <li>’-‘  远端登录名(由identd而来，如果支持的话)</li>
+  <li>’-‘  远程用户名</li>
+  <li>[01/Jan/2014:00:02:02 +0800] 请求时间，格式为[day/month/year:hour:minute:second zone]</li>
+  <li>“GET /feed/ HTTP/1.0” 请求内容，格式为”%m %U%q %H”，即”请求方法/访问路径/协议”</li>
+  <li>200 状态码</li>
+  <li>12306 返回数据大小</li>
+</ol>
+
+<h2 id="section-1">简单处理</h2>
+<p>平常不太复杂的日志文件分析和处理直接可以用Shell脚本搞定，下面是几个常用脚本</p>
+
+<pre><code>1.查看apache的进程数
+ps -aux | grep httpd | wc -l
+
+2.分析日志查看当天的ip连接数
+cat default-access_log | grep "10/Dec/2010" | awk '{print $2}' | sort | uniq -c | sort -nr
+
+3.查看指定的ip在当天究竟访问了什么url
+cat default-access_log | grep "10/Dec/2010" | grep "218.19.140.242" | awk '{print $7}' | sort | uniq -c | sort -nr
+
+4.查看当天访问排行前10的url
+cat default-access_log | grep "10/Dec/2010" | awk '{print $7}' | sort | uniq -c | sort -nr | head -n 10
+
+5.看到指定的ip究竟干了什么
+cat default-access_log | grep 218.19.140.242 | awk '{print $1"\t"$8}' | sort | uniq -c | sort -nr | less
+
+6.查看访问次数最多的几个分钟(找到热点)
+awk '{print $4}' default-access_log |cut -c 14-18|sort|uniq -c|sort -nr|head
+</code></pre>
+
+<p>另外可以对日志进行简单的处理，只保留自己需要的行和列，这个处理我用python写了。例如SAE拿下来的日志</p>
+
+<pre><code>yansublog.sinaapp.com 61.135.219.2 930269 99 [01/Jan/2014:00:02:02 +0800] yansublog 636 1 "GET /feed/ HTTP/1.0" 304 - "-" "Mozilla/5.0 (compatible;YoudaoFeedFetcher/1.0;http://www.youdao.com/help/reader/faq/topic006/;2 subscribers;)" 61.135.219.2.1388505722221452 yq22
+</code></pre>
+
+<p>挺多数据，但是其中有不知道干啥用的，为了分析方便，把不知道用处的删掉</p>
+
+<pre><code>import re
+
+f_input = open('access_log', 'r')
+f_output = open('access_simple', 'w')
+
+for line in f_input:
+    log = re.findall(r'.* (.*) .* .* (\[.*\]) .* .* .* (\".*\") (.*) (.*) (\".*\") (\".*\") .* .*', line)   
+    log = list(log[0])
+    log[1:1] = '-'
+    log[1:1] = '-'
+    f_output.write(' '.join(log)+'\n')
+
+f_input.close()
+f_output.close()
+</code></pre>
+
+<p>如果想要对日志进一步分析，也可以安装使用<a href="http://awstats.sourceforge.net/">awstats</a></p>
+
+
+        <!--百度分享-->
+     <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧">百度贴吧</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">豆瓣网</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a></div>
+     <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16},"image":{"viewList":["tsina","sqq","qzone","tieba","weixin","douban","renren"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","sqq","qzone","tieba","weixin","douban","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        <!--网易云跟贴-->
+        <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    </article>
+</div>
+
+<!-- 引入google code pretiffy -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $("pre").addClass("prettyprint linenums");
+      prettyPrint();
+      });
+    </script>
+
+<!-- 添加博文分割线 -->
+<hr class="post-list__divider" />
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2014/01/17/python-script-of-sae-log-download.html" data-toggle="tooltip" data-placement="top" title="Python脚本--下载合并SAE日志">上一篇：  <span>Python脚本--下载合并SAE日志</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2014/01/25/how-to-use-php-socket.html" data-toggle="tooltip" data-placement="top" title="PHP Socket的使用">下一篇：  <span>PHP Socket的使用</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+<!-- 多说评论框 start -->
+
+
+
+        <footer>
+  &copy; 2015-2017 喵喵清吟,blog.mana.love <br/>Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> Themes <a href="http://github.com/renyuanz/leonids/" target="_blank">Leonids</a>
+</footer>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://blog.mana.love/js/jquery-2.1.4.min.js"></script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script type="text/javascript" src="https://blog.mana.love/js/main.js"></script>
+<!--访问量统计工具 Hit Kounter v0.2-->
+<script src="https://blog.mana.love/js/av-mini-0.6.10.js"></script>
+<script src="https://blog.mana.love/js/hit-kounter-lc-0.2.0.js"></script>
+<script type="text/javascript">
+    var cloudTieConfig = {
+        url: document.location.href,
+        sourceId: "",
+        productKey: "86a52c1e48c0450385a25e49e7c984cd",
+        target: "cloud-tie-wrapper"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+
+
+</body>
+</html>

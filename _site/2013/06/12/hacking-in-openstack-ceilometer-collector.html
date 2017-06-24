@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>OpenStack Ceilometer Collector代码解读</title>
+  <meta name="description" content="Collector功能Collector顾名思义是负责数据收集的，它负责搜集来自OpenStack其他组件（如Nova,Glance,Cinder等）的Notification信息，以及从Compute Agent和Central Agent发送来的数据，然后将这些数据存储在数据库中。PubSubHubbubPu...">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="https://blog.mana.love/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://blog.mana.love/css/main.css">
+
+  <link rel="canonical" href="https://blog.mana.love/2013/06/12/hacking-in-openstack-ceilometer-collector.html">
+  <link rel="alternate" type="application/rss+xml" title="喵喵清吟 | 爱菜家希望之神小飞鸟官方博客" href="https://blog.mana.love /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <!--<link rel="shortcut icon" href="https://blog.mana.love/favicon.ico">-->
+   <!--32x32--> 
+  <link rel="shortcut icon" href="https://blog.mana.love/img/favicon.png">
+  <!--<link rel="shortcut icon" href="https://www.tuchuang001.com/images/2017/05/20/favicon.png">-->
+    <!--百度统计-->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9e7b394e0b9f2ed7bbe4edf5607e7dad";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+         
+
+<div class="cover-card table-cell table-middle">
+  <!---->
+  <a href="https://blog.mana.love/" class="avatar_a"><img src="" alt="" class="avatar" style="outline: 0;border: 0;"/></a>
+  <!--<img src="https://www.tuchuang001.com/images/2017/05/20/site-avatar.png" alt="" class="avatar">-->
+  <!---->
+  <a href="https://blog.mana.love/" class="author_name">小飞鸟</a>
+  <span class="author_job">爱菜家、希望之神</span>
+  <span class="author_bio mbm">爱菜、爱菜、爱菜</span>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://blog.mana.love/">首页</a>
+        <span>/</span>
+      </li>
+       
+      <li class="nav-item">
+        <a href="https://blog.mana.love/about/">关于</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/archive/">归档</a>
+        
+          <span>/</span>
+        
+      </li>
+            
+      <li class="nav-item">
+        <a href="https://blog.mana.love/categories/">分类</a>
+        
+          <span>/</span>
+        
+      </li>
+        
+      <li class="nav-item">
+        <a href="https://blog.mana.love/links/">友链</a>
+        
+          <span>/</span>
+        
+      </li>
+          
+      <li class="nav-item">
+        <a href="https://blog.mana.love/tags/">标签</a>
+        
+          <span>/</span>
+        
+      </li>
+                             
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="http://github.com/ashidamana" class="social-link-item" target="_blank"><i class="fa fa-fw fa-github"></i></a></li>
+    <li><a href="http://www.weibo.com/flyerangel" class="social-link-item" target="_blank"><i class="fa fa-fw fa-weibo"></i></a></li>
+    
+    <li><a href="mailto:flyer@mana.love" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <!-- 判断是否插入首页图片 -->
+
+
+<!-- 添加日期和阅读 -->
+<div id="post">
+    <header class="post-header">
+        <span class="post-meta">
+            <span class="post-date">
+                2013-06-12
+            </span> 
+            •
+            <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
+
+            •
+            阅读(<span data-hk-page="current"> - </span>次)<span class="pause"></span>
+        </span>
+        <h1 title="OpenStack Ceilometer Collector代码解读">OpenStack Ceilometer Collector代码解读</h1>
+    </header>
+    
+    <!-- 引入google code pretiffy高亮样式 -->
+    <link href="/js/google-code-prettify/themes/github-v2.css" rel="stylesheet" type="text/css" />
+    
+    <!-- 添加博文 -->
+    <article class="post-content">
+        <h3 id="collector">Collector功能</h3>
+<p>Collector顾名思义是负责数据收集的，它负责搜集来自OpenStack其他组件（如Nova,Glance,Cinder等）的Notification信息，以及从Compute Agent和Central Agent发送来的数据，然后将这些数据存储在数据库中。</p>
+
+<h3 id="pubsubhubbub">PubSubHubbub</h3>
+<p><a href="https://code.google.com/p/pubsubhubbub/">PubSubHubbub</a>是Google推出的一个基于Web-hook方式的解决方案，它其实是RSS的改进。它具体要解决的是RSS效率低和压力大的问题，有一个<a href="http://www.slideshare.net/devseed/go-real-time-with-pubsubhubbub-and-feeds">Go real time with pubsubhubbub and feeds</a>讲的挺清楚</p>
+
+<p><a href="http://timyang.net/web/pubsubhubbub/">Tim</a>的这篇博客也讲了它的机制，其中有这个图：</p>
+
+<p><img src="https://www.tuchuang001.com/images/2017/05/20/tech-pubsubhubbub.png" alt="PubSubHubbub" /></p>
+
+<p>一个PubSubHubbub的大致流程如下：</p>
+
+<ol>
+  <li>Sub找Pub订阅内容，Pub将Hub的地址发给Sub，告诉Sub：你以后找它要内容去</li>
+  <li>Sub将自己要订阅的地址发给Hub，并在Hub那里注册了一个Callback函数，以后有新内容麻烦给Callback就好啦</li>
+  <li>Hub可以主动，也可以被动的从Pub那里获得内容，然后再分发给在自己这里注册的Sub</li>
+</ol>
+
+<p>图中可以看到，有这么几个关键部分，在Ceilometer中，它们对应如下：</p>
+
+<ul>
+  <li>Publisher 内容提供方，OpenStack的各组件和Agent模块的角色</li>
+  <li>Subscriber 内容订阅方，Collector的角色</li>
+  <li>Hub 中转，Collector也充当了这个角色</li>
+</ul>
+
+<h3 id="collector-1">Collector代码原理</h3>
+<p>有些相思代码在之前的<a href="/2013/06/11/hacking-in-openstack-ceilometer-compute-agent.html">OpenStack Ceilometer Compute Agent源码解读</a>讲过</p>
+
+<p>这里只写和collector有关的</p>
+
+<h4 id="section">入口函数</h4>
+<p>Collector的核心功能在<code>ceilometer.collector.service:CollectorService</code>中，它是OpenStack的Service服务，启动以后从<code>initialize_service_hook()</code>开始运行</p>
+
+<pre><code>def initialize_service_hook(self, service):
+    self.pipeline_manager = pipeline.setup_pipeline(
+        transformer.TransformerExtensionManager(
+            'ceilometer.transformer',
+        ),
+        publisher.PublisherExtensionManager(
+            'ceilometer.publisher',
+        ),
+    )
+
+    self.notification_manager = \
+        extension_manager.ActivatedExtensionManager(
+            namespace=self.COLLECTOR_NAMESPACE,
+            disabled_names=
+            cfg.CONF.collector.disabled_notification_listeners,
+        )
+
+    self.notification_manager.map(self._setup_subscription)
+
+    self.conn.create_worker(
+        cfg.CONF.publisher_meter.metering_topic,
+        rpc_dispatcher.RpcDispatcher([self]),
+        'ceilometer.collector.' + cfg.CONF.publisher_meter.metering_topic,
+    )
+</code></pre>
+
+<p>这里只说重点的，<code>self.notification_manager</code>是导入所有可用的内容的处理对象，从<code>setup.cfg</code>中可以找到</p>
+
+<pre><code>ceilometer.collector =
+    instance = ceilometer.compute.notifications:Instance
+    instance_flavor = ceilometer.compute.notifications:InstanceFlavor
+    instance_delete = ceilometer.compute.notifications:InstanceDelete
+    ...
+</code></pre>
+
+<h4 id="section-1">订阅内容</h4>
+
+<p>接着<code>self.notification_manager.map(self._setup_subscription)</code>要对这些对象进行配置，其实就相当于PubSubHubbub中的订阅了</p>
+
+<pre><code>def _setup_subscription(self, ext, *args, **kwds):
+    handler = ext.obj
+    for exchange_topic in handler.get_exchange_topics(cfg.CONF):
+        for topic in exchange_topic.topics:
+            self.conn.join_consumer_pool(
+                callback=self.process_notification,
+                pool_name='ceilometer.notifications',
+                topic=topic,
+                exchange_name=exchange_topic.exchange,
+            )
+</code></pre>
+
+<h4 id="section-2">回调函数</h4>
+
+<p>这里<code>_setup_subscription()</code>讲每一个订阅对象都<code>join_consumer_pool</code>，即在AMQP中接收这些订阅相关topic的内容，然后指定了callback函数为<code>self.process_notification</code></p>
+
+<pre><code>def process_notification(self, notification):
+    self.notification_manager.map(self._process_notification_for_ext,
+                                  notification=notification,
+                                  )
+
+def _process_notification_for_ext(self, ext, notification):
+    handler = ext.obj
+    if notification['event_type'] in handler.get_event_types():
+        ctxt = context.get_admin_context()
+        with self.pipeline_manager.publisher(ctxt,
+                                             cfg.CONF.counter_source) as p:
+            p(list(handler.process_notification(notification)))
+</code></pre>
+
+<p>callback在执行后会调用这些notification中的<code>process_notification()</code>，它的作用是对不同的消息进行不同处理，因为从Nova,Glance等组件发来的消息Collector不一定都读的懂</p>
+
+<h4 id="section-3">处理内容</h4>
+
+<p>处理好的消息还是会通过Pipeline发送到AMQP中，然后和Agent直接发来的消息类似，Collector接收并交给</p>
+
+<pre><code>def record_metering_data(self, context, data):
+    for meter in data:
+        if meter.get('timestamp'):
+            ts = timeutils.parse_isotime(meter['timestamp'])
+            meter['timestamp'] = timeutils.normalize_time(ts)
+        self.storage_conn.record_metering_data(meter)
+</code></pre>
+
+<p>来处理，其实相当于自己给自己通过AMQP发了一条信息，这也就能看出，其实Collector充当了Hub和Sub双重身份</p>
+
+<h3 id="section-4">总结</h3>
+<p>Collector相对来说不是很复杂，了解了PubSubHubbub后再看就相对简单了。</p>
+
+<p>这里没有详细说数据存储部分，因为存储和API调用部分联系比较紧密，留给存储部分再讲吧</p>
+
+
+        <!--百度分享-->
+     <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友">QQ好友</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧">百度贴吧</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网">豆瓣网</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a></div>
+     <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16},"image":{"viewList":["tsina","sqq","qzone","tieba","weixin","douban","renren"],"viewText":"分享到：","viewSize":"24"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","sqq","qzone","tieba","weixin","douban","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        <!--网易云跟贴-->
+        <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    </article>
+</div>
+
+<!-- 引入google code pretiffy -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+    $(function(){
+      $("pre").addClass("prettyprint linenums");
+      prettyPrint();
+      });
+    </script>
+
+<!-- 添加博文分割线 -->
+<hr class="post-list__divider" />
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2013/06/12/hacking-in-openstack-ceilometer-api.html" data-toggle="tooltip" data-placement="top" title="OpenStack Ceilometer数据与API源码详解">上一篇：  <span>OpenStack Ceilometer数据与API源码详解</span>
+            </a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/2013/08/04/something-about-tools-i-used.html" data-toggle="tooltip" data-placement="top" title="我与工具">下一篇：  <span>我与工具</span>
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+<!-- 多说评论框 start -->
+
+
+
+        <footer>
+  &copy; 2015-2017 喵喵清吟,blog.mana.love <br/>Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> Themes <a href="http://github.com/renyuanz/leonids/" target="_blank">Leonids</a>
+</footer>
+
+
+
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://blog.mana.love/js/jquery-2.1.4.min.js"></script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script type="text/javascript" src="https://blog.mana.love/js/main.js"></script>
+<!--访问量统计工具 Hit Kounter v0.2-->
+<script src="https://blog.mana.love/js/av-mini-0.6.10.js"></script>
+<script src="https://blog.mana.love/js/hit-kounter-lc-0.2.0.js"></script>
+<script type="text/javascript">
+    var cloudTieConfig = {
+        url: document.location.href,
+        sourceId: "",
+        productKey: "86a52c1e48c0450385a25e49e7c984cd",
+        target: "cloud-tie-wrapper"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+
+
+</body>
+</html>
