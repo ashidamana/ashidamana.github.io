@@ -3,11 +3,11 @@
   <channel>
     <title>喵喵清吟 | 爱菜家希望之神小飞鸟官方博客</title>
     <description>爱菜家、希望之神小飞鸟官方博客</description>
-    <link>https://blog.mana.love/</link>
-    <atom:link href="https://blog.mana.love/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Jun 2017 06:21:38 +0000</pubDate>
-    <lastBuildDate>Sat, 24 Jun 2017 06:21:38 +0000</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <link>http://blog.mana.love/</link>
+    <atom:link href="http://blog.mana.love/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 25 Jun 2017 13:42:04 +0800</pubDate>
+    <lastBuildDate>Sun, 25 Jun 2017 13:42:04 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.0</generator>
     
       <item>
         <title>SMMS图床伴侣</title>
@@ -24,15 +24,15 @@
 
 &lt;p&gt;下面对这款扩展做下具体介绍：&lt;/p&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;📑 一些声明&lt;/h2&gt;
+&lt;h2 id=&quot;-一些声明&quot;&gt;📑 一些声明&lt;/h2&gt;
 &lt;p&gt;本扩展是为了对&lt;a href=&quot;https://sm.ms/&quot;&gt;https://sm.ms/&lt;/a&gt;的功能做封装而开发的,主体代码基于&lt;a href=&quot;https://github.com/Suxiaogang/WeiboPicBed&quot;&gt;WeiboPicBed&lt;/a&gt;。&lt;br /&gt;
 使用时请遵守&lt;a href=&quot;https://sm.ms/&quot;&gt;https://sm.ms/&lt;/a&gt;的相关规则。&lt;/p&gt;
 
-&lt;h2 id=&quot;donate&quot;&gt;📑 Donate&lt;/h2&gt;
+&lt;h2 id=&quot;-donate&quot;&gt;📑 Donate&lt;/h2&gt;
 &lt;p&gt;Weixin&lt;br /&gt;
 &lt;img src=&quot;https://ooo.0o0.ooo/2017/06/16/59435b632d79e.png&quot; alt=&quot;Donate&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;features&quot;&gt;📑 Features&lt;/h2&gt;
+&lt;h2 id=&quot;-features&quot;&gt;📑 Features&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;支持点选/拖拽2种方式上传图片至https://sm.ms/&lt;/li&gt;
   &lt;li&gt;可生成图片链接,HTML,UBB和Markdown四种格式&lt;/li&gt;
@@ -41,7 +41,7 @@
   &lt;li&gt;上传历史浏览和删除（注：历史记录是依托于浏览器的）&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;screenshots&quot;&gt;📑 Screenshots&lt;/h2&gt;
+&lt;h2 id=&quot;-screenshots&quot;&gt;📑 Screenshots&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://ooo.0o0.ooo/2017/06/16/59439b6e7e782.png&quot; alt=&quot;上传页面&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://ooo.0o0.ooo/2017/06/16/59439ba9503cd.png&quot; alt=&quot;上传后的页面，可复制链接&quot; /&gt;&lt;/p&gt;
@@ -57,38 +57,38 @@
 &lt;h2 id=&quot;contributors&quot;&gt;Contributors&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/ashidamana/&quot;&gt;Flyer&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;📑 最常被问到的问题&lt;/h2&gt;
+&lt;h2 id=&quot;-最常被问到的问题&quot;&gt;📑 最常被问到的问题&lt;/h2&gt;
 
-&lt;h2 id=&quot;section-2&quot;&gt;📑 参考&lt;/h2&gt;
+&lt;h2 id=&quot;-参考&quot;&gt;📑 参考&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Suxiaogang/WeiboPicBed&quot;&gt;WeiboPicBed&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;section-3&quot;&gt;📑 更新日志&lt;/h2&gt;
-&lt;p&gt;```
-2017-06-21 v1.0.0&lt;br /&gt;
-SMMS图床伴侣扩展终于在360应用市场审核通过。&lt;br /&gt;
-直达链接，&lt;a href=&quot;https://ext.se.360.cn/webstore/detail/gpfmdejmklijnfobjnjaeglkggocnlnn&quot;&gt;快戳我&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-更新日志&quot;&gt;📑 更新日志&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2017-06-21 v1.0.0  
+SMMS图床伴侣扩展终于在360应用市场审核通过。  
+直达链接，[快戳我](https://ext.se.360.cn/webstore/detail/gpfmdejmklijnfobjnjaeglkggocnlnn)  
 
-&lt;p&gt;2017-06-16 v1.0.0&lt;br /&gt;
-打包发布到360应用市场&lt;/p&gt;
+2017-06-16 v1.0.0  
+打包发布到360应用市场
 
-&lt;p&gt;2017-06-16 v0.0.2
+2017-06-16 v0.0.2
 支持点选/拖拽2种方式上传图片至https://sm.ms/
-可生成图片链接,HTML,UBB和Markdown四种格式&lt;br /&gt;
-支持返回https安全协议的图片地址&lt;br /&gt;
-支持自定义Chrome菜单栏图标&lt;br /&gt;
-上传历史浏览和删除&lt;/p&gt;
+可生成图片链接,HTML,UBB和Markdown四种格式  
+支持返回https安全协议的图片地址  
+支持自定义Chrome菜单栏图标  
+上传历史浏览和删除  
 
-&lt;p&gt;2017-06-15 v0.0.1&lt;br /&gt;
+2017-06-15 v0.0.1  
 初始化项目
-```&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h2 id=&quot;licence&quot;&gt;💎 Licence&lt;/h2&gt;
+&lt;h2 id=&quot;-licence&quot;&gt;💎 Licence&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg&quot; alt=&quot;License: CC BY 4.0&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 16 Jun 2017 00:00:00 +0000</pubDate>
-        <link>https://blog.mana.love/2017/06/16/smms-pic-bed.html</link>
-        <guid isPermaLink="true">https://blog.mana.love/2017/06/16/smms-pic-bed.html</guid>
+        <pubDate>Fri, 16 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://blog.mana.love/articles/2017-06/smms-pic-bed</link>
+        <guid isPermaLink="true">http://blog.mana.love/articles/2017-06/smms-pic-bed</guid>
         
         <category>图床伴侣</category>
         
@@ -205,9 +205,9 @@ SMMS图床伴侣扩展终于在360应用市场审核通过。&lt;br /&gt;
 社長（しゃちょう）&lt;br /&gt;
 企業（きぎょう）&lt;/p&gt;
 </description>
-        <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
-        <link>https://blog.mana.love/2017/06/15/japanese-learn-primary-one-50tone-06.html</link>
-        <guid isPermaLink="true">https://blog.mana.love/2017/06/15/japanese-learn-primary-one-50tone-06.html</guid>
+        <pubDate>Thu, 15 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://blog.mana.love/articles/2017-06/japanese-learn-primary-one-50tone-06</link>
+        <guid isPermaLink="true">http://blog.mana.love/articles/2017-06/japanese-learn-primary-one-50tone-06</guid>
         
         <category>日语初级上</category>
         
@@ -336,9 +336,9 @@ SMMS图床伴侣扩展终于在360应用市场审核通过。&lt;br /&gt;
 （となりの　きゃくは　よく　かきくう　きゃくだ）&lt;br /&gt;
 【我旁边的客人是特别能吃柿子的客人】&lt;/p&gt;
 </description>
-        <pubDate>Sat, 10 Jun 2017 00:00:00 +0000</pubDate>
-        <link>https://blog.mana.love/2017/06/10/japanese-learn-primary-one-50tone-05.html</link>
-        <guid isPermaLink="true">https://blog.mana.love/2017/06/10/japanese-learn-primary-one-50tone-05.html</guid>
+        <pubDate>Sat, 10 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://blog.mana.love/articles/2017-06/japanese-learn-primary-one-50tone-05</link>
+        <guid isPermaLink="true">http://blog.mana.love/articles/2017-06/japanese-learn-primary-one-50tone-05</guid>
         
         <category>日语初级上</category>
         
@@ -351,21 +351,22 @@ SMMS图床伴侣扩展终于在360应用市场审核通过。&lt;br /&gt;
     
       <item>
         <title>Windows下Jekyll环境搭建</title>
-        <description>&lt;h2 id=&quot;jekyllwindows&quot;&gt;官方对于Jekyll在Windows上安装的说明&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;官方对于jekyll在windows上安装的说明&quot;&gt;官方对于Jekyll在Windows上安装的说明&lt;/h2&gt;
 
 &lt;p&gt;直接贴链接了，&lt;a href=&quot;https://jekyllrb.com/docs/windows/&quot;&gt;https://jekyllrb.com/docs/windows/&lt;/a&gt;
 它说了，Windows10 可以用 Bash on Ubuntu on Windows,很简单的，可惜我的电脑是Windows8.1
 它说用Chocolatey来安装Ruby,然后再安装Devkit，最后通过Ruby的Gem来安装Jekyll及相关组件。
 不过我依然失败了很多次，最后想了一下，调整了Ruby和Devkit以及Jekyll的版本，才搞定,注意Ruby和Devkit的版本一定要适配。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ ruby -v
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ruby -v
 ruby 2.3.3p222 (2016-11-21 revision 56859) [x64-mingw32]  
   
 $ jekyll -v
 jekyll 2.5.3
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;很有帮助的文章&lt;/h2&gt;
+&lt;h2 id=&quot;很有帮助的文章&quot;&gt;很有帮助的文章&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/windows/&quot;&gt;官方对于Jekyll在Windows上安装的说明&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://jekyll-windows.juthilo.com&quot;&gt;一个比较全面的Jekyll在Windows上安装的说明&lt;/a&gt;&lt;/li&gt;
@@ -376,13 +377,13 @@ jekyll 2.5.3
   &lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000002932352&quot;&gt;ruby编译scss出现invalid GBK错误&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;总结&lt;/h2&gt;
+&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;
 &lt;p&gt;总之遇到什么问题，就去解决就好了。&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
-        <link>https://blog.mana.love/2017/06/06/jekyll-windows-environment.html</link>
-        <guid isPermaLink="true">https://blog.mana.love/2017/06/06/jekyll-windows-environment.html</guid>
+        <pubDate>Tue, 06 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://blog.mana.love/articles/2017-06/jekyll-windows-environment</link>
+        <guid isPermaLink="true">http://blog.mana.love/articles/2017-06/jekyll-windows-environment</guid>
         
         <category>Jekyll</category>
         
@@ -514,9 +515,9 @@ ashita 不送气，纸不抖动，口型还是ashita,只是气不要出的太多
 （タンゴを　おどりながら、たんごを　おぼえた）&lt;br /&gt;
 【探戈】&lt;/p&gt;
 </description>
-        <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
-        <link>https://blog.mana.love/2017/06/05/japanese-learn-primary-one-50tone-04.html</link>
-        <guid isPermaLink="true">https://blog.mana.love/2017/06/05/japanese-learn-primary-one-50tone-04.html</guid>
+        <pubDate>Mon, 05 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://blog.mana.love/articles/2017-06/japanese-learn-primary-one-50tone-04</link>
+        <guid isPermaLink="true">http://blog.mana.love/articles/2017-06/japanese-learn-primary-one-50tone-04</guid>
         
         <category>日语初级上</category>
         
@@ -662,9 +663,9 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 
 &lt;p&gt;要全部转换成片假名，则打完按F7即可【百度日文输入法，&lt;a href=&quot;http://ime.baidu.jp/type/&quot;&gt;http://ime.baidu.jp/type/&lt;/a&gt; 】&lt;/p&gt;
 </description>
-        <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
-        <link>https://blog.mana.love/2017/05/30/japanese-learn-primary-one-50tone-03.html</link>
-        <guid isPermaLink="true">https://blog.mana.love/2017/05/30/japanese-learn-primary-one-50tone-03.html</guid>
+        <pubDate>Tue, 30 May 2017 00:00:00 +0800</pubDate>
+        <link>http://blog.mana.love/articles/2017-05/japanese-learn-primary-one-50tone-03</link>
+        <guid isPermaLink="true">http://blog.mana.love/articles/2017-05/japanese-learn-primary-one-50tone-03</guid>
         
         <category>日语初级上</category>
         
@@ -737,9 +738,9 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 
 &lt;p&gt;【撑起伞来，咱们走吧】&lt;/p&gt;
 </description>
-        <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
-        <link>https://blog.mana.love/2017/05/25/japanese-learn-primary-one-50tone-02.html</link>
-        <guid isPermaLink="true">https://blog.mana.love/2017/05/25/japanese-learn-primary-one-50tone-02.html</guid>
+        <pubDate>Thu, 25 May 2017 00:00:00 +0800</pubDate>
+        <link>http://blog.mana.love/articles/2017-05/japanese-learn-primary-one-50tone-02</link>
+        <guid isPermaLink="true">http://blog.mana.love/articles/2017-05/japanese-learn-primary-one-50tone-02</guid>
         
         <category>日语初级上</category>
         
@@ -848,9 +849,9 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 &lt;p&gt;あの　いえの　うえ　【那个房子的上面】&lt;/p&gt;
 
 </description>
-        <pubDate>Sat, 20 May 2017 00:00:00 +0000</pubDate>
-        <link>https://blog.mana.love/2017/05/20/japanese-learn-primary-one-50tone-01.html</link>
-        <guid isPermaLink="true">https://blog.mana.love/2017/05/20/japanese-learn-primary-one-50tone-01.html</guid>
+        <pubDate>Sat, 20 May 2017 00:00:00 +0800</pubDate>
+        <link>http://blog.mana.love/articles/2017-05/japanese-learn-primary-one-50tone-01</link>
+        <guid isPermaLink="true">http://blog.mana.love/articles/2017-05/japanese-learn-primary-one-50tone-01</guid>
         
         <category>日语初级上</category>
         
@@ -875,9 +876,9 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 爱菜家、希望之神小飞鸟&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
-        <link>https://blog.mana.love/2017/05/19/japanese-preface.html</link>
-        <guid isPermaLink="true">https://blog.mana.love/2017/05/19/japanese-preface.html</guid>
+        <pubDate>Fri, 19 May 2017 00:00:00 +0800</pubDate>
+        <link>http://blog.mana.love/articles/2017-05/japanese-preface</link>
+        <guid isPermaLink="true">http://blog.mana.love/articles/2017-05/japanese-preface</guid>
         
         <category>日语初级上</category>
         
@@ -888,17 +889,17 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
     
       <item>
         <title>Docker 使用总结</title>
-        <description>&lt;h2 id=&quot;docker-&quot;&gt;Docker 基本概念&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;docker-基本概念&quot;&gt;Docker 基本概念&lt;/h2&gt;
 
-&lt;h3 id=&quot;image&quot;&gt;镜像 Image&lt;/h3&gt;
+&lt;h3 id=&quot;镜像-image&quot;&gt;镜像 Image&lt;/h3&gt;
 
 &lt;p&gt;镜像是一些打包好的已有的环境，可以被用来启动和创建容器，本身不能被直接修改。&lt;/p&gt;
 
-&lt;h3 id=&quot;container&quot;&gt;容器 Container&lt;/h3&gt;
+&lt;h3 id=&quot;容器-container&quot;&gt;容器 Container&lt;/h3&gt;
 
 &lt;p&gt;容器是镜像的实例化，是可以修改的，但是都是临时修改。&lt;/p&gt;
 
-&lt;h3 id=&quot;section&quot;&gt;容器启动过程&lt;/h3&gt;
+&lt;h3 id=&quot;容器启动过程&quot;&gt;容器启动过程&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;检查本地是否存在指定的镜像，不存在就从公有仓库下载&lt;/li&gt;
@@ -910,208 +911,208 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
   &lt;li&gt;执行完毕后容器被终止&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;docker--1&quot;&gt;Docker 常用命令&lt;/h2&gt;
+&lt;h2 id=&quot;docker-常用命令&quot;&gt;Docker 常用命令&lt;/h2&gt;
 
-&lt;h3 id=&quot;image-&quot;&gt;Image 操作&lt;/h3&gt;
+&lt;h3 id=&quot;image-操作&quot;&gt;Image 操作&lt;/h3&gt;
 
-&lt;h4 id=&quot;section-1&quot;&gt;基本操作&lt;/h4&gt;
+&lt;h4 id=&quot;基本操作&quot;&gt;基本操作&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;显示本地所有镜像&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker images
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker images
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;搜索一个image&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker search image_name
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker search image_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;下载image&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker pull image_name
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker pull image_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;删除镜像&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker rmi image_name
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker rmi image_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;显示镜像历史&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker history image_name
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker history image_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h4 id=&quot;section-2&quot;&gt;制作镜像&lt;/h4&gt;
+&lt;h4 id=&quot;制作镜像&quot;&gt;制作镜像&lt;/h4&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker build -t image_name DockerfilePath
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker build -t image_name DockerfilePath
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;这里DockerfilePath是Context上下文目录，在创建的时候会全部上传到Docker Server端，所以这个目录不要太大&lt;/p&gt;
 
-&lt;h4 id=&quot;section-3&quot;&gt;迁移镜像&lt;/h4&gt;
+&lt;h4 id=&quot;迁移镜像&quot;&gt;迁移镜像&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;保存镜像到文件&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker save image_name -o file.tar
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker save image_name -o file.tar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;加载一个tar包的镜像&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker load -i file.tar
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker load -i file.tar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h3 id=&quot;container-&quot;&gt;Container 操作&lt;/h3&gt;
+&lt;h3 id=&quot;container-操作&quot;&gt;Container 操作&lt;/h3&gt;
 
-&lt;h4 id=&quot;section-4&quot;&gt;显示相关&lt;/h4&gt;
+&lt;h4 id=&quot;显示相关&quot;&gt;显示相关&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;查看运行中的容器&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;```
-docker ps&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker ps
 
-&lt;h1 id=&quot;section-5&quot;&gt;一行显示全部容器&lt;/h1&gt;
-&lt;p&gt;docker ps | less -S&lt;/p&gt;
+# 一行显示全部容器
+docker ps | less -S
 
-&lt;h1 id=&quot;section-6&quot;&gt;最近一次启动&lt;/h1&gt;
-&lt;p&gt;docker ps -l&lt;/p&gt;
+# 最近一次启动
+docker ps -l
 
-&lt;h1 id=&quot;section-7&quot;&gt;列出所有容器&lt;/h1&gt;
-&lt;p&gt;docker ps -a
-```&lt;/p&gt;
+# 列出所有容器
+docker ps -a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;显示一个运行的容器里面的进程信息&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker top cid
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker top cid
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;显示容器详细信息&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker inspect cid
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker inspect cid
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;查看容器日志&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;```
-docker logs cid&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker logs cid
 
-&lt;h1 id=&quot;section-8&quot;&gt;实时查看日志输出&lt;/h1&gt;
-&lt;p&gt;docker logs -f cid
-```&lt;/p&gt;
+# 实时查看日志输出
+docker logs -f cid
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;查看容器更改&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker diff cid
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker diff cid
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;查看容器root用户密码&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker logs cid 2&amp;gt;&amp;amp;1 | grep &#39;^User: &#39; | tail -n1
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker logs cid 2&amp;gt;&amp;amp;1 | grep '^User: ' | tail -n1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h4 id=&quot;section-9&quot;&gt;运行相关&lt;/h4&gt;
+&lt;h4 id=&quot;运行相关&quot;&gt;运行相关&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;启动容器并执行一个命令（交互）&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;```
-# -t 终端
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# -t 终端
 # -i 交互操作
-docker run -it ubuntu /bin/bash&lt;/p&gt;
+docker run -it ubuntu /bin/bash
 
-&lt;h1 id=&quot;hello-word&quot;&gt;运行一个hello word然后就自动关闭&lt;/h1&gt;
-&lt;p&gt;docker run image_name echo “hello word”&lt;/p&gt;
+# 运行一个hello word然后就自动关闭
+docker run image_name echo &quot;hello word&quot;
 
-&lt;h1 id=&quot;section-10&quot;&gt;命名并启动容器&lt;/h1&gt;
-&lt;p&gt;docker run –name test ubuntu&lt;/p&gt;
+# 命名并启动容器
+docker run --name test ubuntu
 
-&lt;h1 id=&quot;section-11&quot;&gt;后台运行一个容器&lt;/h1&gt;
-&lt;p&gt;docker run -d -it ubuntu&lt;/p&gt;
+# 后台运行一个容器
+docker run -d -it ubuntu
 
-&lt;h1 id=&quot;section-12&quot;&gt;映射端口&lt;/h1&gt;
-&lt;p&gt;docker run -p 8080:8080 ubuntu&lt;/p&gt;
+# 映射端口
+docker run -p 8080:8080 ubuntu
 
-&lt;h1 id=&quot;volumn&quot;&gt;挂载volumn&lt;/h1&gt;
-&lt;p&gt;docker run -v ./test:/var/www&lt;/p&gt;
+# 挂载volumn
+docker run -v ./test:/var/www
 
-&lt;h1 id=&quot;container--root-root&quot;&gt;container 内 root 拥有真正root权限&lt;/h1&gt;
-&lt;p&gt;docker run –privileged=false&lt;/p&gt;
+# container 内 root 拥有真正root权限
+docker run --privileged=false
 
-&lt;h1 id=&quot;section-13&quot;&gt;启动完镜像后自动删除&lt;/h1&gt;
-&lt;p&gt;docker run -it –rm ubuntu bash
-```&lt;/p&gt;
+# 启动完镜像后自动删除
+docker run -it --rm ubuntu bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;附着到正在运行的容器, 附着完以后退出会导致容器也终止&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker attach cid
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker attach cid
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;进入正在运行的 container 并且执行&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker exec -it 839a6cfc9496 /bin/bash
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker exec -it 839a6cfc9496 /bin/bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;在容器中运行一段程序&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker run ubuntu apt-get update
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run ubuntu apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;拷贝文件出来&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker cp cid:/container_path to_path  
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker cp cid:/container_path to_path  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h4 id=&quot;section-14&quot;&gt;修改容器&lt;/h4&gt;
+&lt;h4 id=&quot;修改容器&quot;&gt;修改容器&lt;/h4&gt;
 
 &lt;p&gt;image相当于类，container相当于实例，不过可以动态给实例安装新软件，然后把这个container用commit命令固化成一个image&lt;/p&gt;
 
@@ -1119,67 +1120,67 @@ docker cp cid:/container_path to_path
   &lt;li&gt;提交一个commit&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker commit cid new_image_name
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker commit cid new_image_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;删除容器&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;```
-docker rm cid&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker rm cid
 
-&lt;h1 id=&quot;section-15&quot;&gt;强制删除&lt;/h1&gt;
-&lt;p&gt;docker rm -f cid&lt;/p&gt;
+# 强制删除
+docker rm -f cid
 
-&lt;h1 id=&quot;section-16&quot;&gt;删除所有容器&lt;/h1&gt;
-&lt;p&gt;docker rm &lt;code&gt;docker ps -a -q&lt;/code&gt;
-```&lt;/p&gt;
+# 删除所有容器
+docker rm `docker ps -a -q`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;状态修改&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker start/stop/kill/restart cid
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker start/stop/kill/restart cid
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;更改名字&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker rename old new
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker rename old new
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h4 id=&quot;section-17&quot;&gt;链接容器&lt;/h4&gt;
+&lt;h4 id=&quot;链接容器&quot;&gt;链接容器&lt;/h4&gt;
 
 &lt;p&gt;sonar容器连接到mysql容器，并将mysql容器重命名为db。这样，sonar容器就可以使用db的相关的环境变量了。&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker run -it --name sonar -d -link mysql:db tpires/sonar-server
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it --name sonar -d -link mysql:db tpires/sonar-server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h3 id=&quot;section-18&quot;&gt;仓库操作&lt;/h3&gt;
+&lt;h3 id=&quot;仓库操作&quot;&gt;仓库操作&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;登录到docker仓库&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker login
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker login
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;上传镜像&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-docker push new_image_name
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker push new_image_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h2 id=&quot;dockerfile-&quot;&gt;Dockerfile 常用命令&lt;/h2&gt;
+&lt;h2 id=&quot;dockerfile-常用命令&quot;&gt;Dockerfile 常用命令&lt;/h2&gt;
 
 &lt;p&gt;有了 Dockerfile 可以自定义一些自己需要的镜像，在熟悉了 Docker 基本操作，然后使用过一些别人提供好的镜像以后，难免需要自己修改一部分。&lt;/p&gt;
 
@@ -1194,56 +1195,56 @@ docker push new_image_name
   &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-FROM nginx
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM nginx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;run&quot;&gt;RUN&lt;/h3&gt;
 
 &lt;p&gt;执行一些命令&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-RUN echo &#39;&amp;lt;h1&amp;gt;Hello, Docker!&amp;lt;/h1&amp;gt;&#39; &amp;gt; /usr/share/nginx/html/index.html
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RUN echo '&amp;lt;h1&amp;gt;Hello, Docker!&amp;lt;/h1&amp;gt;' &amp;gt; /usr/share/nginx/html/index.html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;每个RUN命令都会在容器中建立一层，所以尽量合并多个命令。例如&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-RUN buildDeps=&#39;gcc libc6-dev make&#39; \
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RUN buildDeps='gcc libc6-dev make' \
     &amp;amp;&amp;amp; apt-get update \
     &amp;amp;&amp;amp; apt-get install -y $buildDeps \
     ...
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;copy&quot;&gt;COPY&lt;/h3&gt;
 
 &lt;p&gt;复制文件到指定目录 source -&amp;gt; target&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-COPY ./package.json /usr/src/app
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;COPY ./package.json /usr/src/app
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;cmd&quot;&gt;CMD&lt;/h3&gt;
 
 &lt;p&gt;容器的启动命令&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-CMD [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CMD [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;这个命令可以在启动时被覆盖。另外它也可以为 ENTRYPOINT 提供参数。&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;CMD 理论上只能执行一次，如果想要执行两个命令，需要使用 &lt;code&gt;&amp;amp;&lt;/code&gt; 来连接两个命令，或者使用一个bash文件。更为高级一点的方法是用supervisor来管理&lt;/p&gt;
+  &lt;p&gt;CMD 理论上只能执行一次，如果想要执行两个命令，需要使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; 来连接两个命令，或者使用一个bash文件。更为高级一点的方法是用supervisor来管理&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;entrypoint&quot;&gt;ENTRYPOINT&lt;/h3&gt;
 
 &lt;p&gt;ENTRYPOINT 和 CMD 有一部分重复工作，但是 ENTRYPOINT 可以让容器像软件一样执行。例如&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-ENTRYPOINT /bin/echo
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ENTRYPOINT /bin/echo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;在容器启动时，之后增加的内容都属于这个命令的参数。&lt;/p&gt;
 
@@ -1251,7 +1252,7 @@ ENTRYPOINT /bin/echo
 
 &lt;p&gt;设置环境变量。&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;ENV key value&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ENV key value&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;arg&quot;&gt;ARG&lt;/h3&gt;
 
@@ -1269,9 +1270,9 @@ ENTRYPOINT /bin/echo
 
 &lt;p&gt;申明端口，可以用来默认映射端口，以及容器间互通。&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-EXPOSE 22 80
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;EXPOSE 22 80
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;workdir&quot;&gt;WORKDIR&lt;/h3&gt;
 
@@ -1281,11 +1282,11 @@ EXPOSE 22 80
 
 &lt;p&gt;指定当前用户。&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-RUN groupadd -r redis &amp;amp;&amp;amp; useradd -r -g redis redis
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RUN groupadd -r redis &amp;amp;&amp;amp; useradd -r -g redis redis
 USER redis
 RUN [ &quot;redis-server&quot; ]
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;healthcheck&quot;&gt;HEALTHCHECK&lt;/h3&gt;
 
@@ -1295,19 +1296,19 @@ RUN [ &quot;redis-server&quot; ]
 
 &lt;p&gt;当此容器作为别的容器的基础容器时操作内容&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-FROM node:slim
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM node:slim
 RUN &quot;mkdir /app&quot;
 WORKDIR /app
 ONBUILD COPY ./package.json /app
 ONBUILD RUN [ &quot;npm&quot;, &quot;install&quot; ]
 ONBUILD COPY . /app/
 CMD [ &quot;npm&quot;, &quot;start&quot; ]
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h2 id=&quot;docker-compose-&quot;&gt;Docker-compose 常用指令&lt;/h2&gt;
+&lt;h2 id=&quot;docker-compose-常用指令&quot;&gt;Docker-compose 常用指令&lt;/h2&gt;
 
-&lt;h3 id=&quot;dependson&quot;&gt;depends_on&lt;/h3&gt;
+&lt;h3 id=&quot;depends_on&quot;&gt;depends_on&lt;/h3&gt;
 
 &lt;p&gt;这个不仅可以保证build的先后顺序，还可以省去links的设置&lt;/p&gt;
 
@@ -1315,14 +1316,13 @@ CMD [ &quot;npm&quot;, &quot;start&quot; ]
 
 &lt;p&gt;和docker run命令一致，主要原因是在每次新开启container的时候，port可能会变，所以有了这个设置可以保证每次都可以绑定到正确的值。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-19&quot;&gt;实例操作&lt;/h2&gt;
+&lt;h2 id=&quot;实例操作&quot;&gt;实例操作&lt;/h2&gt;
 
-&lt;h3 id=&quot;lamp&quot;&gt;创建一个LAMP的项目&lt;/h3&gt;
+&lt;h3 id=&quot;创建一个lamp的项目&quot;&gt;创建一个LAMP的项目&lt;/h3&gt;
 
 &lt;p&gt;首先是目录结构&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-├── README.md
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;├── README.md
 ├── apache
 │   └── virtualhost.conf
 ├── docker-compose.yml
@@ -1334,64 +1334,65 @@ CMD [ &quot;npm&quot;, &quot;start&quot; ]
 │   └── php.ini
 └── src
     └── index.php
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;创建 docker-compose.yml&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;yml
-version: &#39;2&#39;
-services:
-  mysql:
-    image: mysql
-    ports:
-      - &quot;3306:3306&quot;
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: phpdata
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
-    volumes:
-      - dbdata:/var/lib/mysql
-  php:
-    build: ./php
-    ports:
-      - &#39;8080:80&#39;
-    volumes:
-      - ./src:/var/www/html
-      - ./apache:/etc/apache2/sites-enabled/
-    depends_on:
-      - mysql
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - &#39;8081:80&#39;
-    links:
-      - mysql:db
-    environment:
-      PMA_USER: root
-      PMA_PASSWORD: password
-    volumes:
-      - adminsessions:/sessions
-    depends_on:
-      - mysql
-      - php
-volumes:
-  dbdata:
-  adminsessions:
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2'&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3306:3306&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;password&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;MYSQL_DATABASE&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;phpdata&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;MYSQL_USER&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;user&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;MYSQL_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;password&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dbdata:/var/lib/mysql&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;php&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./php&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8080:80'&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./src:/var/www/html&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./apache:/etc/apache2/sites-enabled/&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;depends_on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;phpmyadmin&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;phpmyadmin/phpmyadmin&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8081:80'&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;links&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql:db&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;PMA_USER&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;root&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;PMA_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;password&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;adminsessions:/sessions&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;depends_on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;php&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;dbdata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;adminsessions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h2 id=&quot;section-20&quot;&gt;问题记录&lt;/h2&gt;
+&lt;h2 id=&quot;问题记录&quot;&gt;问题记录&lt;/h2&gt;
 
-&lt;h3 id=&quot;mysql--volume-&quot;&gt;Mysql 挂载 volume 后启动时显示无权限&lt;/h3&gt;
+&lt;h3 id=&quot;mysql-挂载-volume-后启动时显示无权限&quot;&gt;Mysql 挂载 volume 后启动时显示无权限&lt;/h3&gt;
 
-&lt;p&gt;设置mysql的启动模式 &lt;code&gt;privileged:true&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;设置mysql的启动模式 &lt;code class=&quot;highlighter-rouge&quot;&gt;privileged:true&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;另外这个问题一般不会发生，我之前遇到主要原因是我把多个 volume 都映射到了一个上面，导致目录内部读写发生冲突。&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 21 Feb 2017 00:00:00 +0000</pubDate>
-        <link>https://blog.mana.love/2017/02/21/docker-summary.html</link>
-        <guid isPermaLink="true">https://blog.mana.love/2017/02/21/docker-summary.html</guid>
+        <pubDate>Tue, 21 Feb 2017 00:00:00 +0800</pubDate>
+        <link>http://blog.mana.love/articles/2017-02/docker-summary</link>
+        <guid isPermaLink="true">http://blog.mana.love/articles/2017-02/docker-summary</guid>
         
         <category>Docker</category>
         
