@@ -14,7 +14,7 @@ $(document).ready(function() {
     var reg2 = /^http:\/\/blog\.mana\.love/;
     var a = document.getElementsByTagName("a");
     for (var i = 0; i < a.length; i++) {
-        if (!reg.test(a[i].href)||!reg2.test(a[i].href)) {
+        if (!reg2.test(a[i].href)) {
             a[i].target = "_blank";
         }
     }

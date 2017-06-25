@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SMMS图床伴侣2
+title: SMMS图床伴侣3
 category: 实用工具
 tags: [图床伴侣,sm.ms]
 description: 简单好用的SMMS图床伴侣,sm.ms站点伴侣，支持选择/拖拽/粘贴上传图片,并生成图片地址,HTML,UBB和Markdown等格式,支持浏览和删除历史记录
