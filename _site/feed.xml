@@ -3,10 +3,10 @@
   <channel>
     <title>喵喵清吟 | 爱菜家希望之神小飞鸟官方博客</title>
     <description>爱菜家、希望之神小飞鸟官方博客</description>
-    <link>http://blog.mana.love/</link>
-    <atom:link href="http://blog.mana.love/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Jun 2017 15:51:02 +0800</pubDate>
-    <lastBuildDate>Sun, 25 Jun 2017 15:51:02 +0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 26 Jun 2017 09:01:17 +0800</pubDate>
+    <lastBuildDate>Mon, 26 Jun 2017 09:01:17 +0800</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -87,8 +87,8 @@ SMMS图床伴侣扩展终于在360应用市场审核通过。
 &lt;p&gt;&lt;a href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg&quot; alt=&quot;License: CC BY 4.0&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 16 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://blog.mana.love/articles/2017/06/16/smms-pic-bed.html</link>
-        <guid isPermaLink="true">http://blog.mana.love/articles/2017/06/16/smms-pic-bed.html</guid>
+        <link>http://localhost:4000/articles/2017-06/smms-pic-bed</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017-06/smms-pic-bed</guid>
         
         <category>图床伴侣</category>
         
@@ -206,8 +206,8 @@ SMMS图床伴侣扩展终于在360应用市场审核通过。
 企業（きぎょう）&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://blog.mana.love/articles/2017/06/15/japanese-learn-primary-one-50tone-06.html</link>
-        <guid isPermaLink="true">http://blog.mana.love/articles/2017/06/15/japanese-learn-primary-one-50tone-06.html</guid>
+        <link>http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-06</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-06</guid>
         
         <category>日语初级上</category>
         
@@ -337,8 +337,8 @@ SMMS图床伴侣扩展终于在360应用市场审核通过。
 【我旁边的客人是特别能吃柿子的客人】&lt;/p&gt;
 </description>
         <pubDate>Sat, 10 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://blog.mana.love/articles/2017/06/10/japanese-learn-primary-one-50tone-05.html</link>
-        <guid isPermaLink="true">http://blog.mana.love/articles/2017/06/10/japanese-learn-primary-one-50tone-05.html</guid>
+        <link>http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-05</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-05</guid>
         
         <category>日语初级上</category>
         
@@ -382,8 +382,8 @@ jekyll 2.5.3
 
 </description>
         <pubDate>Tue, 06 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://blog.mana.love/articles/2017/06/06/jekyll-windows-environment.html</link>
-        <guid isPermaLink="true">http://blog.mana.love/articles/2017/06/06/jekyll-windows-environment.html</guid>
+        <link>http://localhost:4000/articles/2017-06/jekyll-windows-environment</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017-06/jekyll-windows-environment</guid>
         
         <category>Jekyll</category>
         
@@ -516,8 +516,8 @@ ashita 不送气，纸不抖动，口型还是ashita,只是气不要出的太多
 【探戈】&lt;/p&gt;
 </description>
         <pubDate>Mon, 05 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://blog.mana.love/articles/2017/06/05/japanese-learn-primary-one-50tone-04.html</link>
-        <guid isPermaLink="true">http://blog.mana.love/articles/2017/06/05/japanese-learn-primary-one-50tone-04.html</guid>
+        <link>http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-04</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-04</guid>
         
         <category>日语初级上</category>
         
@@ -664,8 +664,8 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 &lt;p&gt;要全部转换成片假名，则打完按F7即可【百度日文输入法，&lt;a href=&quot;http://ime.baidu.jp/type/&quot;&gt;http://ime.baidu.jp/type/&lt;/a&gt; 】&lt;/p&gt;
 </description>
         <pubDate>Tue, 30 May 2017 00:00:00 +0800</pubDate>
-        <link>http://blog.mana.love/articles/2017/05/30/japanese-learn-primary-one-50tone-03.html</link>
-        <guid isPermaLink="true">http://blog.mana.love/articles/2017/05/30/japanese-learn-primary-one-50tone-03.html</guid>
+        <link>http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-03</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-03</guid>
         
         <category>日语初级上</category>
         
@@ -739,8 +739,8 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 &lt;p&gt;【撑起伞来，咱们走吧】&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 May 2017 00:00:00 +0800</pubDate>
-        <link>http://blog.mana.love/articles/2017/05/25/japanese-learn-primary-one-50tone-02.html</link>
-        <guid isPermaLink="true">http://blog.mana.love/articles/2017/05/25/japanese-learn-primary-one-50tone-02.html</guid>
+        <link>http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-02</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-02</guid>
         
         <category>日语初级上</category>
         
@@ -850,8 +850,8 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 
 </description>
         <pubDate>Sat, 20 May 2017 00:00:00 +0800</pubDate>
-        <link>http://blog.mana.love/articles/2017/05/20/japanese-learn-primary-one-50tone-01.html</link>
-        <guid isPermaLink="true">http://blog.mana.love/articles/2017/05/20/japanese-learn-primary-one-50tone-01.html</guid>
+        <link>http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-01</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-01</guid>
         
         <category>日语初级上</category>
         
@@ -877,8 +877,8 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 
 </description>
         <pubDate>Fri, 19 May 2017 00:00:00 +0800</pubDate>
-        <link>http://blog.mana.love/articles/2017/05/19/japanese-preface.html</link>
-        <guid isPermaLink="true">http://blog.mana.love/articles/2017/05/19/japanese-preface.html</guid>
+        <link>http://localhost:4000/articles/2017-05/japanese-preface</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017-05/japanese-preface</guid>
         
         <category>日语初级上</category>
         
@@ -1391,8 +1391,8 @@ CMD [ &quot;npm&quot;, &quot;start&quot; ]
 
 </description>
         <pubDate>Tue, 21 Feb 2017 00:00:00 +0800</pubDate>
-        <link>http://blog.mana.love/articles/2017/02/21/docker-summary.html</link>
-        <guid isPermaLink="true">http://blog.mana.love/articles/2017/02/21/docker-summary.html</guid>
+        <link>http://localhost:4000/articles/2017-02/docker-summary</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017-02/docker-summary</guid>
         
         <category>Docker</category>
         
