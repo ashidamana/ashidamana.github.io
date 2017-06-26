@@ -5,7 +5,8 @@
 #
 title: 喵喵清吟 | 爱菜家希望之神小飞鸟官方博客
 description: '爱菜家、希望之神小飞鸟官方博客'
-url: http://localhost:4000
+#url: https://blog.mana.love
+url: http://blog.mana.love
 avatar: https://www.tuchuang001.com/images/2017/05/20/site-avatar.png
 favicon: https://www.tuchuang001.com/images/2017/05/20/favicon.png
 begin_year: 2015
@@ -24,7 +25,7 @@ timezone:          Asia/Shanghai
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
-permalink:         /articles/:year-:month/:title
+permalink:         /articles/:year/:month/:day/:title.html
 
 kramdown:
   auto_ids: true
