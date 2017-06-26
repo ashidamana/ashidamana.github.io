@@ -133,7 +133,36 @@
 
     
     <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2013-06/learn-python-abc-module" title="访问 学习Python的ABC模块">学习Python的ABC模块</a></h3>
+        <h3 class="post-list__post-title"><a href="/articles/2013/06/09/learn-python-stevedore-module-in-detail.html" title="访问 学习Python动态扩展包stevedore">学习Python动态扩展包stevedore</a></h3>
+        
+        <p class="excerpt">1.stevedore作用Python导入动态代码很容易，例如通过在运行时导入扩展插件来扩展你的应用。许多应用通过__import__或importlib实现了这个功能。stevedore的功能就是管理扩展的，但是它的实现方式是借助steuptools的entry points（我的上一篇有讲entry points功能）。2.创建一个插件这里以一个格式转换的例子来学习：# stevedor...&hellip;</p>
+        
+        <p class="post-meta">
+        <span class="home-post-date">
+            2013-06-09
+        </span>
+        
+        •
+        
+        <a class="post-cat" href="http://localhost:4000/categories/#技术笔记">技术笔记</a>
+        
+        
+        
+        </p>
+        
+<div class = "post-list-small-mate">
+    <a class="btn-border-small" href=/articles/2013/06/09/learn-python-stevedore-module-in-detail.html>阅读全文</a>
+</div>
+
+<hr class="home-post-list__divider" />
+
+    </div>
+    
+     <li>
+
+    
+    <div class="post">
+        <h3 class="post-list__post-title"><a href="/articles/2013/06/09/learn-python-abc-module.html" title="访问 学习Python的ABC模块">学习Python的ABC模块</a></h3>
         
         <p class="excerpt">1.abc模块作用Python本身不提供抽象类和接口机制，要想实现抽象类，可以借助abc模块。ABC是Abstract Base Class的缩写。2.模块中的类和函数abc.ABCMeta这是用来生成抽象基础类的元类。由它生成的类可以被直接继承。from abc import ABCMetaclass MyABC:    __metaclass__ = ABCMetaMyABC.regis...&hellip;</p>
         
@@ -151,7 +180,7 @@
         </p>
         
 <div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2013-06/learn-python-abc-module>阅读全文</a>
+    <a class="btn-border-small" href=/articles/2013/06/09/learn-python-abc-module.html>阅读全文</a>
 </div>
 
 <hr class="home-post-list__divider" />
@@ -162,7 +191,7 @@
 
     
     <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2013-06/learn-python-setuptools-in-detail" title="访问 Python包管理工具setuptools详解">Python包管理工具setuptools详解</a></h3>
+        <h3 class="post-list__post-title"><a href="/articles/2013/06/07/learn-python-setuptools-in-detail.html" title="访问 Python包管理工具setuptools详解">Python包管理工具setuptools详解</a></h3>
         
         <p class="excerpt">0.什么是setuptoolssetuptools是Python distutils增强版的集合，它可以帮助我们更简单的创建和分发Python包，尤其是拥有依赖关系的。用户在使用setuptools创建的包时，并不需要已安装setuptools，只要一个启动模块即可。功能亮点：  利用EasyInstall自动查找、下载、安装、升级依赖包  创建Python Eggs  包含包目录内的数据文...&hellip;</p>
         
@@ -180,7 +209,7 @@
         </p>
         
 <div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2013-06/learn-python-setuptools-in-detail>阅读全文</a>
+    <a class="btn-border-small" href=/articles/2013/06/07/learn-python-setuptools-in-detail.html>阅读全文</a>
 </div>
 
 <hr class="home-post-list__divider" />
@@ -191,7 +220,7 @@
 
     
     <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2013-05/openstack-horizon-locale" title="访问 OpenStack Horizon 中文本地化">OpenStack Horizon 中文本地化</a></h3>
+        <h3 class="post-list__post-title"><a href="/articles/2013/05/27/openstack-horizon-locale.html" title="访问 OpenStack Horizon 中文本地化">OpenStack Horizon 中文本地化</a></h3>
         
         <p class="excerpt">1.安装组件apt-get install gettext2.重新生成po文件cd /usr/local/lib/python2.7/dist-packages/horizon/使用django自带django-admin.py makemessages -l zh_CNdjango-admin.py compilemessages  手动在zn_CN文件夹中生成find . -type f...&hellip;</p>
         
@@ -209,7 +238,7 @@
         </p>
         
 <div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2013-05/openstack-horizon-locale>阅读全文</a>
+    <a class="btn-border-small" href=/articles/2013/05/27/openstack-horizon-locale.html>阅读全文</a>
 </div>
 
 <hr class="home-post-list__divider" />
@@ -220,7 +249,7 @@
 
     
     <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2013-05/install-mysql-and-mongo-web-admin" title="访问 安装MySQL和MongoDB的WEB管理界面">安装MySQL和MongoDB的WEB管理界面</a></h3>
+        <h3 class="post-list__post-title"><a href="/articles/2013/05/23/install-mysql-and-mongo-web-admin.html" title="访问 安装MySQL和MongoDB的WEB管理界面">安装MySQL和MongoDB的WEB管理界面</a></h3>
         
         <p class="excerpt">MySQL管理界面这个没多少选择，大部分人都安装的是phpmyadmin，而且简单方便，在ubuntu下，只要apt-get install phpmyadmin设置也不需要，只要在安装过程中输入mysql密码即可，访问http://localhost/phpmyadmin即可MongoDB管理界面MongoDB的工具还比较多，没有一个能够统一全部工具的，不过推荐使用RockMongo，这个...&hellip;</p>
         
@@ -238,7 +267,7 @@
         </p>
         
 <div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2013-05/install-mysql-and-mongo-web-admin>阅读全文</a>
+    <a class="btn-border-small" href=/articles/2013/05/23/install-mysql-and-mongo-web-admin.html>阅读全文</a>
 </div>
 
 <hr class="home-post-list__divider" />
@@ -249,7 +278,7 @@
 
     
     <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2013-05/change-to-zsh" title="访问 从Bash切换到Zsh">从Bash切换到Zsh</a></h3>
+        <h3 class="post-list__post-title"><a href="/articles/2013/05/22/change-to-zsh.html" title="访问 从Bash切换到Zsh">从Bash切换到Zsh</a></h3>
         
         <p class="excerpt">安装Zsh我在mac下，使用port install zsh就好了，因为mac自带的Zsh比较老，然后使用chsh -s /opt/local/bin/zsh搞定安装Zsh配置文件克隆配置git clone git://github.com/sjl/oh-my-zsh.git ~/.oh-my-zsh移动到根目录cp ~/.oh-my-zsh/templates/zshrc.zsh-temp...&hellip;</p>
         
@@ -267,7 +296,7 @@
         </p>
         
 <div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2013-05/change-to-zsh>阅读全文</a>
+    <a class="btn-border-small" href=/articles/2013/05/22/change-to-zsh.html>阅读全文</a>
 </div>
 
 <hr class="home-post-list__divider" />
@@ -278,7 +307,7 @@
 
     
     <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2013-05/set-proxy-for-git-or-apt" title="访问 给Git或者APT设置goagent代理">给Git或者APT设置goagent代理</a></h3>
+        <h3 class="post-list__post-title"><a href="/articles/2013/05/20/set-proxy-for-git-or-apt.html" title="访问 给Git或者APT设置goagent代理">给Git或者APT设置goagent代理</a></h3>
         
         <p class="excerpt">安装goagent这个教程网上很多，放狗一搜即可。不过网上goagent教程里讲的大部分是给浏览器用的。其实goagent是监听了本地的8087端口，其实任何程序都可以利用这个端口，只要设置好即可。设置git代理直接在终端输入export https_proxy="127.0.0.1:8087"export http_proxy="127.0.0.1:8087"git config --gl...&hellip;</p>
         
@@ -296,7 +325,7 @@
         </p>
         
 <div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2013-05/set-proxy-for-git-or-apt>阅读全文</a>
+    <a class="btn-border-small" href=/articles/2013/05/20/set-proxy-for-git-or-apt.html>阅读全文</a>
 </div>
 
 <hr class="home-post-list__divider" />
@@ -307,7 +336,7 @@
 
     
     <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2013-05/what-is-wsgi" title="访问 WSGI学习">WSGI学习</a></h3>
+        <h3 class="post-list__post-title"><a href="/articles/2013/05/19/what-is-wsgi.html" title="访问 WSGI学习">WSGI学习</a></h3>
         
         <p class="excerpt">WSGI(Web Server Gateway Interface)WSGI是WEB服务网关接口的缩写，是为Python语言定义的Web服务器和Web应用程序之间一种简单而通用的接口。它没有具体的实现，更像是一个标准协议，具体可以去PEP333了解。简单说来，它是一个连接用户应用和Web服务器的桥梁，有点类似Apache的CGI。简单例子下面是来自PEP333的一个简单例子def simpl...&hellip;</p>
         
@@ -325,7 +354,7 @@
         </p>
         
 <div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2013-05/what-is-wsgi>阅读全文</a>
+    <a class="btn-border-small" href=/articles/2013/05/19/what-is-wsgi.html>阅读全文</a>
 </div>
 
 <hr class="home-post-list__divider" />
@@ -336,7 +365,7 @@
 
     
     <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2013-05/deploy-openstack-grizzly-in-virtual-machine" title="访问 在虚拟机单机部署OpenStack Grizzly">在虚拟机单机部署OpenStack Grizzly</a></h3>
+        <h3 class="post-list__post-title"><a href="/articles/2013/05/16/deploy-openstack-grizzly-in-virtual-machine.html" title="访问 在虚拟机单机部署OpenStack Grizzly">在虚拟机单机部署OpenStack Grizzly</a></h3>
         
         <p class="excerpt">安装过程安装Ubuntu我手头有的是Ubuntu Server 12.04 64位版，就直接用了，默认安装即可，配置的时候很简单，如下  内存:1G  硬盘:20G  处理器:2  网络:NAT装好以后登陆，执行以下命令sudo passwd root                   #设置root密码su                                 #以root登陆...&hellip;</p>
         
@@ -354,7 +383,7 @@
         </p>
         
 <div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2013-05/deploy-openstack-grizzly-in-virtual-machine>阅读全文</a>
+    <a class="btn-border-small" href=/articles/2013/05/16/deploy-openstack-grizzly-in-virtual-machine.html>阅读全文</a>
 </div>
 
 <hr class="home-post-list__divider" />
@@ -365,7 +394,7 @@
 
     
     <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2013-05/learn-how-to-use-distutils" title="访问 学习使用python打包工具distutils">学习使用python打包工具distutils</a></h3>
+        <h3 class="post-list__post-title"><a href="/articles/2013/05/15/learn-how-to-use-distutils.html" title="访问 学习使用python打包工具distutils">学习使用python打包工具distutils</a></h3>
         
         <p class="excerpt">安装和了解distutilspython中自带了distutils，直接用使用步骤  写一个安装脚本(setup.py)  (可选)写一个安装配置文件  创建一个源码分布  (可选)创建一个或多个编译过的二进制分布一个简单的例子from distutils.core import setupsetup(name='test',      version='1.0',      py_modu...&hellip;</p>
         
@@ -383,36 +412,7 @@
         </p>
         
 <div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2013-05/learn-how-to-use-distutils>阅读全文</a>
-</div>
-
-<hr class="home-post-list__divider" />
-
-    </div>
-    
-     <li>
-
-    
-    <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2013-05/different-between-python-package-tools" title="访问 python包工具之间的关系">python包工具之间的关系</a></h3>
-        
-        <p class="excerpt">从下面部分可以大致了解一下各个工具的由来和区别，推荐Python打包工具这篇文章，来自图灵社区的一篇翻译文，很详细的解释了Python打包工具的发展。下面部分转载自:Yang Yubo’s blog当前的包管理工具链是 easy_install/pip + distribute/setuptools + distutils, 显得较为混乱。而将来的工具链组合非常简单：pip + distut...&hellip;</p>
-        
-        <p class="post-meta">
-        <span class="home-post-date">
-            2013-05-15
-        </span>
-        
-        •
-        
-        <a class="post-cat" href="http://localhost:4000/categories/#技术笔记">技术笔记</a>
-        
-        
-        
-        </p>
-        
-<div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2013-05/different-between-python-package-tools>阅读全文</a>
+    <a class="btn-border-small" href=/articles/2013/05/15/learn-how-to-use-distutils.html>阅读全文</a>
 </div>
 
 <hr class="home-post-list__divider" />

@@ -5,9 +5,70 @@
     <description>爱菜家、希望之神小飞鸟官方博客</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Jun 2017 09:10:31 +0800</pubDate>
-    <lastBuildDate>Mon, 26 Jun 2017 09:10:31 +0800</lastBuildDate>
+    <pubDate>Mon, 26 Jun 2017 11:12:31 +0800</pubDate>
+    <lastBuildDate>Mon, 26 Jun 2017 11:12:31 +0800</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
+    
+      <item>
+        <title>测试jekyll-admin插件</title>
+        <description>&lt;p&gt;今天去Jekyll的官方github主页查看之前提交的issue，然后发现了这个插件。&lt;br /&gt;
+官方说它的功能是A Jekyll plugin that provides users with a traditional CMS-style graphical interface to author content and administer Jekyll sites.
+所以我就来试试，这篇文章就是用jekyll-admin图形化界面来写的，不知道效果如何呢？一会就是见证奇迹的时刻。&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;图片测试
+&lt;img src=&quot;https://ooo.0o0.ooo/2017/06/21/5949d9128947f.png&quot; alt=&quot;测试的图片&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;粗体字测试
+&lt;strong&gt;这是粗体字&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;斜体字测试
+&lt;em&gt;这是斜体字&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;标题测试
+    &lt;h1 id=&quot;这是标题&quot;&gt;这是标题&lt;/h1&gt;
+  &lt;/li&gt;
+  &lt;li&gt;代码测试
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source &quot;https://rubygems.org&quot;
+gem &quot;tzinfo&quot;
+gem &quot;tzinfo-data&quot;
+gem &quot;jekyll-paginate&quot;
+gem 'jekyll-admin', group: :jekyll_plugins
+gem &quot;wdm&quot;, &quot;~&amp;gt; 0.1.0&quot; if Gem.win_platform?
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;引用测试
+    &lt;blockquote&gt;
+      &lt;p&gt;这是引用&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;链接测试
+&lt;a href=&quot;https://www.baidu.com/&quot;&gt;这是链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;
+&lt;p&gt;说实话，还有待优化，生成的文章没有layout,category,tags,description,可以手动添加，比较麻烦，已经提交issue给官方。
+于是弃用，还是觉得用Netbeans来写作更顺手。&lt;/p&gt;
+
+&lt;p&gt;顺便说一个问题，关于我Jekyll从2.x升级到3.x的问题。&lt;br /&gt;
+怎么搞都不行，最终还是重新去下载了别人最新的模板，于是可以了。
+后来折腾这个jekyll-admin，用到Gemfile,然后弄上去，也确实可以了，但是用了jekyll-admin，导致写文章必须通过jekyll-admin，否则不生成文件，
+这个不好，于是卸载掉jekyll-admin，然后原先的问题暴露出来，怎么也搞不定，就是bundle install之后，然后jekyll serve 怎么都报错，小白也不知道咋么搞。&lt;br /&gt;
+然后我一气之下把Gemfile和Gemfile.lock删除了，然后运行bundle install。接着运行jekyll serve，&lt;br /&gt;
+居然可以了，真神奇，要说明的是Jekyll 3.5.0支持增量式build，使用&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve --incremental --watch&lt;/code&gt;，
+这是再好不过了，这个命令可以本地写作的时候根据你的文章变化自动增量式生成静态文件。&lt;br /&gt;
+另外我也找到了比较好的、通过ftp方式增量式更新Jekyll文章到虚拟主机的方法，非常好用，有时间
+我会专门写一篇关于Jekyll本地部署及通过ftp增量式更新文章到虚拟主机的方法，敬请期待。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/articles/2017/06/26/test-jekyll-admin.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/06/26/test-jekyll-admin.html</guid>
+        
+        <category>jekyll-admin</category>
+        
+        
+        <category>实用工具</category>
+        
+      </item>
     
       <item>
         <title>SMMS图床伴侣</title>
@@ -87,8 +148,8 @@ SMMS图床伴侣扩展终于在360应用市场审核通过。
 &lt;p&gt;&lt;a href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg&quot; alt=&quot;License: CC BY 4.0&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 16 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/articles/2017-06/smms-pic-bed</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-06/smms-pic-bed</guid>
+        <link>http://localhost:4000/articles/2017/06/16/smms-pic-bed.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/06/16/smms-pic-bed.html</guid>
         
         <category>图床伴侣</category>
         
@@ -206,8 +267,8 @@ SMMS图床伴侣扩展终于在360应用市场审核通过。
 企業（きぎょう）&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-06</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-06</guid>
+        <link>http://localhost:4000/articles/2017/06/15/japanese-learn-primary-one-50tone-06.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/06/15/japanese-learn-primary-one-50tone-06.html</guid>
         
         <category>日语初级上</category>
         
@@ -337,8 +398,8 @@ SMMS图床伴侣扩展终于在360应用市场审核通过。
 【我旁边的客人是特别能吃柿子的客人】&lt;/p&gt;
 </description>
         <pubDate>Sat, 10 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-05</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-05</guid>
+        <link>http://localhost:4000/articles/2017/06/10/japanese-learn-primary-one-50tone-05.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/06/10/japanese-learn-primary-one-50tone-05.html</guid>
         
         <category>日语初级上</category>
         
@@ -382,8 +443,8 @@ jekyll 2.5.3
 
 </description>
         <pubDate>Tue, 06 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/articles/2017-06/jekyll-windows-environment</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-06/jekyll-windows-environment</guid>
+        <link>http://localhost:4000/articles/2017/06/06/jekyll-windows-environment.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/06/06/jekyll-windows-environment.html</guid>
         
         <category>Jekyll</category>
         
@@ -516,8 +577,8 @@ ashita 不送气，纸不抖动，口型还是ashita,只是气不要出的太多
 【探戈】&lt;/p&gt;
 </description>
         <pubDate>Mon, 05 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-04</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-06/japanese-learn-primary-one-50tone-04</guid>
+        <link>http://localhost:4000/articles/2017/06/05/japanese-learn-primary-one-50tone-04.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/06/05/japanese-learn-primary-one-50tone-04.html</guid>
         
         <category>日语初级上</category>
         
@@ -664,8 +725,8 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 &lt;p&gt;要全部转换成片假名，则打完按F7即可【百度日文输入法，&lt;a href=&quot;http://ime.baidu.jp/type/&quot;&gt;http://ime.baidu.jp/type/&lt;/a&gt; 】&lt;/p&gt;
 </description>
         <pubDate>Tue, 30 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-03</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-03</guid>
+        <link>http://localhost:4000/articles/2017/05/30/japanese-learn-primary-one-50tone-03.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/05/30/japanese-learn-primary-one-50tone-03.html</guid>
         
         <category>日语初级上</category>
         
@@ -739,8 +800,8 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 &lt;p&gt;【撑起伞来，咱们走吧】&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-02</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-02</guid>
+        <link>http://localhost:4000/articles/2017/05/25/japanese-learn-primary-one-50tone-02.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/05/25/japanese-learn-primary-one-50tone-02.html</guid>
         
         <category>日语初级上</category>
         
@@ -850,8 +911,8 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 
 </description>
         <pubDate>Sat, 20 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-01</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-05/japanese-learn-primary-one-50tone-01</guid>
+        <link>http://localhost:4000/articles/2017/05/20/japanese-learn-primary-one-50tone-01.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/05/20/japanese-learn-primary-one-50tone-01.html</guid>
         
         <category>日语初级上</category>
         
@@ -877,527 +938,13 @@ h像含着一口水一样，不要太用力&lt;br /&gt;
 
 </description>
         <pubDate>Fri, 19 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/articles/2017-05/japanese-preface</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-05/japanese-preface</guid>
+        <link>http://localhost:4000/articles/2017/05/19/japanese-preface.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2017/05/19/japanese-preface.html</guid>
         
         <category>日语初级上</category>
         
         
         <category>日语学习</category>
-        
-      </item>
-    
-      <item>
-        <title>Docker 使用总结</title>
-        <description>&lt;h2 id=&quot;docker-基本概念&quot;&gt;Docker 基本概念&lt;/h2&gt;
-
-&lt;h3 id=&quot;镜像-image&quot;&gt;镜像 Image&lt;/h3&gt;
-
-&lt;p&gt;镜像是一些打包好的已有的环境，可以被用来启动和创建容器，本身不能被直接修改。&lt;/p&gt;
-
-&lt;h3 id=&quot;容器-container&quot;&gt;容器 Container&lt;/h3&gt;
-
-&lt;p&gt;容器是镜像的实例化，是可以修改的，但是都是临时修改。&lt;/p&gt;
-
-&lt;h3 id=&quot;容器启动过程&quot;&gt;容器启动过程&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;检查本地是否存在指定的镜像，不存在就从公有仓库下载&lt;/li&gt;
-  &lt;li&gt;利用镜像创建并启动一个容器&lt;/li&gt;
-  &lt;li&gt;分配一个文件系统，并在只读的镜像层外面挂载一层可读写层&lt;/li&gt;
-  &lt;li&gt;从宿主主机配置的网桥接口中桥接一个虚拟接口到容器中去&lt;/li&gt;
-  &lt;li&gt;从地址池配置一个 ip 地址给容器&lt;/li&gt;
-  &lt;li&gt;执行用户指定的应用程序&lt;/li&gt;
-  &lt;li&gt;执行完毕后容器被终止&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;docker-常用命令&quot;&gt;Docker 常用命令&lt;/h2&gt;
-
-&lt;h3 id=&quot;image-操作&quot;&gt;Image 操作&lt;/h3&gt;
-
-&lt;h4 id=&quot;基本操作&quot;&gt;基本操作&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;显示本地所有镜像&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker images
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;搜索一个image&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker search image_name
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;下载image&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker pull image_name
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;删除镜像&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker rmi image_name
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;显示镜像历史&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker history image_name
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;制作镜像&quot;&gt;制作镜像&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker build -t image_name DockerfilePath
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;这里DockerfilePath是Context上下文目录，在创建的时候会全部上传到Docker Server端，所以这个目录不要太大&lt;/p&gt;
-
-&lt;h4 id=&quot;迁移镜像&quot;&gt;迁移镜像&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;保存镜像到文件&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker save image_name -o file.tar
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;加载一个tar包的镜像&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker load -i file.tar
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;container-操作&quot;&gt;Container 操作&lt;/h3&gt;
-
-&lt;h4 id=&quot;显示相关&quot;&gt;显示相关&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;查看运行中的容器&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker ps
-
-# 一行显示全部容器
-docker ps | less -S
-
-# 最近一次启动
-docker ps -l
-
-# 列出所有容器
-docker ps -a
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;显示一个运行的容器里面的进程信息&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker top cid
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;显示容器详细信息&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker inspect cid
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;查看容器日志&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker logs cid
-
-# 实时查看日志输出
-docker logs -f cid
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;查看容器更改&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker diff cid
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;查看容器root用户密码&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker logs cid 2&amp;gt;&amp;amp;1 | grep '^User: ' | tail -n1
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;运行相关&quot;&gt;运行相关&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;启动容器并执行一个命令（交互）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# -t 终端
-# -i 交互操作
-docker run -it ubuntu /bin/bash
-
-# 运行一个hello word然后就自动关闭
-docker run image_name echo &quot;hello word&quot;
-
-# 命名并启动容器
-docker run --name test ubuntu
-
-# 后台运行一个容器
-docker run -d -it ubuntu
-
-# 映射端口
-docker run -p 8080:8080 ubuntu
-
-# 挂载volumn
-docker run -v ./test:/var/www
-
-# container 内 root 拥有真正root权限
-docker run --privileged=false
-
-# 启动完镜像后自动删除
-docker run -it --rm ubuntu bash
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;附着到正在运行的容器, 附着完以后退出会导致容器也终止&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker attach cid
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;进入正在运行的 container 并且执行&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker exec -it 839a6cfc9496 /bin/bash
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;在容器中运行一段程序&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run ubuntu apt-get update
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;拷贝文件出来&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker cp cid:/container_path to_path  
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;修改容器&quot;&gt;修改容器&lt;/h4&gt;
-
-&lt;p&gt;image相当于类，container相当于实例，不过可以动态给实例安装新软件，然后把这个container用commit命令固化成一个image&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;提交一个commit&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker commit cid new_image_name
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;删除容器&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker rm cid
-
-# 强制删除
-docker rm -f cid
-
-# 删除所有容器
-docker rm `docker ps -a -q`
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;状态修改&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker start/stop/kill/restart cid
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;更改名字&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker rename old new
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;链接容器&quot;&gt;链接容器&lt;/h4&gt;
-
-&lt;p&gt;sonar容器连接到mysql容器，并将mysql容器重命名为db。这样，sonar容器就可以使用db的相关的环境变量了。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it --name sonar -d -link mysql:db tpires/sonar-server
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;仓库操作&quot;&gt;仓库操作&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;登录到docker仓库&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker login
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;上传镜像&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker push new_image_name
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;dockerfile-常用命令&quot;&gt;Dockerfile 常用命令&lt;/h2&gt;
-
-&lt;p&gt;有了 Dockerfile 可以自定义一些自己需要的镜像，在熟悉了 Docker 基本操作，然后使用过一些别人提供好的镜像以后，难免需要自己修改一部分。&lt;/p&gt;
-
-&lt;h3 id=&quot;from&quot;&gt;FROM&lt;/h3&gt;
-
-&lt;p&gt;指定基础镜像。例如：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ubuntu&lt;/li&gt;
-  &lt;li&gt;nginx&lt;/li&gt;
-  &lt;li&gt;redis&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM nginx
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;run&quot;&gt;RUN&lt;/h3&gt;
-
-&lt;p&gt;执行一些命令&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RUN echo '&amp;lt;h1&amp;gt;Hello, Docker!&amp;lt;/h1&amp;gt;' &amp;gt; /usr/share/nginx/html/index.html
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;每个RUN命令都会在容器中建立一层，所以尽量合并多个命令。例如&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RUN buildDeps='gcc libc6-dev make' \
-    &amp;amp;&amp;amp; apt-get update \
-    &amp;amp;&amp;amp; apt-get install -y $buildDeps \
-    ...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;copy&quot;&gt;COPY&lt;/h3&gt;
-
-&lt;p&gt;复制文件到指定目录 source -&amp;gt; target&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;COPY ./package.json /usr/src/app
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;cmd&quot;&gt;CMD&lt;/h3&gt;
-
-&lt;p&gt;容器的启动命令&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CMD [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;这个命令可以在启动时被覆盖。另外它也可以为 ENTRYPOINT 提供参数。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;CMD 理论上只能执行一次，如果想要执行两个命令，需要使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; 来连接两个命令，或者使用一个bash文件。更为高级一点的方法是用supervisor来管理&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;entrypoint&quot;&gt;ENTRYPOINT&lt;/h3&gt;
-
-&lt;p&gt;ENTRYPOINT 和 CMD 有一部分重复工作，但是 ENTRYPOINT 可以让容器像软件一样执行。例如&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ENTRYPOINT /bin/echo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;在容器启动时，之后增加的内容都属于这个命令的参数。&lt;/p&gt;
-
-&lt;h3 id=&quot;env&quot;&gt;ENV&lt;/h3&gt;
-
-&lt;p&gt;设置环境变量。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ENV key value&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;arg&quot;&gt;ARG&lt;/h3&gt;
-
-&lt;p&gt;构建参数，在容器启动后不会存在。&lt;/p&gt;
-
-&lt;h3 id=&quot;volume&quot;&gt;VOLUME&lt;/h3&gt;
-
-&lt;p&gt;定义匿名卷，以免用户忘了挂载volumn，导致大量写入。这个 Volume 在容器启动前可以添加内容，但是并不是实际操作用户挂载的内容。在用户挂载完 volume 后，原来写在这里的内容会被复制到用户挂载的目录。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;注意：在 VOLUME 命令之后对这个目录的所有操作，将被忽略。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;expose&quot;&gt;EXPOSE&lt;/h3&gt;
-
-&lt;p&gt;申明端口，可以用来默认映射端口，以及容器间互通。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;EXPOSE 22 80
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;workdir&quot;&gt;WORKDIR&lt;/h3&gt;
-
-&lt;p&gt;指定工作目录。不仅是当前 docker 中的目录，同时也是运行容器时刚刚登录以后的目录。&lt;/p&gt;
-
-&lt;h3 id=&quot;user&quot;&gt;USER&lt;/h3&gt;
-
-&lt;p&gt;指定当前用户。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RUN groupadd -r redis &amp;amp;&amp;amp; useradd -r -g redis redis
-USER redis
-RUN [ &quot;redis-server&quot; ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;healthcheck&quot;&gt;HEALTHCHECK&lt;/h3&gt;
-
-&lt;p&gt;健康检查&lt;/p&gt;
-
-&lt;h3 id=&quot;onbuild&quot;&gt;ONBUILD&lt;/h3&gt;
-
-&lt;p&gt;当此容器作为别的容器的基础容器时操作内容&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM node:slim
-RUN &quot;mkdir /app&quot;
-WORKDIR /app
-ONBUILD COPY ./package.json /app
-ONBUILD RUN [ &quot;npm&quot;, &quot;install&quot; ]
-ONBUILD COPY . /app/
-CMD [ &quot;npm&quot;, &quot;start&quot; ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;docker-compose-常用指令&quot;&gt;Docker-compose 常用指令&lt;/h2&gt;
-
-&lt;h3 id=&quot;depends_on&quot;&gt;depends_on&lt;/h3&gt;
-
-&lt;p&gt;这个不仅可以保证build的先后顺序，还可以省去links的设置&lt;/p&gt;
-
-&lt;h3 id=&quot;links&quot;&gt;links&lt;/h3&gt;
-
-&lt;p&gt;和docker run命令一致，主要原因是在每次新开启container的时候，port可能会变，所以有了这个设置可以保证每次都可以绑定到正确的值。&lt;/p&gt;
-
-&lt;h2 id=&quot;实例操作&quot;&gt;实例操作&lt;/h2&gt;
-
-&lt;h3 id=&quot;创建一个lamp的项目&quot;&gt;创建一个LAMP的项目&lt;/h3&gt;
-
-&lt;p&gt;首先是目录结构&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;├── README.md
-├── apache
-│   └── virtualhost.conf
-├── docker-compose.yml
-├── mysql
-│   ├── Dockerfile
-│   └── my.cnf
-├── php
-│   ├── Dockerfile
-│   └── php.ini
-└── src
-    └── index.php
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;创建 docker-compose.yml&lt;/p&gt;
-
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2'&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3306:3306&quot;&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;password&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;MYSQL_DATABASE&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;phpdata&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;MYSQL_USER&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;user&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;MYSQL_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;password&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dbdata:/var/lib/mysql&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;php&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./php&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8080:80'&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./src:/var/www/html&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./apache:/etc/apache2/sites-enabled/&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;depends_on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;phpmyadmin&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;phpmyadmin/phpmyadmin&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8081:80'&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;links&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql:db&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;PMA_USER&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;root&lt;/span&gt;
-      &lt;span class=&quot;s&quot;&gt;PMA_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;password&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;adminsessions:/sessions&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;depends_on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;php&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;dbdata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;adminsessions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;问题记录&quot;&gt;问题记录&lt;/h2&gt;
-
-&lt;h3 id=&quot;mysql-挂载-volume-后启动时显示无权限&quot;&gt;Mysql 挂载 volume 后启动时显示无权限&lt;/h3&gt;
-
-&lt;p&gt;设置mysql的启动模式 &lt;code class=&quot;highlighter-rouge&quot;&gt;privileged:true&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;另外这个问题一般不会发生，我之前遇到主要原因是我把多个 volume 都映射到了一个上面，导致目录内部读写发生冲突。&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 21 Feb 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/articles/2017-02/docker-summary</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-02/docker-summary</guid>
-        
-        <category>Docker</category>
-        
-        
-        <category>实用工具</category>
         
       </item>
     
