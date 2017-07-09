@@ -6,6 +6,11 @@ permalink: /links/
 
 ## 友情链接
 
+### 友情相关
+
+- [沫雨](https://gao4.pw)  
+- [KeJun-二次元智障](https://kejun.me)  
+
 ### 爱菜相关
 
 - [jobbykids官网](http://www.jobbykids.jp/product/芦田-愛菜/)  
@@ -28,9 +33,7 @@ permalink: /links/
 - [2048自定义-爱菜吃](https://2048.malash.net/xiaochihuomana)  
 - [2048自定义-爱菜唱](https://2048.malash.net/d7a9a91df7b33855)  
 
-### 其他相关
 
-- [KeJun-二次元智障](https://kejun.me)  
 
 
 
