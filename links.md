@@ -8,6 +8,7 @@ permalink: /links/
 
 ### 友情相关
 
+- [周建川的随想录](http://jantc.cn)  
 - [沫雨](https://gao4.pw)  
 - [KeJun-二次元智障](https://kejun.me)  
 
