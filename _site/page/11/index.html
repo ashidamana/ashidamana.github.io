@@ -140,6 +140,35 @@
 
     
     <div class="post">
+        <h3 class="post-list__post-title"><a href="/articles/2013/01/30/introduction-of-kanyun-worker.html" title="访问 kanyun worker原理">kanyun worker原理</a></h3>
+        
+        <p class="excerpt">信息获取主要是有几个plugin函数，依次调用，并把结果发给server获得主机信息plugin_local_cpu()使用命令 sleep %d;top -n 1 -b|grep Cpu|awk '{print $2}' 来检测计算节点（非虚拟机）cpu占用率plugin_traffic_accounting_info()获得流量信息，测试不好用获得宿主机信息plugin_agent_in...&hellip;</p>
+        
+        <p class="post-meta">
+        <span class="home-post-date">
+            2013-01-30
+        </span>
+        
+        •
+        
+        <a class="post-cat" href="https://blog.mana.love/categories/#技术笔记">技术笔记</a>
+        
+        
+        
+        </p>
+        
+<div class = "post-list-small-mate">
+    <a class="btn-border-small" href=/articles/2013/01/30/introduction-of-kanyun-worker.html>阅读全文</a>
+</div>
+
+<hr class="home-post-list__divider" />
+
+    </div>
+    
+     <li>
+
+    
+    <div class="post">
         <h3 class="post-list__post-title"><a href="/articles/2013/01/30/introduction-kanyun-server.html" title="访问 kanyun server服务">kanyun server服务</a></h3>
         
         <p class="excerpt">数据接收和存储数据接收使用msg_type, report = socket.recv_multipart()获得数据类型和内容，然后再使用plugins[msg_type](app=app, db=db, data=data)调用相应的函数，处理数据从MYSQL数据库中获得相应实例的uuid，作为cassandra的key，即每一row存储一个虚拟机数据&hellip;</p>
@@ -391,35 +420,6 @@
         
 <div class = "post-list-small-mate">
     <a class="btn-border-small" href=/articles/2012/09/27/php-variable-variables.html>阅读全文</a>
-</div>
-
-<hr class="home-post-list__divider" />
-
-    </div>
-    
-     <li>
-
-    
-    <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2012/09/27/open-widown-in-javascript.html" title="访问 JS中防止浏览器屏蔽window.open">JS中防止浏览器屏蔽window.open</a></h3>
-        
-        <p class="excerpt">有的时候我们需要一些弹出窗来作为临时信息显示，在js代码中直接使用window.open(url,“_blank”,option);即可实现跳转，而且还可以传递一些参数。但是有个问题是，很多浏览器不支持代码触发上述代码，这个问题在平常使用中显得很不方便，尤其是我们经常用ajax返回值来触发一个新页面。为了防止被屏蔽，可以有两种方式解决。1、在用户点击事件中增加监听程序&lt;button o...&hellip;</p>
-        
-        <p class="post-meta">
-        <span class="home-post-date">
-            2012-09-27
-        </span>
-        
-        •
-        
-        <a class="post-cat" href="https://blog.mana.love/categories/#技术笔记">技术笔记</a>
-        
-        
-        
-        </p>
-        
-<div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2012/09/27/open-widown-in-javascript.html>阅读全文</a>
 </div>
 
 <hr class="home-post-list__divider" />
