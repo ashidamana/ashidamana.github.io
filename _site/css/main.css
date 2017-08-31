@@ -74,7 +74,8 @@
 /*
  * Global Variables
  */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,400,400italic|Roboto+Mono);
+/*@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,400,400italic|Roboto+Mono);*/
+@import url(https://fonts.geekzu.org/css?family=Source+Sans+Pro:600,400,400italic|Roboto+Mono);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
