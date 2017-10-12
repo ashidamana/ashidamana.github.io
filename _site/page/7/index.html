@@ -140,6 +140,35 @@
 
     
     <div class="post">
+        <h3 class="post-list__post-title"><a href="/articles/2013/06/11/pipeline-of-openstack-ceilometer.html" title="访问 OpenStack Ceilometer Pipeline代码解读">OpenStack Ceilometer Pipeline代码解读</a></h3>
+        
+        <p class="excerpt">Pipeline作用Pipeline翻译过来是管道的意思，它在ceilometer中的作用类似一个过滤器一样，或者说是转换器。它是一般是一个方法链，这个方法链前面一部分是transformer，transformer实现数据转换等功能，它可以有多个。在链尾是publisher，它负责将数据发送到AMQP中去。Pipeline定义在Agent的构造函数中，第一个创建的属性就是pipeline_...&hellip;</p>
+        
+        <p class="post-meta">
+        <span class="home-post-date">
+            2013-06-11
+        </span>
+        
+        •
+        
+        <a class="post-cat" href="https://blog.mana.love/categories/#技术笔记">技术笔记</a>
+        
+        
+        
+        </p>
+        
+<div class = "post-list-small-mate">
+    <a class="btn-border-small" href=/articles/2013/06/11/pipeline-of-openstack-ceilometer.html>阅读全文</a>
+</div>
+
+<hr class="home-post-list__divider" />
+
+    </div>
+    
+     <li>
+
+    
+    <div class="post">
         <h3 class="post-list__post-title"><a href="/articles/2013/06/11/hacking-in-openstack-ceilometer-compute-agent.html" title="访问 OpenStack Ceilometer Agent源码解读">OpenStack Ceilometer Agent源码解读</a></h3>
         
         <p class="excerpt">Compute Agent功能不知道代码干了什么就盲目去读的话，基本是事倍功半的结果。Ceilometer通过Agent模块去polling虚拟机或者OpenStack中需要的信息，然后将它传送至Ceilometer Event Bus中去。对于虚拟机的具体信息（CPU，Memory,Disk I/O,Network I/O）需要去虚拟机所运行的节点上获取（其实使用libvirt可以直接tc...&hellip;</p>
@@ -391,35 +420,6 @@
         
 <div class = "post-list-small-mate">
     <a class="btn-border-small" href=/articles/2013/05/19/what-is-wsgi.html>阅读全文</a>
-</div>
-
-<hr class="home-post-list__divider" />
-
-    </div>
-    
-     <li>
-
-    
-    <div class="post">
-        <h3 class="post-list__post-title"><a href="/articles/2013/05/16/deploy-openstack-grizzly-in-virtual-machine.html" title="访问 在虚拟机单机部署OpenStack Grizzly">在虚拟机单机部署OpenStack Grizzly</a></h3>
-        
-        <p class="excerpt">安装过程安装Ubuntu我手头有的是Ubuntu Server 12.04 64位版，就直接用了，默认安装即可，配置的时候很简单，如下  内存:1G  硬盘:20G  处理器:2  网络:NAT装好以后登陆，执行以下命令sudo passwd root                   #设置root密码su                                 #以root登陆...&hellip;</p>
-        
-        <p class="post-meta">
-        <span class="home-post-date">
-            2013-05-16
-        </span>
-        
-        •
-        
-        <a class="post-cat" href="https://blog.mana.love/categories/#技术笔记">技术笔记</a>
-        
-        
-        
-        </p>
-        
-<div class = "post-list-small-mate">
-    <a class="btn-border-small" href=/articles/2013/05/16/deploy-openstack-grizzly-in-virtual-machine.html>阅读全文</a>
 </div>
 
 <hr class="home-post-list__divider" />
