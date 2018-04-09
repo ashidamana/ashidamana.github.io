@@ -11,7 +11,7 @@ permalink: /about/
 ## 关于博主
 小飞鸟，简称飞鸟，[芦田爱菜](http://baike.baidu.com/link?url=ExnHT1ktZxoUgi1_gNVQruQTVC17Cm2lqqKadZX5_D0qlCsmVi-CJk43xXAyrTUXb8LeHRWJCEU_OQ0YtlqUALZmQ8sMur-ecTZUMJrMNg5YDD4lUWQGXeeZiPVhaje8)超骨灰级粉丝。  
 全名飞鸟鸣鸾，又名喵喵清吟。字鸣之，号冲天，又号梦灵居士，自号希望之神，江苏人。    
-爱菜家、思想家、视觉艺术家、闲聊艺术家、声音艺术家。  
+爱菜家、思想家、抑郁症研究者、视觉艺术家、闲聊艺术家、声音艺术家。  
 感性主义者、自由主义者、践行主义者、浪漫主义者、完美主义者、率真主义者。  
 不是萝莉控，不是萝莉控，不是萝莉控。  
 传说中的IT攻城狮。  
